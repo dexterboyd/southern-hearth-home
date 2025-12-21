@@ -36,7 +36,7 @@ export function AboutPreview() {
               </p>
             </div>
 
-            <Link to="/about">
+            <Link to="/about#top">
               <Button variant="outline" size="lg">
                 Read My Full Story
                 <ArrowRight className="w-4 h-4" />
