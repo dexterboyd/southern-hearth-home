@@ -1,8 +1,8 @@
+import { Link } from 'react-router-dom';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { Button } from '@/components/ui/button';
 import { BookOpen, Instagram, Mail } from 'lucide-react';
-import chefImage from '@/assets/about-chef.jpg';
 
 const About = () => {
   return (
@@ -12,31 +12,16 @@ const About = () => {
         {/* Hero Section */}
         <section className="section-padding bg-muted">
           <div className="container-blog">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-              {/* Image */}
-              <div className="relative order-2 lg:order-1">
-                <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-elevated">
-                  <img
-                    src={chefImage}
-                    alt="Home cook in Southern kitchen"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="absolute -bottom-6 -right-6 w-40 h-40 bg-primary/10 rounded-2xl -z-10" />
-              </div>
-
-              {/* Content */}
-              <div className="order-1 lg:order-2">
-                <p className="font-body text-primary uppercase tracking-widest text-sm mb-4">
-                  About Flavor First
-                </p>
-                <h1 className="font-display text-4xl md:text-5xl font-semibold text-foreground mb-6 leading-tight">
-                  Good Food Doesn't Rush
-                </h1>
-                <p className="font-body text-xl text-muted-foreground italic mb-6">
-                  And flavor isn't optional.
-                </p>
-              </div>
+            <div className="max-w-3xl mx-auto text-center">
+              <p className="font-body text-primary uppercase tracking-widest text-sm mb-4">
+                About Flavor First
+              </p>
+              <h1 className="font-display text-4xl md:text-5xl font-semibold text-foreground mb-6 leading-tight">
+                Good Food Doesn't Rush
+              </h1>
+              <p className="font-body text-xl text-muted-foreground italic">
+                And flavor isn't optional.
+              </p>
             </div>
           </div>
         </section>
@@ -135,21 +120,25 @@ const About = () => {
                   Join the Flavor First Kitchen
                 </h3>
                 <p className="font-body text-muted-foreground mb-6 max-w-md mx-auto">
-                  Get a complimentary cookbook-quality recipe plus early access to new releases.
+                  Get 10 complimentary cookbook-quality recipes plus early access to new releases.
                 </p>
                 <div className="flex flex-wrap justify-center gap-4">
-                  <Button variant="hero">
-                    <Mail className="w-4 h-4" />
-                    Get Free Recipe
-                  </Button>
+                  <Link to="/#newsletter">
+                    <Button variant="hero">
+                      <Mail className="w-4 h-4" />
+                      Get Free Recipes
+                    </Button>
+                  </Link>
                   <Button variant="outline">
                     <Instagram className="w-4 h-4" />
                     Follow on Instagram
                   </Button>
-                  <Button variant="outline">
-                    <BookOpen className="w-4 h-4" />
-                    Shop Cookbooks
-                  </Button>
+                  <Link to="/cookbooks">
+                    <Button variant="outline">
+                      <BookOpen className="w-4 h-4" />
+                      Shop Cookbooks
+                    </Button>
+                  </Link>
                 </div>
               </div>
             </div>

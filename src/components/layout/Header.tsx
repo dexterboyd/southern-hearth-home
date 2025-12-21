@@ -6,7 +6,6 @@ import { cn } from '@/lib/utils';
 
 const navLinks = [
   { name: 'Home', href: '/' },
-  { name: 'BBQ', href: '/bbq' },
   { name: 'Recipes', href: '/recipes' },
   { name: 'About', href: '/about' },
   { name: 'Cookbooks', href: '/cookbooks' },
@@ -43,9 +42,11 @@ export function Header() {
                 {link.name}
               </Link>
             ))}
-            <Button variant="default" size="sm">
-              Get Free Recipes
-            </Button>
+            <Link to="/#newsletter">
+              <Button variant="default" size="sm">
+                Get 10 Free Recipes
+              </Button>
+            </Link>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -77,9 +78,11 @@ export function Header() {
                   {link.name}
                 </Link>
               ))}
-              <Button variant="default" className="mt-2">
-                Get Free Recipes
-              </Button>
+              <Link to="/#newsletter" onClick={() => setIsOpen(false)}>
+                <Button variant="default" className="mt-2">
+                  Get 10 Free Recipes
+                </Button>
+              </Link>
             </div>
           </nav>
         )}
