@@ -58,6 +58,11 @@ export default {
         burgundy: "hsl(var(--burgundy))",
         smoke: "hsl(var(--smoke))",
         "warm-white": "hsl(var(--warm-white))",
+        flame: "hsl(var(--flame))",
+        "flame-bright": "hsl(var(--flame-bright))",
+        ember: "hsl(var(--ember))",
+        electric: "hsl(var(--electric))",
+        midnight: "hsl(var(--midnight))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -78,6 +83,7 @@ export default {
         warm: "var(--shadow-warm)",
         card: "var(--shadow-card)",
         elevated: "var(--shadow-elevated)",
+        glow: "var(--shadow-glow)",
       },
       keyframes: {
         "accordion-down": {
