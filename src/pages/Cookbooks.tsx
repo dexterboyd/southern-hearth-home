@@ -282,8 +282,80 @@ const Cookbooks = () => {
           </div>
         </section>
 
-        {/* CTA Section */}
+        {/* Third Cookbook - Southern Comfort Food */}
         <section className="section-padding bg-muted">
+          <div className="container-blog">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              {/* Content */}
+              <div>
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-rose-500/20 text-rose-500 mb-6">
+                  <BookOpen className="w-4 h-4 fill-current" />
+                  <span className="font-body text-sm font-medium">Comfort Food Cookbook</span>
+                </div>
+                <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-6 leading-tight">
+                  Flavor First: Southern Comfort Food Recipes
+                </h2>
+                <p className="font-body text-lg text-muted-foreground mb-8 leading-relaxed">
+                  Stop chasing shortcuts. Start cooking real Southern comfort food the right way. This heartfelt 
+                  collection of classic Southern dishes — the kind passed down through generations, cooked with 
+                  patience, and served with love.
+                </p>
+
+                {/* Features */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
+                  <div className="flex items-start gap-2">
+                    <Check className="w-5 h-5 text-rose-500 flex-shrink-0 mt-0.5" />
+                    <span className="font-body text-foreground text-sm">40+ time-tested Southern recipes</span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <Check className="w-5 h-5 text-rose-500 flex-shrink-0 mt-0.5" />
+                    <span className="font-body text-foreground text-sm">Comfort food staples & sides</span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <Check className="w-5 h-5 text-rose-500 flex-shrink-0 mt-0.5" />
+                    <span className="font-body text-foreground text-sm">Iconic Southern desserts</span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <Check className="w-5 h-5 text-rose-500 flex-shrink-0 mt-0.5" />
+                    <span className="font-body text-foreground text-sm">Home-cook friendly instructions</span>
+                  </div>
+                </div>
+
+                {/* Pricing */}
+                <a 
+                  href="https://www.amazon.com/dp/B0GB6RB2B9" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  <Button className="bg-rose-500 hover:bg-rose-600 text-white font-semibold" size="xl">
+                    <BookOpen className="w-5 h-5" />
+                    Kindle eBook — $3.99
+                  </Button>
+                </a>
+              </div>
+
+              {/* Book Cover Placeholder */}
+              <div className="relative flex justify-center">
+                <div className="bg-gradient-to-br from-rose-500/30 to-rose-700/30 p-8 rounded-2xl">
+                  <div className="bg-charcoal border-4 border-rose-500/40 rounded-xl p-8 text-center max-w-sm">
+                    <ChefHat className="w-16 h-16 text-rose-500 mx-auto mb-4" />
+                    <h3 className="font-display text-2xl md:text-3xl font-bold text-cream mb-2">
+                      FLAVOR FIRST
+                    </h3>
+                    <p className="font-body text-cream/80 text-sm uppercase tracking-wider mb-4">
+                      Southern Comfort Food Recipes
+                    </p>
+                    <div className="w-16 h-1 bg-rose-500 mx-auto" />
+                  </div>
+                </div>
+                <div className="absolute -bottom-6 -right-6 w-40 h-40 bg-rose-500/20 rounded-2xl -z-10" />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="section-padding bg-background">
           <div className="container-blog">
             <div className="max-w-2xl mx-auto text-center bg-gradient-to-br from-charcoal to-secondary p-8 md:p-12 rounded-2xl">
               <Flame className="w-12 h-12 text-primary mx-auto mb-4" />
@@ -291,8 +363,8 @@ const Cookbooks = () => {
                 Ready to Elevate Your Flavor?
               </h2>
               <p className="font-body text-cream/80 mb-6">
-                Get both cookbooks today and master bold Southern flavor — from homemade rubs and sauces 
-                to authentic Southern favorites.
+                Get all three cookbooks today and master bold Southern flavor — from homemade rubs and sauces 
+                to authentic Louisiana favorites and soul-warming comfort food.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <a 
@@ -301,7 +373,7 @@ const Cookbooks = () => {
                   rel="noopener noreferrer"
                 >
                   <Button variant="hero" size="lg">
-                    Get Flavor First
+                    Get Rubs & Sauces
                   </Button>
                 </a>
                 <a 
@@ -310,7 +382,16 @@ const Cookbooks = () => {
                   rel="noopener noreferrer"
                 >
                   <Button className="bg-amber-500 hover:bg-amber-600 text-charcoal font-semibold" size="lg">
-                    Get Flavors of the Big Easy
+                    Get Big Easy
+                  </Button>
+                </a>
+                <a 
+                  href="https://www.amazon.com/dp/B0GB6RB2B9" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  <Button className="bg-rose-500 hover:bg-rose-600 text-white font-semibold" size="lg">
+                    Get Comfort Food
                   </Button>
                 </a>
               </div>
