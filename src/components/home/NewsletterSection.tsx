@@ -14,7 +14,7 @@ export function NewsletterSection() {
     
     // Simulate subscription
     setTimeout(() => {
-      toast.success("Welcome to the kitchen! Check your inbox for your free recipes.");
+      toast.success("Welcome to Flavor First! Check your inbox for your free recipe.");
       setEmail('');
       setIsLoading(false);
     }, 1000);
@@ -31,26 +31,25 @@ export function NewsletterSection() {
 
           {/* Heading */}
           <h2 className="font-display text-3xl md:text-4xl font-semibold text-secondary-foreground mb-4">
-            Get My Best Recipes Free
+            Get a Free Flavor First Recipe
           </h2>
           <p className="font-body text-lg text-secondary-foreground/80 mb-8 max-w-2xl mx-auto leading-relaxed">
-            Join thousands of home cooks who receive my weekly newsletter with exclusive recipes, 
-            cooking tips, and early access to new cookbooks.
+            Join the Flavor First kitchen and receive a complimentary cookbook-quality recipe plus early access to new releases.
           </p>
 
           {/* Features */}
           <div className="flex flex-wrap justify-center gap-6 mb-10">
             <div className="flex items-center gap-2 text-secondary-foreground/70">
               <BookOpen className="w-5 h-5 text-primary" />
-              <span className="font-body text-sm">5 Free Signature Recipes</span>
+              <span className="font-body text-sm">Cookbook-Quality Recipe</span>
             </div>
             <div className="flex items-center gap-2 text-secondary-foreground/70">
               <Mail className="w-5 h-5 text-primary" />
-              <span className="font-body text-sm">Weekly Recipe Newsletter</span>
+              <span className="font-body text-sm">Early Access to New Releases</span>
             </div>
             <div className="flex items-center gap-2 text-secondary-foreground/70">
               <Gift className="w-5 h-5 text-primary" />
-              <span className="font-body text-sm">Sample Cookbook Chapter</span>
+              <span className="font-body text-sm">Exclusive Cooking Tips</span>
             </div>
           </div>
 
@@ -71,7 +70,7 @@ export function NewsletterSection() {
               disabled={isLoading}
               className="whitespace-nowrap"
             >
-              {isLoading ? 'Sending...' : 'Send My Recipes'}
+              {isLoading ? 'Sending...' : 'Send My Free Recipe'}
             </Button>
           </form>
 

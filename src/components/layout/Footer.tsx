@@ -20,7 +20,7 @@ const socialLinks = [
   { name: 'Instagram', icon: Instagram, href: '#' },
   { name: 'Facebook', icon: Facebook, href: '#' },
   { name: 'YouTube', icon: Youtube, href: '#' },
-  { name: 'Email', icon: Mail, href: 'mailto:hello@smokeandhoney.com' },
+  { name: 'Email', icon: Mail, href: 'mailto:hello@flavorfirst.com' },
 ];
 
 export function Footer() {
@@ -32,12 +32,12 @@ export function Footer() {
           <div className="lg:col-span-2">
             <Link to="/" className="inline-block">
               <h3 className="font-display text-2xl font-semibold mb-4">
-                Smoke & <span className="text-primary">Honey</span>
+                Flavor <span className="text-primary">First</span>
               </h3>
             </Link>
             <p className="font-body text-secondary-foreground/80 max-w-md mb-6 leading-relaxed">
-              Luxury Southern comfort food with a homestyle heart. Recipes rooted in tradition, 
-              made from scratch, and served with love.
+              Premium Southern cooking rooted in tradition, elevated with technique, 
+              and finished with bold, BBQ-inspired flavor.
             </p>
             <div className="flex items-center gap-4">
               {socialLinks.map((social) => (
@@ -92,7 +92,7 @@ export function Footer() {
         <div className="mt-12 pt-8 border-t border-secondary-foreground/10">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="font-body text-sm text-secondary-foreground/60">
-              © {new Date().getFullYear()} Smoke & Honey Kitchen. All rights reserved.
+              © {new Date().getFullYear()} Flavor First. All rights reserved.
             </p>
             <div className="flex items-center gap-6">
               <Link to="/privacy" className="font-body text-sm text-secondary-foreground/60 hover:text-primary transition-colors">
