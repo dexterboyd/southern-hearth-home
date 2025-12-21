@@ -1,7 +1,7 @@
+import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 import heroImage from '@/assets/hero-southern-feast.jpg';
-
 export function HeroSection() {
   return (
     <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
@@ -29,13 +29,17 @@ export function HeroSection() {
             Luxury-inspired, homestyle Southern recipes with a bold BBQ edge — written like a cookbook, cooked like home.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 animate-fade-up opacity-0 stagger-4">
-            <Button variant="hero" size="xl">
-              Explore Recipes
-              <ArrowRight className="w-5 h-5" />
-            </Button>
-            <Button variant="hero-outline" size="xl">
-              Get a Free Recipe
-            </Button>
+            <Link to="/recipes">
+              <Button variant="hero" size="xl">
+                Explore Recipes
+                <ArrowRight className="w-5 h-5" />
+              </Button>
+            </Link>
+            <Link to="/#newsletter">
+              <Button variant="hero-outline" size="xl">
+                Download Free Recipes
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

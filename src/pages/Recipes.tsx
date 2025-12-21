@@ -24,6 +24,7 @@ const categories = [
   { name: 'Sunday Suppers', slug: 'sunday' },
   { name: 'Southern Sides & Breads', slug: 'sides' },
   { name: 'Backyard BBQ & Smokehouse', slug: 'bbq' },
+  { name: 'Rubs & Marinades', slug: 'rubs' },
   { name: 'Desserts with Soul', slug: 'desserts' },
 ];
 
@@ -46,13 +47,13 @@ const Recipes = () => {
       <Header />
       <main className="pt-20">
         {/* Hero Section */}
-        <section className="section-padding bg-muted">
+        <section id="recipe-collection" className="section-padding bg-muted scroll-mt-20">
           <div className="container-blog text-center">
             <h1 className="font-display text-4xl md:text-5xl font-semibold text-foreground mb-4">
               Recipe Collection
             </h1>
             <p className="font-body text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
-              Authentic New Orleans & Creole recipes from "Flavors of the Big Easy" — ready for your kitchen.
+              Bold Southern flavors, homestyle Cajun & Creole recipes, and BBQ classics — ready for your kitchen.
             </p>
 
             {/* Search */}

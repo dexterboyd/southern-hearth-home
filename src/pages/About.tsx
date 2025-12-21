@@ -8,9 +8,9 @@ const About = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      <main className="pt-20">
+      <main id="top" className="pt-20">
         {/* Hero Section */}
-        <section className="section-padding bg-muted">
+        <section className="section-padding bg-muted scroll-mt-20">
           <div className="container-blog">
             <div className="max-w-3xl mx-auto text-center">
               <p className="font-body text-primary uppercase tracking-widest text-sm mb-4">
