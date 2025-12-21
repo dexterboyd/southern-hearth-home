@@ -57,7 +57,7 @@ const Cookbooks = () => {
                 {/* Pricing */}
                 <div className="flex flex-wrap gap-4 mb-8">
                   <a 
-                    href="https://www.amazon.com/dp/B0G8VZ7CMV" 
+                    href="https://www.amazon.com/FLAVOR-FIRST-HOMEMADE-MARINADES-SAUCES-ebook/dp/B0FYNB6Z3D/ref=tmm_kin_swatch_0" 
                     target="_blank" 
                     rel="noopener noreferrer"
                   >
@@ -67,7 +67,7 @@ const Cookbooks = () => {
                     </Button>
                   </a>
                   <a 
-                    href="https://www.amazon.com/FLAVOR-FIRST-HOMEMADE-MARINADES-SAUCES/dp/B0G4DJC4MB" 
+                    href="https://www.amazon.com/FLAVOR-FIRST-HOMEMADE-MARINADES-SAUCES/dp/B0G4DJC4MB/ref=tmm_pap_swatch_0" 
                     target="_blank" 
                     rel="noopener noreferrer"
                   >
@@ -170,7 +170,7 @@ const Cookbooks = () => {
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <a 
-                  href="https://www.amazon.com/FLAVOR-FIRST-HOMEMADE-MARINADES-SAUCES/dp/B0G4DJC4MB" 
+                  href="https://www.amazon.com/FLAVOR-FIRST-HOMEMADE-MARINADES-SAUCES/dp/B0G4DJC4MB/ref=tmm_pap_swatch_0" 
                   target="_blank" 
                   rel="noopener noreferrer"
                 >
