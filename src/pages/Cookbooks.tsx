@@ -156,8 +156,80 @@ const Cookbooks = () => {
           </div>
         </section>
 
-        {/* CTA Section */}
+        {/* Second Cookbook - Flavors of the Big Easy */}
         <section className="section-padding bg-background">
+          <div className="container-blog">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              {/* Book Cover Placeholder */}
+              <div className="relative flex justify-center order-2 lg:order-1">
+                <div className="bg-gradient-to-br from-amber-600/30 to-orange-700/30 p-8 rounded-2xl">
+                  <div className="bg-charcoal border-4 border-amber-500/40 rounded-xl p-8 text-center max-w-sm">
+                    <BookOpen className="w-16 h-16 text-amber-500 mx-auto mb-4" />
+                    <h3 className="font-display text-2xl md:text-3xl font-bold text-cream mb-2">
+                      FLAVORS OF THE BIG EASY
+                    </h3>
+                    <p className="font-body text-cream/80 text-sm uppercase tracking-wider mb-4">
+                      Cook Up Bold New Orleans Favorites at Home
+                    </p>
+                    <div className="w-16 h-1 bg-amber-500 mx-auto" />
+                  </div>
+                </div>
+                <div className="absolute -bottom-6 -left-6 w-40 h-40 bg-amber-500/20 rounded-2xl -z-10" />
+              </div>
+
+              {/* Content */}
+              <div className="order-1 lg:order-2">
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-500/20 text-amber-500 mb-6">
+                  <BookOpen className="w-4 h-4 fill-current" />
+                  <span className="font-body text-sm font-medium">New Orleans Cookbook</span>
+                </div>
+                <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-6 leading-tight">
+                  Flavors of the Big Easy
+                </h2>
+                <p className="font-body text-lg text-muted-foreground mb-8 leading-relaxed">
+                  Bring the bold, soulful flavors of New Orleans into your kitchen. From Cajun & Creole classics 
+                  to comfort food favorites and backyard BBQ, this cookbook is your guide to cooking up authentic 
+                  Big Easy dishes at home.
+                </p>
+
+                {/* Features */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
+                  <div className="flex items-start gap-2">
+                    <Check className="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" />
+                    <span className="font-body text-foreground text-sm">Cajun & Creole classics</span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <Check className="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" />
+                    <span className="font-body text-foreground text-sm">Elevated Southern favorites</span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <Check className="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" />
+                    <span className="font-body text-foreground text-sm">Comfort food & family recipes</span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <Check className="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" />
+                    <span className="font-body text-foreground text-sm">Backyard BBQ & smokehouse</span>
+                  </div>
+                </div>
+
+                {/* Pricing */}
+                <a 
+                  href="https://www.amazon.com/dp/B0G8VZ7CMV" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  <Button className="bg-amber-500 hover:bg-amber-600 text-charcoal font-semibold" size="xl">
+                    <BookOpen className="w-5 h-5" />
+                    Kindle eBook — $8.99
+                  </Button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="section-padding bg-muted">
           <div className="container-blog">
             <div className="max-w-2xl mx-auto text-center bg-gradient-to-br from-charcoal to-secondary p-8 md:p-12 rounded-2xl">
               <Flame className="w-12 h-12 text-primary mx-auto mb-4" />
@@ -165,8 +237,8 @@ const Cookbooks = () => {
                 Ready to Elevate Your Flavor?
               </h2>
               <p className="font-body text-cream/80 mb-6">
-                Get Flavor First today and start creating bold, homemade rubs, marinades, and BBQ sauces 
-                that will transform your cooking.
+                Get both cookbooks today and master bold Southern flavor — from homemade rubs and sauces 
+                to authentic New Orleans favorites.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <a 
@@ -175,7 +247,16 @@ const Cookbooks = () => {
                   rel="noopener noreferrer"
                 >
                   <Button variant="hero" size="lg">
-                    Get the Cookbook on Amazon
+                    Get Flavor First
+                  </Button>
+                </a>
+                <a 
+                  href="https://www.amazon.com/dp/B0G8VZ7CMV" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  <Button className="bg-amber-500 hover:bg-amber-600 text-charcoal font-semibold" size="lg">
+                    Get Flavors of the Big Easy
                   </Button>
                 </a>
               </div>
