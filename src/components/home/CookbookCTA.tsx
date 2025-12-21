@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button';
-import { ShoppingBag, BookOpen, Star } from 'lucide-react';
+import { ShoppingBag, BookOpen, Star, Check } from 'lucide-react';
 
 export function CookbookCTA() {
   return (
@@ -16,48 +16,75 @@ export function CookbookCTA() {
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/20 text-primary mb-6">
             <Star className="w-4 h-4 fill-current" />
-            <span className="font-body text-sm font-medium">New Cookbook Available</span>
+            <span className="font-body text-sm font-medium">5.0 Rating on Amazon</span>
           </div>
 
           {/* Heading */}
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-semibold mb-6 leading-tight">
-            The Smoke & Honey Cookbook
+            Flavor First: Homemade Rubs, Marinades & BBQ Sauces
           </h2>
           <p className="font-body text-xl text-cream/80 mb-8 max-w-2xl mx-auto leading-relaxed">
-            100+ recipes celebrating the art of Southern cooking. From my kitchen to yours, 
-            now available in ebook and beautiful hardcover editions.
+            Your complete guide to flavor-forward backyard cooking. 41+ battle-tested recipes including signature dry rubs, marinades, regional BBQ sauces, and full meat recipes.
           </p>
 
           {/* Features */}
-          <div className="flex flex-wrap justify-center gap-8 mb-10">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10 max-w-3xl mx-auto">
             <div className="text-center">
-              <div className="text-3xl font-display font-bold text-primary mb-1">100+</div>
+              <div className="text-2xl font-display font-bold text-primary mb-1">41+</div>
               <div className="font-body text-sm text-cream/70">Recipes</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-display font-bold text-primary mb-1">7</div>
-              <div className="font-body text-sm text-cream/70">Chapters</div>
+              <div className="text-2xl font-display font-bold text-primary mb-1">12+</div>
+              <div className="font-body text-sm text-cream/70">Dry Rubs</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-display font-bold text-primary mb-1">50+</div>
-              <div className="font-body text-sm text-cream/70">Pro Tips</div>
+              <div className="text-2xl font-display font-bold text-primary mb-1">14</div>
+              <div className="font-body text-sm text-cream/70">BBQ Sauces</div>
+            </div>
+            <div className="text-center">
+              <div className="text-2xl font-display font-bold text-primary mb-1">96</div>
+              <div className="font-body text-sm text-cream/70">Pages</div>
+            </div>
+          </div>
+
+          {/* What's Inside */}
+          <div className="grid md:grid-cols-2 gap-3 mb-10 max-w-2xl mx-auto text-left">
+            <div className="flex items-start gap-2 text-cream/80">
+              <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+              <span className="font-body text-sm">The Flavor Trinity framework</span>
+            </div>
+            <div className="flex items-start gap-2 text-cream/80">
+              <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+              <span className="font-body text-sm">Regional sauces: Kansas City, Carolina Gold, Alabama White</span>
+            </div>
+            <div className="flex items-start gap-2 text-cream/80">
+              <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+              <span className="font-body text-sm">Smoking techniques & timing charts</span>
+            </div>
+            <div className="flex items-start gap-2 text-cream/80">
+              <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+              <span className="font-body text-sm">BONUS: Sides, slaws & staples</span>
             </div>
           </div>
 
           {/* Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="hero" size="xl">
-              <BookOpen className="w-5 h-5" />
-              Get the eBook — $14.99
+            <Button variant="hero" size="xl" asChild>
+              <a href="https://www.amazon.com/FLAVOR-FIRST-HOMEMADE-MARINADES-SAUCES-ebook/dp/B0FYNB6Z3D" target="_blank" rel="noopener noreferrer">
+                <BookOpen className="w-5 h-5" />
+                Get the Kindle — $6.99
+              </a>
             </Button>
-            <Button variant="hero-outline" size="xl">
-              <ShoppingBag className="w-5 h-5" />
-              Order Hardcover — $34.99
+            <Button variant="hero-outline" size="xl" asChild>
+              <a href="https://www.amazon.com/FLAVOR-FIRST-HOMEMADE-MARINADES-SAUCES/dp/B0G4DJC4MB" target="_blank" rel="noopener noreferrer">
+                <ShoppingBag className="w-5 h-5" />
+                Order Paperback — $12.99
+              </a>
             </Button>
           </div>
 
           <p className="font-body text-sm text-cream/50 mt-6">
-            Free shipping on hardcover orders over $50
+            Available on Amazon • Fast, free shipping with Prime
           </p>
         </div>
       </div>
