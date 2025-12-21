@@ -63,7 +63,7 @@ const Cookbooks = () => {
                   >
                     <Button variant="hero" size="xl">
                       <BookOpen className="w-5 h-5" />
-                      Kindle eBook — $4.99
+                      Kindle eBook — $6.99
                     </Button>
                   </a>
                   <a 
@@ -73,7 +73,7 @@ const Cookbooks = () => {
                   >
                     <Button variant="hero-outline" size="xl">
                       <ShoppingBag className="w-5 h-5" />
-                      Paperback — $9.99
+                      Paperback — $12.99
                     </Button>
                   </a>
                 </div>
