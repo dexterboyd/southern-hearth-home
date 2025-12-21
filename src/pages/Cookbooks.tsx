@@ -1,7 +1,9 @@
+import { useRef } from 'react';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { Button } from '@/components/ui/button';
-import { BookOpen, ShoppingBag, Star, Check, Flame } from 'lucide-react';
+import { BookOpen, ShoppingBag, Star, Check, Flame, Clock, ChefHat } from 'lucide-react';
+import flavorFirstCover from '@/assets/flavor-first-ebook-cover.jpg';
 
 const cookbookFeatures = [
   'Over 50 homemade rubs, marinades & BBQ sauces',
@@ -30,12 +32,36 @@ const testimonials = [
   },
 ];
 
+// Best recipes from the Flavor First cookbook
+const flavorFirstRecipes = [
+  {
+    title: 'Sweet Heat Rib Rub',
+    description: 'Brown sugar, cayenne, and cinnamon for perfect ribs or pork shoulder.',
+    yield: '1 cup',
+    time: '5 min',
+  },
+  {
+    title: 'Kickin\' Cajun Rub',
+    description: 'Bold paprika, garlic, and cayenne blend for chicken, shrimp, or fish.',
+    yield: '1 cup',
+    time: '5 min',
+  },
+  {
+    title: 'Caribbean Jerk Dry Rub',
+    description: 'Allspice, cinnamon, and heat for authentic island flavor.',
+    yield: '1 cup',
+    time: '5 min',
+  },
+];
+
 const Cookbooks = () => {
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
+
   return (
     <div className="min-h-screen bg-background">
       <Header />
       <main className="pt-20">
-        {/* Hero Section */}
+        {/* Hero Section - Flavor First */}
         <section className="section-padding bg-gradient-to-br from-charcoal via-secondary to-charcoal text-cream">
           <div className="container-blog">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -83,21 +109,53 @@ const Cookbooks = () => {
                 </p>
               </div>
 
-              {/* Book Cover Placeholder */}
-              <div className="relative flex justify-center">
-                <div className="bg-gradient-to-br from-primary/30 to-burgundy/30 p-8 rounded-2xl">
-                  <div className="bg-charcoal border-4 border-primary/40 rounded-xl p-8 text-center max-w-sm">
-                    <Flame className="w-16 h-16 text-primary mx-auto mb-4" />
-                    <h3 className="font-display text-2xl md:text-3xl font-bold text-cream mb-2">
-                      FLAVOR FIRST
-                    </h3>
-                    <p className="font-body text-cream/80 text-sm uppercase tracking-wider mb-4">
-                      Homemade Rubs, Marinades & BBQ Sauces
-                    </p>
-                    <div className="w-16 h-1 bg-primary mx-auto" />
+              {/* Book Cover with Recipe Cards */}
+              <div className="relative flex flex-col items-center gap-6">
+                {/* Ebook Cover */}
+                <div className="relative">
+                  <div className="bg-gradient-to-br from-primary/30 to-burgundy/30 p-4 rounded-2xl">
+                    <img 
+                      src={flavorFirstCover} 
+                      alt="Flavor First: Homemade Rubs, Marinades & BBQ Sauces Cookbook Cover" 
+                      className="rounded-xl shadow-2xl max-w-xs md:max-w-sm"
+                    />
+                  </div>
+                  <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-primary/20 rounded-2xl -z-10" />
+                </div>
+
+                {/* Scrolling Recipe Cards */}
+                <div className="w-full max-w-sm">
+                  <p className="font-body text-xs text-cream/60 mb-2 text-center uppercase tracking-wider">
+                    Featured Recipes Inside
+                  </p>
+                  <div 
+                    ref={scrollContainerRef}
+                    className="flex gap-3 overflow-x-auto pb-2 scrollbar-hide snap-x snap-mandatory"
+                    style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+                  >
+                    {flavorFirstRecipes.map((recipe, index) => (
+                      <div 
+                        key={index}
+                        className="flex-shrink-0 w-48 bg-charcoal/80 border border-primary/30 rounded-lg p-4 snap-center"
+                      >
+                        <div className="flex items-center gap-1 mb-2">
+                          <ChefHat className="w-3 h-3 text-primary" />
+                          <span className="font-body text-xs text-primary">{recipe.yield}</span>
+                        </div>
+                        <h4 className="font-display text-sm font-semibold text-cream mb-1">
+                          {recipe.title}
+                        </h4>
+                        <p className="font-body text-xs text-cream/70 mb-2 line-clamp-2">
+                          {recipe.description}
+                        </p>
+                        <div className="flex items-center gap-1 text-cream/50">
+                          <Clock className="w-3 h-3" />
+                          <span className="font-body text-xs">{recipe.time}</span>
+                        </div>
+                      </div>
+                    ))}
                   </div>
                 </div>
-                <div className="absolute -bottom-6 -right-6 w-40 h-40 bg-primary/20 rounded-2xl -z-10" />
               </div>
             </div>
           </div>
@@ -181,15 +239,15 @@ const Cookbooks = () => {
               <div className="order-1 lg:order-2">
                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-500/20 text-amber-500 mb-6">
                   <BookOpen className="w-4 h-4 fill-current" />
-                  <span className="font-body text-sm font-medium">New Orleans Cookbook</span>
+                  <span className="font-body text-sm font-medium">Southern Cookbook</span>
                 </div>
                 <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-6 leading-tight">
                   Flavors of the Big Easy
                 </h2>
                 <p className="font-body text-lg text-muted-foreground mb-8 leading-relaxed">
-                  Bring the bold, soulful flavors of New Orleans into your kitchen. From Cajun & Creole classics 
-                  to comfort food favorites and backyard BBQ, this cookbook is your guide to cooking up authentic 
-                  Big Easy dishes at home.
+                  Bring the bold, soulful flavors of Louisiana into your kitchen. From Cajun & Creole classics 
+                  to elevated Southern favorites and backyard BBQ, this cookbook is your guide to cooking up 
+                  authentic Southern dishes at home.
                 </p>
 
                 {/* Features */}
@@ -238,7 +296,7 @@ const Cookbooks = () => {
               </h2>
               <p className="font-body text-cream/80 mb-6">
                 Get both cookbooks today and master bold Southern flavor — from homemade rubs and sauces 
-                to authentic New Orleans favorites.
+                to authentic Southern favorites.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <a 
