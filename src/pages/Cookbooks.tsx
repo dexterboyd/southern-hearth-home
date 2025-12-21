@@ -288,7 +288,7 @@ const Cookbooks = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               {/* Content */}
               <div>
-                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-rose-500/20 text-rose-500 mb-6">
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-700/20 text-orange-600 mb-6">
                   <BookOpen className="w-4 h-4 fill-current" />
                   <span className="font-body text-sm font-medium">Comfort Food Cookbook</span>
                 </div>
@@ -304,19 +304,19 @@ const Cookbooks = () => {
                 {/* Features */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
                   <div className="flex items-start gap-2">
-                    <Check className="w-5 h-5 text-rose-500 flex-shrink-0 mt-0.5" />
+                    <Check className="w-5 h-5 text-orange-600 flex-shrink-0 mt-0.5" />
                     <span className="font-body text-foreground text-sm">40+ time-tested Southern recipes</span>
                   </div>
                   <div className="flex items-start gap-2">
-                    <Check className="w-5 h-5 text-rose-500 flex-shrink-0 mt-0.5" />
+                    <Check className="w-5 h-5 text-orange-600 flex-shrink-0 mt-0.5" />
                     <span className="font-body text-foreground text-sm">Comfort food staples & sides</span>
                   </div>
                   <div className="flex items-start gap-2">
-                    <Check className="w-5 h-5 text-rose-500 flex-shrink-0 mt-0.5" />
+                    <Check className="w-5 h-5 text-orange-600 flex-shrink-0 mt-0.5" />
                     <span className="font-body text-foreground text-sm">Iconic Southern desserts</span>
                   </div>
                   <div className="flex items-start gap-2">
-                    <Check className="w-5 h-5 text-rose-500 flex-shrink-0 mt-0.5" />
+                    <Check className="w-5 h-5 text-orange-600 flex-shrink-0 mt-0.5" />
                     <span className="font-body text-foreground text-sm">Home-cook friendly instructions</span>
                   </div>
                 </div>
@@ -327,7 +327,7 @@ const Cookbooks = () => {
                   target="_blank" 
                   rel="noopener noreferrer"
                 >
-                  <Button className="bg-rose-500 hover:bg-rose-600 text-white font-semibold" size="xl">
+                  <Button className="bg-orange-700 hover:bg-orange-800 text-white font-semibold" size="xl">
                     <BookOpen className="w-5 h-5" />
                     Kindle eBook — $3.99
                   </Button>
@@ -336,19 +336,19 @@ const Cookbooks = () => {
 
               {/* Book Cover Placeholder */}
               <div className="relative flex justify-center">
-                <div className="bg-gradient-to-br from-rose-500/30 to-rose-700/30 p-8 rounded-2xl">
-                  <div className="bg-charcoal border-4 border-rose-500/40 rounded-xl p-8 text-center max-w-sm">
-                    <ChefHat className="w-16 h-16 text-rose-500 mx-auto mb-4" />
+                <div className="bg-gradient-to-br from-orange-700/30 to-orange-900/30 p-8 rounded-2xl">
+                  <div className="bg-charcoal border-4 border-orange-600/40 rounded-xl p-8 text-center max-w-sm">
+                    <ChefHat className="w-16 h-16 text-orange-600 mx-auto mb-4" />
                     <h3 className="font-display text-2xl md:text-3xl font-bold text-cream mb-2">
                       FLAVOR FIRST
                     </h3>
                     <p className="font-body text-cream/80 text-sm uppercase tracking-wider mb-4">
                       Southern Comfort Food Recipes
                     </p>
-                    <div className="w-16 h-1 bg-rose-500 mx-auto" />
+                    <div className="w-16 h-1 bg-orange-600 mx-auto" />
                   </div>
                 </div>
-                <div className="absolute -bottom-6 -right-6 w-40 h-40 bg-rose-500/20 rounded-2xl -z-10" />
+                <div className="absolute -bottom-6 -right-6 w-40 h-40 bg-orange-700/20 rounded-2xl -z-10" />
               </div>
             </div>
           </div>
@@ -390,7 +390,7 @@ const Cookbooks = () => {
                   target="_blank" 
                   rel="noopener noreferrer"
                 >
-                  <Button className="bg-rose-500 hover:bg-rose-600 text-white font-semibold" size="lg">
+                  <Button className="bg-orange-700 hover:bg-orange-800 text-white font-semibold" size="lg">
                     Get Comfort Food
                   </Button>
                 </a>
