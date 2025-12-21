@@ -14,19 +14,19 @@ const cookbookFeatures = [
 
 const testimonials = [
   {
-    quote: "These rubs have completely changed my BBQ game. The flavors are bold and the recipes are easy to follow.",
-    author: "Marcus T.",
-    location: "Houston, TX",
+    quote: "One of the best cooking guides I've bought in a long time. The recipes are straightforward, the flavors are big. 100% worth it.",
+    author: "Dave",
+    location: "Verified Purchase",
   },
   {
-    quote: "Finally, a cookbook that focuses on what matters most — flavor. Every marinade is a winner.",
-    author: "Sarah K.",
-    location: "Memphis, TN",
+    quote: "Hands down one of the best BBQ guides I've ever picked up. The recipes, rubs, and sauces are bursting with bold flavor and easy enough for anyone to master.",
+    author: "LStalli1",
+    location: "Verified Purchase",
   },
   {
-    quote: "The BBQ sauces alone are worth it. My family can't get enough of the smoky bourbon glaze!",
-    author: "David R.",
-    location: "Austin, TX",
+    quote: "Boyd does a great job breaking it down into simple steps and fun. I'm inspired.",
+    author: "Tee",
+    location: "Verified Purchase",
   },
 ];
 
