@@ -12,11 +12,13 @@ import pecanPie from '@/assets/recipe-pecan-pie.jpg';
 
 const categories = [
   { name: 'All Recipes', slug: 'all' },
-  { name: 'Southern Classics', slug: 'classics' },
-  { name: 'BBQ & Smokehouse', slug: 'bbq' },
-  { name: 'Comfort Food', slug: 'comfort' },
-  { name: 'Cajun & Creole', slug: 'cajun' },
-  { name: 'Desserts', slug: 'desserts' },
+  { name: 'Elevated Southern Classics', slug: 'classics' },
+  { name: 'Backyard BBQ & Smokehouse', slug: 'bbq' },
+  { name: 'Comfort Food & Family Favorites', slug: 'comfort' },
+  { name: 'Cajun & Creole Roots', slug: 'cajun' },
+  { name: 'Sunday Suppers', slug: 'sunday' },
+  { name: 'Southern Sides & Breads', slug: 'sides' },
+  { name: 'Desserts with Soul', slug: 'desserts' },
 ];
 
 const recipes = [

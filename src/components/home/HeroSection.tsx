@@ -19,15 +19,14 @@ export function HeroSection() {
       <div className="relative z-10 container-blog px-4 py-20">
         <div className="max-w-2xl">
           <p className="font-body text-primary uppercase tracking-widest text-sm mb-4 animate-fade-up opacity-0 stagger-1">
-            Welcome to the Kitchen
+            Welcome to Flavor First
           </p>
           <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-semibold text-cream leading-tight mb-6 animate-fade-up opacity-0 stagger-2">
-            Luxury Southern Cooking with a{' '}
-            <span className="text-primary italic">Homestyle Heart</span>
+            Southern Comfort Starts with{' '}
+            <span className="text-primary italic">Flavor. Always.</span>
           </h1>
           <p className="font-body text-lg md:text-xl text-cream/80 mb-8 leading-relaxed animate-fade-up opacity-0 stagger-3">
-            Discover cookbook-quality recipes rooted in Southern tradition, from slow-smoked BBQ 
-            to soulful Sunday suppers. Every dish made from scratch with love.
+            Luxury-inspired, homestyle Southern recipes with a bold BBQ edge — written like a cookbook, cooked like home.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 animate-fade-up opacity-0 stagger-4">
             <Button variant="hero" size="xl">
@@ -35,7 +34,7 @@ export function HeroSection() {
               <ArrowRight className="w-5 h-5" />
             </Button>
             <Button variant="hero-outline" size="xl">
-              Get Free Cookbook Sample
+              Get a Free Recipe
             </Button>
           </div>
         </div>
