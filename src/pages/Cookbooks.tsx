@@ -1,31 +1,30 @@
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { Button } from '@/components/ui/button';
-import { BookOpen, ShoppingBag, Star, Check, Gift } from 'lucide-react';
-import pecanPie from '@/assets/recipe-pecan-pie.jpg';
+import { BookOpen, ShoppingBag, Star, Check, Flame } from 'lucide-react';
 
 const cookbookFeatures = [
-  '100+ tested recipes with step-by-step instructions',
-  'Pro tips and techniques from a Southern kitchen',
-  'Beautiful food photography for every recipe',
-  'Seasonal meal planning guides',
-  'Equipment recommendations and substitutions',
-  'Stories and traditions behind each dish',
+  'Over 50 homemade rubs, marinades & BBQ sauces',
+  'Step-by-step instructions for every recipe',
+  'Pro tips for building bold, layered flavor',
+  'Perfect for grilling, smoking, and everyday cooking',
+  'Designed for home cooks and pitmasters alike',
+  'Recipes that elevate any cut of meat',
 ];
 
 const testimonials = [
   {
-    quote: "This cookbook has become my go-to for every Sunday dinner. The recipes are foolproof and absolutely delicious.",
-    author: "Martha L.",
-    location: "Atlanta, GA",
+    quote: "These rubs have completely changed my BBQ game. The flavors are bold and the recipes are easy to follow.",
+    author: "Marcus T.",
+    location: "Houston, TX",
   },
   {
-    quote: "Finally, a cookbook that gets Southern cooking right. Every recipe tastes like it came from my grandmother's kitchen.",
-    author: "James T.",
-    location: "Nashville, TN",
+    quote: "Finally, a cookbook that focuses on what matters most — flavor. Every marinade is a winner.",
+    author: "Sarah K.",
+    location: "Memphis, TN",
   },
   {
-    quote: "The BBQ section alone is worth the price. My brisket has never been better!",
+    quote: "The BBQ sauces alone are worth it. My family can't get enough of the smoky bourbon glaze!",
     author: "David R.",
     location: "Austin, TX",
   },
@@ -43,42 +42,60 @@ const Cookbooks = () => {
               {/* Content */}
               <div>
                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/20 text-primary mb-6">
-                  <Star className="w-4 h-4 fill-current" />
-                  <span className="font-body text-sm font-medium">Bestselling Cookbook</span>
+                  <Flame className="w-4 h-4 fill-current" />
+                  <span className="font-body text-sm font-medium">Flavor First Cookbook</span>
                 </div>
                 <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-semibold mb-6 leading-tight">
-                  The Smoke & Honey Cookbook
+                  Flavor First: Homemade Rubs, Marinades & BBQ Sauces
                 </h1>
                 <p className="font-body text-xl text-cream/80 mb-8 leading-relaxed">
-                  100+ recipes celebrating the art of Southern cooking. From slow-smoked BBQ to soulful 
-                  Sunday suppers, bring the taste of the South into your home.
+                  Master the art of bold, Southern-inspired flavor with over 50 recipes for homemade rubs, 
+                  marinades, and BBQ sauces. From smoky dry rubs to tangy glazes, this cookbook gives you 
+                  everything you need to elevate your grilling and cooking.
                 </p>
 
                 {/* Pricing */}
                 <div className="flex flex-wrap gap-4 mb-8">
-                  <Button variant="hero" size="xl">
-                    <BookOpen className="w-5 h-5" />
-                    eBook — $14.99
-                  </Button>
-                  <Button variant="hero-outline" size="xl">
-                    <ShoppingBag className="w-5 h-5" />
-                    Hardcover — $34.99
-                  </Button>
+                  <a 
+                    href="https://www.amazon.com/dp/B0G8VZ7CMV" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                  >
+                    <Button variant="hero" size="xl">
+                      <BookOpen className="w-5 h-5" />
+                      Kindle eBook — $4.99
+                    </Button>
+                  </a>
+                  <a 
+                    href="https://www.amazon.com/FLAVOR-FIRST-HOMEMADE-MARINADES-SAUCES/dp/B0G4DJC4MB" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                  >
+                    <Button variant="hero-outline" size="xl">
+                      <ShoppingBag className="w-5 h-5" />
+                      Paperback — $9.99
+                    </Button>
+                  </a>
                 </div>
 
                 <p className="font-body text-sm text-cream/60">
-                  Free shipping on hardcover orders over $50 • Instant download for eBook
+                  Available on Amazon • Instant Kindle download • Paperback ships worldwide
                 </p>
               </div>
 
-              {/* Book Image */}
-              <div className="relative">
-                <div className="aspect-[3/4] rounded-2xl overflow-hidden shadow-elevated bg-card">
-                  <img
-                    src={pecanPie}
-                    alt="The Smoke & Honey Cookbook cover"
-                    className="w-full h-full object-cover"
-                  />
+              {/* Book Cover Placeholder */}
+              <div className="relative flex justify-center">
+                <div className="bg-gradient-to-br from-primary/30 to-burgundy/30 p-8 rounded-2xl">
+                  <div className="bg-charcoal border-4 border-primary/40 rounded-xl p-8 text-center max-w-sm">
+                    <Flame className="w-16 h-16 text-primary mx-auto mb-4" />
+                    <h3 className="font-display text-2xl md:text-3xl font-bold text-cream mb-2">
+                      FLAVOR FIRST
+                    </h3>
+                    <p className="font-body text-cream/80 text-sm uppercase tracking-wider mb-4">
+                      Homemade Rubs, Marinades & BBQ Sauces
+                    </p>
+                    <div className="w-16 h-1 bg-primary mx-auto" />
+                  </div>
                 </div>
                 <div className="absolute -bottom-6 -right-6 w-40 h-40 bg-primary/20 rounded-2xl -z-10" />
               </div>
@@ -94,7 +111,7 @@ const Cookbooks = () => {
                 What's Inside
               </h2>
               <p className="font-body text-muted-foreground max-w-2xl mx-auto">
-                More than just recipes—a complete guide to mastering Southern cooking.
+                More than just recipes — a complete guide to mastering bold, homemade flavor.
               </p>
             </div>
 
@@ -139,20 +156,29 @@ const Cookbooks = () => {
           </div>
         </section>
 
-        {/* Free Sample CTA */}
+        {/* CTA Section */}
         <section className="section-padding bg-background">
           <div className="container-blog">
-            <div className="max-w-2xl mx-auto text-center bg-muted p-8 md:p-12 rounded-2xl">
-              <Gift className="w-12 h-12 text-primary mx-auto mb-4" />
-              <h2 className="font-display text-2xl md:text-3xl font-semibold text-foreground mb-4">
-                Try Before You Buy
+            <div className="max-w-2xl mx-auto text-center bg-gradient-to-br from-charcoal to-secondary p-8 md:p-12 rounded-2xl">
+              <Flame className="w-12 h-12 text-primary mx-auto mb-4" />
+              <h2 className="font-display text-2xl md:text-3xl font-semibold text-cream mb-4">
+                Ready to Elevate Your Flavor?
               </h2>
-              <p className="font-body text-muted-foreground mb-6">
-                Download a free sample chapter with 5 signature recipes. No credit card required.
+              <p className="font-body text-cream/80 mb-6">
+                Get Flavor First today and start creating bold, homemade rubs, marinades, and BBQ sauces 
+                that will transform your cooking.
               </p>
-              <Button variant="hero" size="lg">
-                Download Free Sample
-              </Button>
+              <div className="flex flex-wrap justify-center gap-4">
+                <a 
+                  href="https://www.amazon.com/FLAVOR-FIRST-HOMEMADE-MARINADES-SAUCES/dp/B0G4DJC4MB" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  <Button variant="hero" size="lg">
+                    Get the Cookbook on Amazon
+                  </Button>
+                </a>
+              </div>
             </div>
           </div>
         </section>
