@@ -5,77 +5,26 @@ import { Link } from 'react-router-dom';
 import { Clock, Users, Search } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
+import { recipes, getRecipesByCategory } from '@/data/recipes';
+
+// Placeholder images until real cookbook photos are added
 import friedChicken from '@/assets/recipe-fried-chicken.jpg';
 import bbqRibs from '@/assets/recipe-bbq-ribs.jpg';
 import shrimpGrits from '@/assets/recipe-shrimp-grits.jpg';
 import pecanPie from '@/assets/recipe-pecan-pie.jpg';
 
+const placeholderImages = [friedChicken, bbqRibs, shrimpGrits, pecanPie];
+const getPlaceholderImage = (index: number) => placeholderImages[index % placeholderImages.length];
+
 const categories = [
   { name: 'All Recipes', slug: 'all' },
-  { name: 'Elevated Southern Classics', slug: 'classics' },
-  { name: 'Backyard BBQ & Smokehouse', slug: 'bbq' },
-  { name: 'Comfort Food & Family Favorites', slug: 'comfort' },
   { name: 'Cajun & Creole Roots', slug: 'cajun' },
+  { name: 'Elevated Southern Classics', slug: 'classics' },
+  { name: 'Comfort Food & Family Favorites', slug: 'comfort' },
   { name: 'Sunday Suppers', slug: 'sunday' },
   { name: 'Southern Sides & Breads', slug: 'sides' },
+  { name: 'Backyard BBQ & Smokehouse', slug: 'bbq' },
   { name: 'Desserts with Soul', slug: 'desserts' },
-];
-
-const recipes = [
-  {
-    id: 1,
-    title: 'Buttermilk Fried Chicken',
-    description: 'Crispy, golden perfection with a juicy, flavorful interior.',
-    category: 'Southern Classics',
-    time: '45 min',
-    servings: 6,
-    image: friedChicken,
-  },
-  {
-    id: 2,
-    title: 'Honey-Glazed BBQ Ribs',
-    description: 'Fall-off-the-bone tender ribs with a sweet and smoky glaze.',
-    category: 'BBQ & Smokehouse',
-    time: '4 hours',
-    servings: 4,
-    image: bbqRibs,
-  },
-  {
-    id: 3,
-    title: 'Lowcountry Shrimp & Grits',
-    description: 'Creamy stone-ground grits topped with succulent shrimp.',
-    category: 'Cajun & Creole',
-    time: '35 min',
-    servings: 4,
-    image: shrimpGrits,
-  },
-  {
-    id: 4,
-    title: 'Classic Southern Pecan Pie',
-    description: 'Rich, caramelized filling with toasted Georgia pecans.',
-    category: 'Desserts',
-    time: '1.5 hours',
-    servings: 8,
-    image: pecanPie,
-  },
-  {
-    id: 5,
-    title: 'Cast Iron Cornbread',
-    description: 'Golden, crispy-edged cornbread made the traditional way.',
-    category: 'Southern Classics',
-    time: '30 min',
-    servings: 8,
-    image: friedChicken,
-  },
-  {
-    id: 6,
-    title: 'Smoked Brisket Texas-Style',
-    description: 'Low and slow smoked brisket with a perfect bark.',
-    category: 'BBQ & Smokehouse',
-    time: '12 hours',
-    servings: 10,
-    image: bbqRibs,
-  },
 ];
 
 const Recipes = () => {
@@ -85,7 +34,7 @@ const Recipes = () => {
   const filteredRecipes = recipes.filter((recipe) => {
     const matchesCategory =
       activeCategory === 'all' ||
-      recipe.category.toLowerCase().includes(activeCategory);
+      recipe.categorySlug === activeCategory;
     const matchesSearch = recipe.title
       .toLowerCase()
       .includes(searchQuery.toLowerCase());
@@ -103,7 +52,7 @@ const Recipes = () => {
               Recipe Collection
             </h1>
             <p className="font-body text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
-              Cookbook-quality recipes rooted in Southern tradition. Each one tested, perfected, and ready for your kitchen.
+              Authentic New Orleans & Creole recipes from "Flavors of the Big Easy" — ready for your kitchen.
             </p>
 
             {/* Search */}
@@ -143,7 +92,7 @@ const Recipes = () => {
         <section className="section-padding bg-background">
           <div className="container-blog">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {filteredRecipes.map((recipe) => (
+              {filteredRecipes.map((recipe, index) => (
                 <Link
                   key={recipe.id}
                   to={`/recipe/${recipe.id}`}
@@ -151,7 +100,7 @@ const Recipes = () => {
                 >
                   <div className="aspect-[4/3] overflow-hidden">
                     <img
-                      src={recipe.image}
+                      src={recipe.image || getPlaceholderImage(index)}
                       alt={recipe.title}
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                     />
