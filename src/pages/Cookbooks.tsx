@@ -4,6 +4,7 @@ import { Footer } from '@/components/layout/Footer';
 import { Button } from '@/components/ui/button';
 import { BookOpen, ShoppingBag, Star, Check, Flame, Clock, ChefHat } from 'lucide-react';
 import flavorFirstCover from '@/assets/flavor-first-ebook-cover.jpg';
+import bigEasyCover from '@/assets/big-easy-ebook-cover.png';
 
 const cookbookFeatures = [
   'Over 50 homemade rubs, marinades & BBQ sauces',
@@ -218,19 +219,14 @@ const Cookbooks = () => {
         <section className="section-padding bg-background">
           <div className="container-blog">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              {/* Book Cover Placeholder */}
+              {/* Book Cover */}
               <div className="relative flex justify-center order-2 lg:order-1">
-                <div className="bg-gradient-to-br from-amber-600/30 to-orange-700/30 p-8 rounded-2xl">
-                  <div className="bg-charcoal border-4 border-amber-500/40 rounded-xl p-8 text-center max-w-sm">
-                    <BookOpen className="w-16 h-16 text-amber-500 mx-auto mb-4" />
-                    <h3 className="font-display text-2xl md:text-3xl font-bold text-cream mb-2">
-                      FLAVORS OF THE BIG EASY
-                    </h3>
-                    <p className="font-body text-cream/80 text-sm uppercase tracking-wider mb-4">
-                      Cook Up Bold New Orleans Favorites at Home
-                    </p>
-                    <div className="w-16 h-1 bg-amber-500 mx-auto" />
-                  </div>
+                <div className="bg-gradient-to-br from-amber-600/30 to-orange-700/30 p-4 rounded-2xl">
+                  <img 
+                    src={bigEasyCover} 
+                    alt="Flavors of the Big Easy Cookbook Cover" 
+                    className="rounded-xl shadow-2xl max-w-xs md:max-w-sm"
+                  />
                 </div>
                 <div className="absolute -bottom-6 -left-6 w-40 h-40 bg-amber-500/20 rounded-2xl -z-10" />
               </div>
