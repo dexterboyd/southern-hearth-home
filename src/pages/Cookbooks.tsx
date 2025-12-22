@@ -222,12 +222,7 @@ const Cookbooks = () => {
             {/* eBook Grid */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-10">
               {/* Flavor First - Rubs */}
-              <a 
-                href="https://www.amazon.com/FLAVOR-FIRST-HOMEMADE-MARINADES-SAUCES-ebook/dp/B0FYNB6Z3D" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="group"
-              >
+              <div className="group">
                 <div className="bg-card rounded-xl p-3 card-elevated transition-transform hover:scale-105">
                   <img 
                     src={flavorFirstCover} 
@@ -237,17 +232,21 @@ const Cookbooks = () => {
                   <p className="font-body text-xs md:text-sm font-medium text-foreground text-center line-clamp-2">
                     Rubs, Marinades & Sauces
                   </p>
-                  <p className="font-body text-xs text-primary text-center font-semibold">$6.99</p>
+                  <p className="font-body text-xs text-primary text-center font-semibold mb-2">$6.99</p>
+                  <a 
+                    href="https://www.amazon.com/FLAVOR-FIRST-HOMEMADE-MARINADES-SAUCES-ebook/dp/B0FYNB6Z3D" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                  >
+                    <Button variant="outline" size="sm" className="w-full text-xs">
+                      Purchase Now
+                    </Button>
+                  </a>
                 </div>
-              </a>
+              </div>
 
               {/* Big Easy */}
-              <a 
-                href="https://www.amazon.com/dp/B0G8VZ7CMV" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="group"
-              >
+              <div className="group">
                 <div className="bg-card rounded-xl p-3 card-elevated transition-transform hover:scale-105">
                   <img 
                     src={bigEasyCover} 
@@ -257,17 +256,21 @@ const Cookbooks = () => {
                   <p className="font-body text-xs md:text-sm font-medium text-foreground text-center line-clamp-2">
                     Flavors of the Big Easy
                   </p>
-                  <p className="font-body text-xs text-amber-500 text-center font-semibold">$8.99</p>
+                  <p className="font-body text-xs text-amber-500 text-center font-semibold mb-2">$8.99</p>
+                  <a 
+                    href="https://www.amazon.com/dp/B0G8VZ7CMV" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                  >
+                    <Button variant="outline" size="sm" className="w-full text-xs">
+                      Purchase Now
+                    </Button>
+                  </a>
                 </div>
-              </a>
+              </div>
 
               {/* Southern Comfort Food */}
-              <a 
-                href="https://www.amazon.com/dp/B0GB6RB2B9" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="group"
-              >
+              <div className="group">
                 <div className="bg-card rounded-xl p-3 card-elevated transition-transform hover:scale-105">
                   <img 
                     src={comfortFoodCover} 
@@ -277,17 +280,21 @@ const Cookbooks = () => {
                   <p className="font-body text-xs md:text-sm font-medium text-foreground text-center line-clamp-2">
                     Southern Comfort Food
                   </p>
-                  <p className="font-body text-xs text-orange-600 text-center font-semibold">$3.99</p>
+                  <p className="font-body text-xs text-orange-600 text-center font-semibold mb-2">$3.99</p>
+                  <a 
+                    href="https://www.amazon.com/dp/B0GB6RB2B9" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                  >
+                    <Button variant="outline" size="sm" className="w-full text-xs">
+                      Purchase Now
+                    </Button>
+                  </a>
                 </div>
-              </a>
+              </div>
 
               {/* Culinary Chronicles */}
-              <a 
-                href="https://www.amazon.com/dp/B0GB81RS76" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="group"
-              >
+              <div className="group">
                 <div className="bg-card rounded-xl p-3 card-elevated transition-transform hover:scale-105">
                   <img 
                     src={culinaryChroniclesCover} 
@@ -297,9 +304,18 @@ const Cookbooks = () => {
                   <p className="font-body text-xs md:text-sm font-medium text-foreground text-center line-clamp-2">
                     Culinary Chronicles
                   </p>
-                  <p className="font-body text-xs text-slate-500 text-center font-semibold">$6.99</p>
+                  <p className="font-body text-xs text-slate-500 text-center font-semibold mb-2">$6.99</p>
+                  <a 
+                    href="https://www.amazon.com/dp/B0GB81RS76" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                  >
+                    <Button variant="outline" size="sm" className="w-full text-xs">
+                      Purchase Now
+                    </Button>
+                  </a>
                 </div>
-              </a>
+              </div>
             </div>
 
             {/* Value Proposition */}
