@@ -25,7 +25,7 @@ const categories = [
   { name: 'Southern Sides & Breads', slug: 'sides' },
   { name: 'Backyard BBQ & Smokehouse', slug: 'bbq' },
   { name: 'Rubs & Marinades', slug: 'rubs' },
-  { name: 'Desserts with Soul', slug: 'desserts' },
+  { name: 'Desserts with Soul', slug: 'sweets' },
 ];
 
 const Recipes = () => {
