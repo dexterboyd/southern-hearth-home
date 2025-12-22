@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, type MouseEvent } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -25,6 +25,21 @@ export function Header() {
     }
   };
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+  };
+
+  const handleNavClick =
+    (href: string) =>
+    (e: MouseEvent<HTMLAnchorElement>) => {
+      // If user clicks the current route, react-router won't navigate — so we scroll to top manually.
+      if (href === location.pathname) {
+        e.preventDefault();
+        scrollToTop();
+      }
+
+      setIsOpen(false);
+    };
   useEffect(() => {
     if (location.state?.scrollTo === 'newsletter') {
       setTimeout(() => {
@@ -52,6 +67,7 @@ export function Header() {
               <Link
                 key={link.name}
                 to={link.href}
+                onClick={handleNavClick(link.href)}
                 className={cn(
                   "font-body text-sm font-medium transition-colors hover:text-primary",
                   location.pathname === link.href
@@ -85,7 +101,7 @@ export function Header() {
                 <Link
                   key={link.name}
                   to={link.href}
-                  onClick={() => setIsOpen(false)}
+                  onClick={handleNavClick(link.href)}
                   className={cn(
                     "font-body text-base font-medium py-2 transition-colors",
                     location.pathname === link.href
