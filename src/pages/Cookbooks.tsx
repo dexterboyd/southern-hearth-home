@@ -223,22 +223,25 @@ const Cookbooks = () => {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-10">
               {/* Flavor First - Rubs */}
               <div className="group">
-                <div className="bg-card rounded-xl p-3 card-elevated transition-transform hover:scale-105">
+                <div className="bg-card rounded-xl p-3 card-elevated transition-transform hover:scale-105 h-full flex flex-col">
                   <img 
                     src={flavorFirstCover} 
                     alt="Flavor First: Homemade Rubs, Marinades & BBQ Sauces" 
                     className="rounded-lg w-full mb-3"
                   />
-                  <p className="font-body text-xs md:text-sm font-medium text-foreground text-center line-clamp-2">
-                    Rubs, Marinades & Sauces
-                  </p>
-                  <p className="font-body text-xs text-primary text-center font-semibold mb-2">$6.99</p>
+                  <div className="flex-1 flex flex-col">
+                    <p className="font-body text-xs md:text-sm font-medium text-foreground text-center line-clamp-2">
+                      Rubs, Marinades & Sauces
+                    </p>
+                    <p className="font-body text-xs text-primary text-center font-semibold mb-2">$6.99</p>
+                  </div>
                   <a 
                     href="https://www.amazon.com/FLAVOR-FIRST-HOMEMADE-MARINADES-SAUCES-ebook/dp/B0FYNB6Z3D" 
                     target="_blank" 
                     rel="noopener noreferrer"
+                    className="mt-auto"
                   >
-                    <Button variant="outline" size="sm" className="w-full text-xs">
+                    <Button variant="ghost" size="sm" className="w-full text-xs bg-primary/10 hover:bg-primary/20 text-primary border-0">
                       Purchase Now
                     </Button>
                   </a>
@@ -247,22 +250,25 @@ const Cookbooks = () => {
 
               {/* Big Easy */}
               <div className="group">
-                <div className="bg-card rounded-xl p-3 card-elevated transition-transform hover:scale-105">
+                <div className="bg-card rounded-xl p-3 card-elevated transition-transform hover:scale-105 h-full flex flex-col">
                   <img 
                     src={bigEasyCover} 
                     alt="Flavors of the Big Easy" 
                     className="rounded-lg w-full mb-3"
                   />
-                  <p className="font-body text-xs md:text-sm font-medium text-foreground text-center line-clamp-2">
-                    Flavors of the Big Easy
-                  </p>
-                  <p className="font-body text-xs text-amber-500 text-center font-semibold mb-2">$8.99</p>
+                  <div className="flex-1 flex flex-col">
+                    <p className="font-body text-xs md:text-sm font-medium text-foreground text-center line-clamp-2">
+                      Flavors of the Big Easy
+                    </p>
+                    <p className="font-body text-xs text-amber-500 text-center font-semibold mb-2">$8.99</p>
+                  </div>
                   <a 
                     href="https://www.amazon.com/dp/B0G8VZ7CMV" 
                     target="_blank" 
                     rel="noopener noreferrer"
+                    className="mt-auto"
                   >
-                    <Button variant="outline" size="sm" className="w-full text-xs">
+                    <Button variant="ghost" size="sm" className="w-full text-xs bg-primary/10 hover:bg-primary/20 text-primary border-0">
                       Purchase Now
                     </Button>
                   </a>
@@ -271,22 +277,25 @@ const Cookbooks = () => {
 
               {/* Southern Comfort Food */}
               <div className="group">
-                <div className="bg-card rounded-xl p-3 card-elevated transition-transform hover:scale-105">
+                <div className="bg-card rounded-xl p-3 card-elevated transition-transform hover:scale-105 h-full flex flex-col">
                   <img 
                     src={comfortFoodCover} 
                     alt="Flavor First: Southern Comfort Food Recipes" 
                     className="rounded-lg w-full mb-3"
                   />
-                  <p className="font-body text-xs md:text-sm font-medium text-foreground text-center line-clamp-2">
-                    Southern Comfort Food
-                  </p>
-                  <p className="font-body text-xs text-orange-600 text-center font-semibold mb-2">$3.99</p>
+                  <div className="flex-1 flex flex-col">
+                    <p className="font-body text-xs md:text-sm font-medium text-foreground text-center line-clamp-2">
+                      Southern Comfort Food
+                    </p>
+                    <p className="font-body text-xs text-orange-600 text-center font-semibold mb-2">$3.99</p>
+                  </div>
                   <a 
                     href="https://www.amazon.com/dp/B0GB6RB2B9" 
                     target="_blank" 
                     rel="noopener noreferrer"
+                    className="mt-auto"
                   >
-                    <Button variant="outline" size="sm" className="w-full text-xs">
+                    <Button variant="ghost" size="sm" className="w-full text-xs bg-primary/10 hover:bg-primary/20 text-primary border-0">
                       Purchase Now
                     </Button>
                   </a>
@@ -295,22 +304,25 @@ const Cookbooks = () => {
 
               {/* Culinary Chronicles */}
               <div className="group">
-                <div className="bg-card rounded-xl p-3 card-elevated transition-transform hover:scale-105">
+                <div className="bg-card rounded-xl p-3 card-elevated transition-transform hover:scale-105 h-full flex flex-col">
                   <img 
                     src={culinaryChroniclesCover} 
                     alt="Culinary Chronicles: Easy Southern American Comfort Food" 
                     className="rounded-lg w-full mb-3"
                   />
-                  <p className="font-body text-xs md:text-sm font-medium text-foreground text-center line-clamp-2">
-                    Culinary Chronicles
-                  </p>
-                  <p className="font-body text-xs text-slate-500 text-center font-semibold mb-2">$6.99</p>
+                  <div className="flex-1 flex flex-col">
+                    <p className="font-body text-xs md:text-sm font-medium text-foreground text-center line-clamp-2">
+                      Culinary Chronicles
+                    </p>
+                    <p className="font-body text-xs text-slate-500 text-center font-semibold mb-2">$6.99</p>
+                  </div>
                   <a 
                     href="https://www.amazon.com/dp/B0GB81RS76" 
                     target="_blank" 
                     rel="noopener noreferrer"
+                    className="mt-auto"
                   >
-                    <Button variant="outline" size="sm" className="w-full text-xs">
+                    <Button variant="ghost" size="sm" className="w-full text-xs bg-primary/10 hover:bg-primary/20 text-primary border-0">
                       Purchase Now
                     </Button>
                   </a>
