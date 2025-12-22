@@ -1,8 +1,7 @@
-import { useRef } from 'react';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { Button } from '@/components/ui/button';
-import { BookOpen, ShoppingBag, Star, Check, Flame, Clock, ChefHat } from 'lucide-react';
+import { BookOpen, ShoppingBag, Star, Check, Flame } from 'lucide-react';
 import flavorFirstCover from '@/assets/flavor-first-ebook-cover.jpg';
 import bigEasyCover from '@/assets/big-easy-ebook-cover.png';
 import comfortFoodCover from '@/assets/southern-comfort-food-cover.png';
@@ -35,30 +34,7 @@ const testimonials = [
   },
 ];
 
-// Best recipes from the Flavor First cookbook
-const flavorFirstRecipes = [
-  {
-    title: 'Sweet Heat Rib Rub',
-    description: 'Brown sugar, cayenne, and cinnamon for perfect ribs or pork shoulder.',
-    yield: '1 cup',
-    time: '5 min',
-  },
-  {
-    title: 'Kickin\' Cajun Rub',
-    description: 'Bold paprika, garlic, and cayenne blend for chicken, shrimp, or fish.',
-    yield: '1 cup',
-    time: '5 min',
-  },
-  {
-    title: 'Caribbean Jerk Dry Rub',
-    description: 'Allspice, cinnamon, and heat for authentic island flavor.',
-    yield: '1 cup',
-    time: '5 min',
-  },
-];
-
 const Cookbooks = () => {
-  const scrollContainerRef = useRef<HTMLDivElement>(null);
 
   return (
     <div className="min-h-screen bg-background">
@@ -126,37 +102,47 @@ const Cookbooks = () => {
                   <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-primary/20 rounded-2xl -z-10" />
                 </div>
 
-                {/* Scrolling Recipe Cards */}
-                <div className="w-full max-w-sm">
-                  <p className="font-body text-xs text-cream/60 mb-2 text-center uppercase tracking-wider">
-                    Featured Recipes Inside
+                {/* Featured Recipes Description */}
+                <div className="w-full max-w-md mt-4">
+                  <p className="font-display text-base text-cream/80 mb-3 text-center uppercase tracking-wider">
+                    Featured Recipes Inside:
                   </p>
-                  <div 
-                    ref={scrollContainerRef}
-                    className="flex gap-3 overflow-x-auto pb-2 scrollbar-hide snap-x snap-mandatory"
-                    style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
-                  >
-                    {flavorFirstRecipes.map((recipe, index) => (
-                      <div 
-                        key={index}
-                        className="flex-shrink-0 w-48 bg-charcoal/80 border border-primary/30 rounded-lg p-4 snap-center"
-                      >
-                        <div className="flex items-center gap-1 mb-2">
-                          <ChefHat className="w-3 h-3 text-primary" />
-                          <span className="font-body text-xs text-primary">{recipe.yield}</span>
-                        </div>
-                        <h4 className="font-display text-sm font-semibold text-cream mb-1">
-                          {recipe.title}
-                        </h4>
-                        <p className="font-body text-xs text-cream/70 mb-2 line-clamp-2">
-                          {recipe.description}
-                        </p>
-                        <div className="flex items-center gap-1 text-cream/50">
-                          <Clock className="w-3 h-3" />
-                          <span className="font-body text-xs">{recipe.time}</span>
-                        </div>
-                      </div>
-                    ))}
+                  <div className="bg-charcoal/60 border border-primary/20 rounded-xl p-5 text-left">
+                    <p className="font-body text-sm text-cream/90 leading-relaxed mb-4">
+                      <strong className="text-primary">Stop guessing. Start grilling with confidence.</strong>
+                    </p>
+                    <p className="font-body text-sm text-cream/80 leading-relaxed mb-4">
+                      Inside this complete BBQ guide, you'll discover:
+                    </p>
+                    <ul className="font-body text-sm text-cream/80 space-y-2">
+                      <li className="flex items-start gap-2">
+                        <Check className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                        <span><strong>41 battle-tested recipes</strong> including signature dry rubs, marinades, regional BBQ sauces, and full meat recipes</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <Check className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                        <span><strong>The Flavor Trinity</strong> — the 3-part framework behind every great BBQ dish</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <Check className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                        <span><strong>12 signature dry rubs</strong> — Sweet Heat Rib Rub, Coffee & Brown Sugar Brisket, Caribbean Jerk, Memphis Dry Rub & more</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <Check className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                        <span><strong>9 bold marinades</strong> — Garlic Mojo Citrus, Spicy Jerk, Soy-Ginger Teriyaki</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <Check className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                        <span><strong>14 regional BBQ sauces</strong> — Mississippi Delta, Carolina Gold, Alabama White, Tennessee Whiskey, Texas Bold</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <Check className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                        <span><strong>Smoking techniques & timing charts</strong> — wood selection, temperature guides, and pro tips</span>
+                      </li>
+                    </ul>
+                    <p className="font-body text-xs text-cream/60 mt-4 italic">
+                      Perfect for backyard grillers, smoker enthusiasts, and anyone ready to take their BBQ from good to unforgettable.
+                    </p>
                   </div>
                 </div>
               </div>
