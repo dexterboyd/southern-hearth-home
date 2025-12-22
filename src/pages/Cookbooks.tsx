@@ -350,26 +350,97 @@ const Cookbooks = () => {
           </div>
         </section>
 
-        {/* CTA Section */}
+        {/* Fourth Cookbook - Culinary Chronicles */}
         <section className="section-padding bg-background">
           <div className="container-blog">
-            <div className="max-w-2xl mx-auto text-center bg-gradient-to-br from-charcoal to-secondary p-8 md:p-12 rounded-2xl">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              {/* Book Cover Placeholder */}
+              <div className="relative flex justify-center order-2 lg:order-1">
+                <div className="bg-gradient-to-br from-emerald-700/30 to-emerald-900/30 p-8 rounded-2xl">
+                  <div className="bg-charcoal border-4 border-emerald-600/40 rounded-xl p-8 text-center max-w-sm">
+                    <BookOpen className="w-16 h-16 text-emerald-500 mx-auto mb-4" />
+                    <h3 className="font-display text-2xl md:text-3xl font-bold text-cream mb-2">
+                      CULINARY CHRONICLES
+                    </h3>
+                    <p className="font-body text-cream/80 text-sm uppercase tracking-wider mb-4">
+                      Easy Southern American Comfort Food
+                    </p>
+                    <div className="w-16 h-1 bg-emerald-500 mx-auto" />
+                  </div>
+                </div>
+                <div className="absolute -bottom-6 -left-6 w-40 h-40 bg-emerald-500/20 rounded-2xl -z-10" />
+              </div>
+
+              {/* Content */}
+              <div className="order-1 lg:order-2">
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/20 text-emerald-500 mb-6">
+                  <BookOpen className="w-4 h-4 fill-current" />
+                  <span className="font-body text-sm font-medium">Story-Rich Cookbook</span>
+                </div>
+                <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-6 leading-tight">
+                  Culinary Chronicles: Easy Southern American Comfort Food
+                </h2>
+                <p className="font-body text-lg text-muted-foreground mb-8 leading-relaxed">
+                  A story-rich collection of easy Southern American comfort food recipes — passed-down favorites, 
+                  church-supper classics, and crave-worthy dishes made simple for everyday cooks.
+                </p>
+
+                {/* Features */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
+                  <div className="flex items-start gap-2">
+                    <Check className="w-5 h-5 text-emerald-500 flex-shrink-0 mt-0.5" />
+                    <span className="font-body text-foreground text-sm">Homestyle Southern classics</span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <Check className="w-5 h-5 text-emerald-500 flex-shrink-0 mt-0.5" />
+                    <span className="font-body text-foreground text-sm">Soulful sides & crowd favorites</span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <Check className="w-5 h-5 text-emerald-500 flex-shrink-0 mt-0.5" />
+                    <span className="font-body text-foreground text-sm">Appetizers & small bites</span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <Check className="w-5 h-5 text-emerald-500 flex-shrink-0 mt-0.5" />
+                    <span className="font-body text-foreground text-sm">Beginner-friendly instructions</span>
+                  </div>
+                </div>
+
+                {/* Pricing */}
+                <a 
+                  href="https://www.amazon.com/dp/B0GB81RS76" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  <Button className="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold" size="xl">
+                    <BookOpen className="w-5 h-5" />
+                    Kindle eBook — $3.99
+                  </Button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="section-padding bg-muted">
+          <div className="container-blog">
+            <div className="max-w-3xl mx-auto text-center bg-gradient-to-br from-charcoal to-secondary p-8 md:p-12 rounded-2xl">
               <Flame className="w-12 h-12 text-primary mx-auto mb-4" />
               <h2 className="font-display text-2xl md:text-3xl font-semibold text-cream mb-4">
                 Ready to Elevate Your Flavor?
               </h2>
               <p className="font-body text-cream/80 mb-6">
-                Get all three cookbooks today and master bold Southern flavor — from homemade rubs and sauces 
+                Get all four cookbooks today and master bold Southern flavor — from homemade rubs and sauces 
                 to authentic Louisiana favorites and soul-warming comfort food.
               </p>
-              <div className="flex flex-wrap justify-center gap-4">
+              <div className="flex flex-wrap justify-center gap-3">
                 <a 
                   href="https://www.amazon.com/FLAVOR-FIRST-HOMEMADE-MARINADES-SAUCES/dp/B0G4DJC4MB/ref=tmm_pap_swatch_0" 
                   target="_blank" 
                   rel="noopener noreferrer"
                 >
                   <Button variant="hero" size="lg">
-                    Get Rubs & Sauces
+                    Rubs & Sauces
                   </Button>
                 </a>
                 <a 
@@ -378,7 +449,7 @@ const Cookbooks = () => {
                   rel="noopener noreferrer"
                 >
                   <Button className="bg-amber-500 hover:bg-amber-600 text-charcoal font-semibold" size="lg">
-                    Get Big Easy
+                    Big Easy
                   </Button>
                 </a>
                 <a 
@@ -387,7 +458,16 @@ const Cookbooks = () => {
                   rel="noopener noreferrer"
                 >
                   <Button className="bg-orange-700 hover:bg-orange-800 text-white font-semibold" size="lg">
-                    Get Comfort Food
+                    Comfort Food
+                  </Button>
+                </a>
+                <a 
+                  href="https://www.amazon.com/dp/B0GB81RS76" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  <Button className="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold" size="lg">
+                    Culinary Chronicles
                   </Button>
                 </a>
               </div>
