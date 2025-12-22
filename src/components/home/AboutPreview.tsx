@@ -36,12 +36,12 @@ export function AboutPreview() {
               </p>
             </div>
 
-            <Link to="/about">
-              <Button variant="outline" size="lg">
+            <Button asChild variant="outline" size="lg">
+              <Link to="/about">
                 Read My Full Story
                 <ArrowRight className="w-4 h-4" />
-              </Button>
-            </Link>
+              </Link>
+            </Button>
           </div>
         </div>
       </div>
