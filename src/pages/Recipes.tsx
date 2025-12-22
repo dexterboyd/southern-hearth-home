@@ -71,9 +71,9 @@ const Recipes = () => {
         </section>
 
         {/* Categories */}
-        <section className="py-6 border-b border-border bg-background sticky top-16 md:top-20 z-40">
+        <section className="py-3 border-b border-border bg-background sticky top-16 md:top-20 z-40">
           <div className="container-blog">
-            <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-hide">
+            <div className="flex gap-2 overflow-x-auto scrollbar-hide">
               {categories.map((category) => (
                 <Button
                   key={category.slug}
@@ -90,7 +90,7 @@ const Recipes = () => {
         </section>
 
         {/* Recipe Grid */}
-        <section className="section-padding bg-background">
+        <section className="py-6 md:py-8 bg-background">
           <div className="container-blog">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {filteredRecipes.map((recipe, index) => (
