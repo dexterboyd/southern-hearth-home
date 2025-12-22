@@ -47,24 +47,24 @@ const Recipes = () => {
       <Header />
       <main className="pt-20">
         {/* Hero Section */}
-        <section id="recipe-collection" className="py-8 md:py-12 bg-muted scroll-mt-20">
+        <section id="recipe-collection" className="py-5 md:py-8 bg-muted scroll-mt-20">
           <div className="container-blog text-center">
-            <h1 className="font-display text-3xl md:text-4xl font-semibold text-foreground mb-3">
+            <h1 className="font-display text-2xl md:text-3xl font-semibold text-foreground mb-2">
               Recipe Collection
             </h1>
-            <p className="font-body text-base text-muted-foreground max-w-2xl mx-auto mb-6">
+            <p className="font-body text-sm text-muted-foreground max-w-2xl mx-auto mb-4">
               Bold Southern flavors, homestyle Cajun & Creole recipes, and BBQ classics — ready for your kitchen.
             </p>
 
             {/* Search */}
-            <div className="max-w-md mx-auto relative">
-              <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
+            <div className="max-w-sm mx-auto relative">
+              <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
               <Input
                 type="text"
                 placeholder="Search recipes..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="pl-12 h-11 bg-background"
+                className="pl-10 h-9 bg-background text-sm"
               />
             </div>
           </div>
