@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { Clock, Users, ArrowRight } from 'lucide-react';
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from '@/components/ui/carousel';
 import Autoplay from 'embla-carousel-autoplay';
-import { featuredRecipes } from '@/data/recipes';
+import { recipes, Recipe } from '@/data/recipes';
 
 // Placeholder images until real cookbook photos are added
 import friedChicken from '@/assets/recipe-fried-chicken.jpg';
@@ -13,6 +13,34 @@ import pecanPie from '@/assets/recipe-pecan-pie.jpg';
 // Cycle through available placeholder images
 const placeholderImages = [friedChicken, bbqRibs, shrimpGrits, pecanPie];
 const getPlaceholderImage = (index: number) => placeholderImages[index % placeholderImages.length];
+
+// Define category order for carousel
+const categoryOrder = [
+  'cajun',      // Cajun & Creole Roots
+  'classics',   // Elevated Southern Classics
+  'comfort',    // Comfort Food & Family Favorites
+  'sides',      // Southern Sides & Breads
+  'bbq',        // BBQ & Smokehouse
+  'rubs',       // Rubs & Marinades
+  'sunday',     // Sunday Suppers
+  'sweets',     // Sweets & Desserts
+];
+
+// Get one recipe per category in order
+const getCarouselRecipes = (): Recipe[] => {
+  const carouselRecipes: Recipe[] = [];
+  
+  categoryOrder.forEach(categorySlug => {
+    const categoryRecipe = recipes.find(r => r.categorySlug === categorySlug);
+    if (categoryRecipe) {
+      carouselRecipes.push(categoryRecipe);
+    }
+  });
+  
+  return carouselRecipes;
+};
+
+const carouselRecipes = getCarouselRecipes();
 
 export function FeaturedRecipes() {
   return (
@@ -47,7 +75,7 @@ export function FeaturedRecipes() {
           className="w-full"
         >
           <CarouselContent className="-ml-4">
-            {featuredRecipes.map((recipe, index) => (
+            {carouselRecipes.map((recipe, index) => (
               <CarouselItem key={recipe.id} className="pl-4 md:basis-1/2 lg:basis-1/3">
                 <Link
                   to={`/recipe/${recipe.id}`}
