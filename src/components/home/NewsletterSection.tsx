@@ -52,7 +52,7 @@ export function NewsletterSection() {
             </div>
             <div className="flex items-center gap-2 text-secondary-foreground/70">
               <Mail className="w-5 h-5 text-primary" />
-              <span className="font-body text-sm">Early Access to New Releases</span>
+              <span className="font-body text-sm">Early Access to Newly Released Recipes</span>
             </div>
           </div>
 
