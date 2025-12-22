@@ -24,9 +24,6 @@ export function HeroSection() {
       {/* Content */}
       <div className="relative z-10 container-blog px-4 py-20">
         <div className="max-w-2xl">
-          <p className="font-body text-primary uppercase tracking-widest text-sm mb-4 animate-fade-up opacity-0 stagger-1">
-            Welcome to Flavor First
-          </p>
           <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-semibold text-cream leading-tight mb-6 animate-fade-up opacity-0 stagger-2">
             Southern Comfort Starts with{' '}
             <span className="text-primary italic">Flavor. Always.</span>
