@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
@@ -14,6 +14,26 @@ const navLinks = [
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
+
+  const scrollToNewsletter = () => {
+    if (location.pathname === '/') {
+      const element = document.getElementById('newsletter');
+      element?.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      navigate('/', { state: { scrollTo: 'newsletter' } });
+    }
+  };
+
+  useEffect(() => {
+    if (location.state?.scrollTo === 'newsletter') {
+      setTimeout(() => {
+        const element = document.getElementById('newsletter');
+        element?.scrollIntoView({ behavior: 'smooth' });
+      }, 100);
+      window.history.replaceState({}, document.title);
+    }
+  }, [location]);
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
@@ -42,11 +62,9 @@ export function Header() {
                 {link.name}
               </Link>
             ))}
-            <Link to="/#newsletter">
-              <Button variant="default" size="sm">
-                Get 10 Free Recipes
-              </Button>
-            </Link>
+            <Button variant="default" size="sm" onClick={scrollToNewsletter}>
+              Get 10 Free Recipes
+            </Button>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -78,11 +96,16 @@ export function Header() {
                   {link.name}
                 </Link>
               ))}
-              <Link to="/#newsletter" onClick={() => setIsOpen(false)}>
-                <Button variant="default" className="mt-2">
-                  Get 10 Free Recipes
-                </Button>
-              </Link>
+              <Button 
+                variant="default" 
+                className="mt-2" 
+                onClick={() => {
+                  setIsOpen(false);
+                  scrollToNewsletter();
+                }}
+              >
+                Get 10 Free Recipes
+              </Button>
             </div>
           </nav>
         )}
