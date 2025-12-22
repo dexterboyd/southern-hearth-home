@@ -55,7 +55,7 @@ export function FeaturedRecipes() {
             Featured Recipes
           </h2>
           <p className="font-body text-muted-foreground max-w-2xl mx-auto">
-            Authentic New Orleans & Creole recipes from "Flavors of the Big Easy" — tried, tested, and ready for your kitchen.
+            From Cajun & Creole classics to smoky BBQ, comforting Sunday suppers to sweet Southern desserts — explore recipes from all our cookbooks, tried, tested, and ready for your kitchen.
           </p>
         </div>
 
