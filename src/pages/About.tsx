@@ -10,16 +10,16 @@ const About = () => {
       <Header />
       <main id="top" className="pt-20">
         {/* Hero Section */}
-        <section className="section-padding bg-muted scroll-mt-20">
+        <section className="py-5 md:py-8 bg-muted scroll-mt-20">
           <div className="container-blog">
             <div className="max-w-3xl mx-auto text-center">
-              <p className="font-body text-primary uppercase tracking-widest text-sm mb-4">
+              <p className="font-body text-primary uppercase tracking-widest text-xs mb-2">
                 About Flavor First
               </p>
-              <h1 className="font-display text-4xl md:text-5xl font-semibold text-foreground mb-6 leading-tight">
+              <h1 className="font-display text-2xl md:text-3xl font-semibold text-foreground mb-2 leading-tight">
                 Good Food Doesn't Rush
               </h1>
-              <p className="font-body text-xl text-muted-foreground italic">
+              <p className="font-body text-base text-muted-foreground italic">
                 And flavor isn't optional.
               </p>
             </div>
