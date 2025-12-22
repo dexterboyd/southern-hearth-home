@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button';
 import { BookOpen, ShoppingBag, Star, Check, Flame, Clock, ChefHat } from 'lucide-react';
 import flavorFirstCover from '@/assets/flavor-first-ebook-cover.jpg';
 import bigEasyCover from '@/assets/big-easy-ebook-cover.png';
+import comfortFoodCover from '@/assets/southern-comfort-food-cover.png';
 
 const cookbookFeatures = [
   'Over 50 homemade rubs, marinades & BBQ sauces',
@@ -334,19 +335,14 @@ const Cookbooks = () => {
                 </a>
               </div>
 
-              {/* Book Cover Placeholder */}
+              {/* Book Cover */}
               <div className="relative flex justify-center">
-                <div className="bg-gradient-to-br from-orange-700/30 to-orange-900/30 p-8 rounded-2xl">
-                  <div className="bg-charcoal border-4 border-orange-600/40 rounded-xl p-8 text-center max-w-sm">
-                    <ChefHat className="w-16 h-16 text-orange-600 mx-auto mb-4" />
-                    <h3 className="font-display text-2xl md:text-3xl font-bold text-cream mb-2">
-                      FLAVOR FIRST
-                    </h3>
-                    <p className="font-body text-cream/80 text-sm uppercase tracking-wider mb-4">
-                      Southern Comfort Food Recipes
-                    </p>
-                    <div className="w-16 h-1 bg-orange-600 mx-auto" />
-                  </div>
+                <div className="bg-gradient-to-br from-orange-700/30 to-orange-900/30 p-4 rounded-2xl">
+                  <img 
+                    src={comfortFoodCover} 
+                    alt="Flavor First: Southern Comfort Food Recipes Cookbook Cover" 
+                    className="rounded-xl shadow-2xl max-w-xs md:max-w-sm"
+                  />
                 </div>
                 <div className="absolute -bottom-6 -right-6 w-40 h-40 bg-orange-700/20 rounded-2xl -z-10" />
               </div>
