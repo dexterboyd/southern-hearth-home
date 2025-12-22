@@ -6,6 +6,7 @@ import { BookOpen, ShoppingBag, Star, Check, Flame, Clock, ChefHat } from 'lucid
 import flavorFirstCover from '@/assets/flavor-first-ebook-cover.jpg';
 import bigEasyCover from '@/assets/big-easy-ebook-cover.png';
 import comfortFoodCover from '@/assets/southern-comfort-food-cover.png';
+import culinaryChroniclesCover from '@/assets/culinary-chronicles-cover.png';
 
 const cookbookFeatures = [
   'Over 50 homemade rubs, marinades & BBQ sauces',
@@ -354,26 +355,21 @@ const Cookbooks = () => {
         <section className="section-padding bg-background">
           <div className="container-blog">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              {/* Book Cover Placeholder */}
+              {/* Book Cover */}
               <div className="relative flex justify-center order-2 lg:order-1">
-                <div className="bg-gradient-to-br from-emerald-700/30 to-emerald-900/30 p-8 rounded-2xl">
-                  <div className="bg-charcoal border-4 border-emerald-600/40 rounded-xl p-8 text-center max-w-sm">
-                    <BookOpen className="w-16 h-16 text-emerald-500 mx-auto mb-4" />
-                    <h3 className="font-display text-2xl md:text-3xl font-bold text-cream mb-2">
-                      CULINARY CHRONICLES
-                    </h3>
-                    <p className="font-body text-cream/80 text-sm uppercase tracking-wider mb-4">
-                      Easy Southern American Comfort Food
-                    </p>
-                    <div className="w-16 h-1 bg-emerald-500 mx-auto" />
-                  </div>
+                <div className="bg-gradient-to-br from-slate-600/30 to-stone-700/30 p-4 rounded-2xl">
+                  <img 
+                    src={culinaryChroniclesCover} 
+                    alt="Culinary Chronicles: Easy Southern American Comfort Food Cookbook Cover" 
+                    className="rounded-xl shadow-2xl max-w-xs md:max-w-sm"
+                  />
                 </div>
-                <div className="absolute -bottom-6 -left-6 w-40 h-40 bg-emerald-500/20 rounded-2xl -z-10" />
+                <div className="absolute -bottom-6 -left-6 w-40 h-40 bg-stone-500/20 rounded-2xl -z-10" />
               </div>
 
               {/* Content */}
               <div className="order-1 lg:order-2">
-                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/20 text-emerald-500 mb-6">
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-stone-500/20 text-stone-500 mb-6">
                   <BookOpen className="w-4 h-4 fill-current" />
                   <span className="font-body text-sm font-medium">Story-Rich Cookbook</span>
                 </div>
@@ -388,19 +384,19 @@ const Cookbooks = () => {
                 {/* Features */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
                   <div className="flex items-start gap-2">
-                    <Check className="w-5 h-5 text-emerald-500 flex-shrink-0 mt-0.5" />
+                    <Check className="w-5 h-5 text-stone-600 flex-shrink-0 mt-0.5" />
                     <span className="font-body text-foreground text-sm">Homestyle Southern classics</span>
                   </div>
                   <div className="flex items-start gap-2">
-                    <Check className="w-5 h-5 text-emerald-500 flex-shrink-0 mt-0.5" />
+                    <Check className="w-5 h-5 text-stone-600 flex-shrink-0 mt-0.5" />
                     <span className="font-body text-foreground text-sm">Soulful sides & crowd favorites</span>
                   </div>
                   <div className="flex items-start gap-2">
-                    <Check className="w-5 h-5 text-emerald-500 flex-shrink-0 mt-0.5" />
+                    <Check className="w-5 h-5 text-stone-600 flex-shrink-0 mt-0.5" />
                     <span className="font-body text-foreground text-sm">Appetizers & small bites</span>
                   </div>
                   <div className="flex items-start gap-2">
-                    <Check className="w-5 h-5 text-emerald-500 flex-shrink-0 mt-0.5" />
+                    <Check className="w-5 h-5 text-stone-600 flex-shrink-0 mt-0.5" />
                     <span className="font-body text-foreground text-sm">Beginner-friendly instructions</span>
                   </div>
                 </div>
@@ -411,7 +407,7 @@ const Cookbooks = () => {
                   target="_blank" 
                   rel="noopener noreferrer"
                 >
-                  <Button className="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold" size="xl">
+                  <Button className="bg-stone-600 hover:bg-stone-700 text-white font-semibold" size="xl">
                     <BookOpen className="w-5 h-5" />
                     Kindle eBook — $3.99
                   </Button>
