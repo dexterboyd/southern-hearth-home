@@ -335,22 +335,10 @@ const Cookbooks = () => {
               <p className="font-display text-2xl md:text-3xl font-semibold text-foreground mb-2">
                 Total Value: <span className="text-primary">$26.96</span>
               </p>
-              <p className="font-body text-muted-foreground mb-6">
+              <p className="font-body text-muted-foreground">
                 Four complete cookbooks covering every aspect of Southern cooking — 
                 from signature rubs and sauces to hearty comfort food and Cajun favorites.
               </p>
-              <div className="flex flex-wrap justify-center gap-3">
-                <a 
-                  href="https://www.amazon.com/FLAVOR-FIRST-HOMEMADE-MARINADES-SAUCES-ebook/dp/B0FYNB6Z3D" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                >
-                  <Button variant="hero" size="lg">
-                    <ShoppingBag className="w-5 h-5" />
-                    Shop All eBooks on Amazon
-                  </Button>
-                </a>
-              </div>
             </div>
           </div>
         </section>
