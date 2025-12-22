@@ -283,7 +283,7 @@ const Cookbooks = () => {
 
               {/* Culinary Chronicles */}
               <a 
-                href="https://www.amazon.com/dp/B0GCWS7LRK" 
+                href="https://www.amazon.com/dp/B0GB81RS76" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="group"
