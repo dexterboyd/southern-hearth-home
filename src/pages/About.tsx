@@ -10,7 +10,7 @@ const About = () => {
       <Header />
       <main id="top" className="pt-20">
         {/* Hero Section */}
-        <section className="py-5 md:py-8 bg-muted scroll-mt-20">
+        <section className="py-6 md:py-10 bg-muted scroll-mt-20">
           <div className="container-blog">
             <div className="max-w-3xl mx-auto text-center">
               <p className="font-body text-primary uppercase tracking-widest text-xs mb-2">
@@ -27,7 +27,7 @@ const About = () => {
         </section>
 
         {/* Story Section */}
-        <section className="section-padding bg-background">
+        <section className="pt-6 pb-12 md:pt-8 md:pb-16 bg-background">
           <div className="container-blog">
             <div className="max-w-3xl mx-auto">
               <div className="prose prose-lg">
