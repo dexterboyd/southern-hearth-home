@@ -26,10 +26,10 @@ export function HeroSection() {
         <div className="max-w-2xl mx-auto">
           <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-semibold text-cream leading-tight mb-6 animate-fade-up opacity-0 stagger-2">
             Southern Comfort Starts with{' '}
-            <span className="text-primary italic">Flavor. Always.</span>
+            <span className="text-primary italic">Flavor.</span>
           </h1>
           <p className="font-body text-lg md:text-xl text-cream/80 mb-8 leading-relaxed animate-fade-up opacity-0 stagger-3">
-            Luxury-inspired, homestyle Southern recipes with a bold BBQ edge — written like a cookbook, cooked like home.
+            Southern-inspired soul food recipes, bold BBQ, and flavors that will have you cleaning your plate.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-up opacity-0 stagger-4">
             <Link to="/recipes">
