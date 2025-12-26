@@ -86,22 +86,26 @@ const Recipes = () => {
         <section className="py-4 md:py-5 border-b border-border/50 bg-gradient-to-b from-muted/30 to-background sticky top-16 md:top-20 z-40">
           <div className="container-blog">
             <div className="grid grid-cols-4 gap-3">
-              {categories.map((category) => (
+              {categories.map((category, index) => (
                 <button
                   key={category.slug}
                   onClick={() => handleCategoryChange(category.slug)}
+                  style={{ animationDelay: `${index * 50}ms` }}
                   className={`
                     relative px-4 py-2.5 rounded-lg font-body text-sm font-medium
                     transition-all duration-300 ease-out
+                    animate-fade-in
+                    hover:-translate-y-1 hover:shadow-lg
+                    active:scale-95
                     ${activeCategory === category.slug
                       ? 'bg-primary text-primary-foreground shadow-md shadow-primary/25 scale-[1.02]'
-                      : 'bg-card hover:bg-primary/10 text-foreground/80 hover:text-primary border border-border/50 hover:border-primary/30 hover:shadow-sm'
+                      : 'bg-card hover:bg-primary/10 text-foreground/80 hover:text-primary border border-border/50 hover:border-primary/40'
                     }
                   `}
                 >
                   <span className="relative z-10">{category.name}</span>
                   {activeCategory === category.slug && (
-                    <span className="absolute inset-0 rounded-lg bg-gradient-to-br from-primary to-primary/80" />
+                    <span className="absolute inset-0 rounded-lg bg-gradient-to-br from-primary to-primary/80 animate-pulse" style={{ animationDuration: '3s' }} />
                   )}
                 </button>
               ))}
