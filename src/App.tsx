@@ -7,6 +7,7 @@ import ScrollToTop from "@/components/ScrollToTop";
 import Index from "./pages/Index";
 import About from "./pages/About";
 import Recipes from "./pages/Recipes";
+import RecipePage from "./pages/RecipePage";
 import Cookbooks from "./pages/Cookbooks";
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
@@ -25,6 +26,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
           <Route path="/recipes" element={<Recipes />} />
+          <Route path="/recipe/:id" element={<RecipePage />} />
           <Route path="/cookbooks" element={<Cookbooks />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/terms" element={<Terms />} />

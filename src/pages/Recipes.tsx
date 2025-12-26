@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { Clock, Users, Search } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
-import { recipes, getRecipesByCategory } from '@/data/recipes';
+import { recipes } from '@/data/recipes';
 
 // Placeholder images until real cookbook photos are added
 import friedChicken from '@/assets/recipe-fried-chicken.jpg';
@@ -18,14 +18,13 @@ const getPlaceholderImage = (index: number) => placeholderImages[index % placeho
 
 const categories = [
   { name: 'All Recipes', slug: 'all' },
-  { name: 'Cajun & Creole Roots', slug: 'cajun' },
-  { name: 'Elevated Southern Classics', slug: 'classics' },
-  { name: 'Comfort Food & Family Favorites', slug: 'comfort' },
-  { name: 'Sunday Suppers', slug: 'sunday' },
-  { name: 'Southern Sides & Breads', slug: 'sides' },
-  { name: 'Backyard BBQ & Smokehouse', slug: 'bbq' },
+  { name: 'Cajun & Creole', slug: 'cajun' },
+  { name: 'Southern Classics', slug: 'classics' },
+  { name: 'Comfort Food', slug: 'comfort' },
+  { name: 'Southern Sides', slug: 'sides' },
+  { name: 'BBQ & Smokehouse', slug: 'bbq' },
   { name: 'Rubs & Marinades', slug: 'rubs' },
-  { name: 'Desserts with Soul', slug: 'sweets' },
+  { name: 'Desserts', slug: 'desserts' },
 ];
 
 const Recipes = () => {
