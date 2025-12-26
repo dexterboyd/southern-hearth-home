@@ -4,15 +4,8 @@ import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext
 import Autoplay from 'embla-carousel-autoplay';
 import { recipes, Recipe } from '@/data/recipes';
 
-// Placeholder images until real cookbook photos are added
-import friedChicken from '@/assets/recipe-fried-chicken.jpg';
-import bbqRibs from '@/assets/recipe-bbq-ribs.jpg';
-import shrimpGrits from '@/assets/recipe-shrimp-grits.jpg';
-import pecanPie from '@/assets/recipe-pecan-pie.jpg';
+import { getRecipeImage } from '@/data/recipeImages';
 
-// Cycle through available placeholder images
-const placeholderImages = [friedChicken, bbqRibs, shrimpGrits, pecanPie];
-const getPlaceholderImage = (index: number) => placeholderImages[index % placeholderImages.length];
 
 // Define category order for carousel (updated - no Sunday Suppers)
 const categoryOrder = [
@@ -81,7 +74,7 @@ export function FeaturedRecipes() {
                   className="group block relative aspect-[3/4] rounded-xl overflow-hidden card-elevated"
                 >
                   <img
-                    src={recipe.image || getPlaceholderImage(index)}
+                    src={getRecipeImage(recipe.id, recipe.categorySlug)}
                     alt={recipe.title}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
