@@ -68,7 +68,7 @@ const RecipePage = () => {
         {/* Hero Image */}
         <div className="relative h-[50vh] md:h-[60vh] overflow-hidden">
           <img
-            src={recipe.image || getPlaceholderImage(recipe.id)}
+            src={getRecipeImage(recipe.id, recipe.categorySlug)}
             alt={recipe.title}
             className="w-full h-full object-cover"
           />
@@ -207,7 +207,7 @@ const RecipePage = () => {
                   >
                     <div className="aspect-[4/3] overflow-hidden">
                       <img
-                        src={related.image || getPlaceholderImage(related.id)}
+                        src={getRecipeImage(related.id, related.categorySlug)}
                         alt={related.title}
                         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                       />
