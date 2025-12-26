@@ -79,7 +79,7 @@ export function Header() {
               </Link>
             ))}
             <Button variant="default" size="sm" onClick={scrollToNewsletter}>
-              Get 10 Free Recipes
+              Free Recipes
             </Button>
           </nav>
 
@@ -120,7 +120,7 @@ export function Header() {
                   scrollToNewsletter();
                 }}
               >
-                Get 10 Free Recipes
+                Free Recipes
               </Button>
             </div>
           </nav>

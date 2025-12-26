@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { Link } from 'react-router-dom';
@@ -22,8 +23,26 @@ const categories = [
 ];
 
 const Recipes = () => {
-  const [activeCategory, setActiveCategory] = useState('all');
+  const [searchParams, setSearchParams] = useSearchParams();
+  const categoryFromUrl = searchParams.get('category') || 'all';
+  const [activeCategory, setActiveCategory] = useState(categoryFromUrl);
   const [searchQuery, setSearchQuery] = useState('');
+
+  // Sync state with URL changes
+  useEffect(() => {
+    const category = searchParams.get('category') || 'all';
+    setActiveCategory(category);
+  }, [searchParams]);
+
+  // Update URL when category changes
+  const handleCategoryChange = (slug: string) => {
+    setActiveCategory(slug);
+    if (slug === 'all') {
+      setSearchParams({});
+    } else {
+      setSearchParams({ category: slug });
+    }
+  };
 
   const filteredRecipes = recipes.filter((recipe) => {
     const matchesCategory =
@@ -72,7 +91,7 @@ const Recipes = () => {
                   key={category.slug}
                   variant={activeCategory === category.slug ? 'default' : 'ghost'}
                   size="sm"
-                  onClick={() => setActiveCategory(category.slug)}
+                  onClick={() => handleCategoryChange(category.slug)}
                   className="whitespace-nowrap"
                 >
                   {category.name}
