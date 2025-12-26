@@ -7,14 +7,8 @@ import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { recipes } from '@/data/recipes';
 
-// Placeholder images until real cookbook photos are added
-import friedChicken from '@/assets/recipe-fried-chicken.jpg';
-import bbqRibs from '@/assets/recipe-bbq-ribs.jpg';
-import shrimpGrits from '@/assets/recipe-shrimp-grits.jpg';
-import pecanPie from '@/assets/recipe-pecan-pie.jpg';
+import { getRecipeImage } from '@/data/recipeImages';
 
-const placeholderImages = [friedChicken, bbqRibs, shrimpGrits, pecanPie];
-const getPlaceholderImage = (index: number) => placeholderImages[index % placeholderImages.length];
 
 const categories = [
   { name: 'All Recipes', slug: 'all' },
@@ -100,7 +94,7 @@ const Recipes = () => {
                 >
                   <div className="aspect-[4/3] overflow-hidden">
                     <img
-                      src={recipe.image || getPlaceholderImage(index)}
+                      src={getRecipeImage(recipe.id, recipe.categorySlug)}
                       alt={recipe.title}
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                     />
