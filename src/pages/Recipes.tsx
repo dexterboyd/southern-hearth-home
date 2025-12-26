@@ -85,7 +85,7 @@ const Recipes = () => {
         {/* Categories */}
         <section className="py-3 border-b border-border bg-background sticky top-16 md:top-20 z-40">
           <div className="container-blog">
-            <div className="flex gap-2 overflow-x-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+            <div className="flex flex-wrap items-center justify-center gap-2">
               {categories.map((category) => (
                 <Button
                   key={category.slug}
