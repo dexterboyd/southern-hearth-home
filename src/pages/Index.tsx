@@ -4,8 +4,6 @@ import { HeroSection } from '@/components/home/HeroSection';
 import { FeaturedRecipes } from '@/components/home/FeaturedRecipes';
 import { CategorySection } from '@/components/home/CategorySection';
 import { AboutPreview } from '@/components/home/AboutPreview';
-import { NewsletterSection } from '@/components/home/NewsletterSection';
-import { CookbookCTA } from '@/components/home/CookbookCTA';
 
 const Index = () => {
   return (
@@ -16,8 +14,6 @@ const Index = () => {
         <FeaturedRecipes />
         <CategorySection />
         <AboutPreview />
-        <CookbookCTA />
-        <NewsletterSection />
       </main>
       <Footer />
     </div>
