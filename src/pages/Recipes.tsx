@@ -83,19 +83,27 @@ const Recipes = () => {
         </section>
 
         {/* Categories */}
-        <section className="py-3 border-b border-border bg-background sticky top-16 md:top-20 z-40">
+        <section className="py-4 md:py-5 border-b border-border/50 bg-gradient-to-b from-muted/30 to-background sticky top-16 md:top-20 z-40">
           <div className="container-blog">
-            <div className="grid grid-cols-4 gap-2">
+            <div className="grid grid-cols-4 gap-3">
               {categories.map((category) => (
-                <Button
+                <button
                   key={category.slug}
-                  variant={activeCategory === category.slug ? 'default' : 'ghost'}
-                  size="sm"
                   onClick={() => handleCategoryChange(category.slug)}
-                  className="whitespace-nowrap"
+                  className={`
+                    relative px-4 py-2.5 rounded-lg font-body text-sm font-medium
+                    transition-all duration-300 ease-out
+                    ${activeCategory === category.slug
+                      ? 'bg-primary text-primary-foreground shadow-md shadow-primary/25 scale-[1.02]'
+                      : 'bg-card hover:bg-primary/10 text-foreground/80 hover:text-primary border border-border/50 hover:border-primary/30 hover:shadow-sm'
+                    }
+                  `}
                 >
-                  {category.name}
-                </Button>
+                  <span className="relative z-10">{category.name}</span>
+                  {activeCategory === category.slug && (
+                    <span className="absolute inset-0 rounded-lg bg-gradient-to-br from-primary to-primary/80" />
+                  )}
+                </button>
               ))}
             </div>
           </div>
