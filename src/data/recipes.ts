@@ -132,7 +132,7 @@ export const recipes: Recipe[] = [
   },
   {
     id: 4,
-    title: 'Bold Creole Jambalaya',
+    title: 'Jambalaya',
     subtitle: 'One-Pot Wonder',
     description: 'A true one-pot dish—layered with smoky sausage, tasso ham, and Gulf shrimp, built on homemade shrimp stock.',
     category: 'Cajun & Creole',
@@ -267,39 +267,6 @@ export const recipes: Recipe[] = [
     ]
   },
   {
-    id: 8,
-    title: 'Cajun Dirty Rice',
-    subtitle: 'Rustic Louisiana Comfort',
-    description: "Rice 'dirtied' with chicken livers, ground pork, and the holy trinity—rustic Louisiana comfort food.",
-    category: 'Cajun & Creole',
-    categorySlug: 'cajun',
-    time: '55 min',
-    servings: 10,
-    image: null,
-    featured: false,
-    ingredients: [
-      '1 lb chicken livers, finely chopped',
-      '1 lb ground pork',
-      '1 large onion, diced',
-      '1 green bell pepper, diced',
-      '2 celery stalks, diced',
-      '4 cloves garlic, minced',
-      '3 cups cooked white rice',
-      '2 cups chicken broth',
-      '2 tsp Cajun seasoning',
-      'Green onions for garnish'
-    ],
-    instructions: [
-      'Brown ground pork in a large skillet, breaking apart.',
-      'Add chicken livers and cook until no longer pink.',
-      'Add onion, bell pepper, and celery. Cook until softened.',
-      'Add garlic, broth, and Cajun seasoning.',
-      'Simmer 15 minutes.',
-      'Stir in cooked rice and mix well.',
-      'Garnish with green onions and serve.'
-    ]
-  },
-  {
     id: 9,
     title: 'New Orleans Shrimp Creole',
     subtitle: 'Bold Bayou Flavor',
@@ -332,77 +299,8 @@ export const recipes: Recipe[] = [
       'Serve over steaming white rice.'
     ]
   },
-  {
-    id: 24,
-    title: 'Crawfish Bisque with Stuffed Heads',
-    subtitle: 'The Ultimate Cajun Labor of Love',
-    description: 'Rich crawfish soup with stuffed heads bobbing in a velvety roux-based broth.',
-    category: 'Cajun & Creole',
-    categorySlug: 'cajun',
-    time: '3.5 hours',
-    servings: 10,
-    image: null,
-    featured: false,
-    ingredients: [
-      '5 lbs crawfish (reserve heads for stuffing)',
-      '1 cup crawfish tail meat, finely chopped',
-      '1/2 cup breadcrumbs',
-      '1 egg',
-      '1 cup flour',
-      '1 cup oil (for roux)',
-      '1 large onion, diced',
-      '1 green bell pepper, diced',
-      '2 celery stalks, diced',
-      '8 cups crawfish or seafood stock',
-      'Creole seasoning, thyme, bay leaves'
-    ],
-    instructions: [
-      'Clean crawfish heads thoroughly and set aside.',
-      'Mix chopped crawfish meat with breadcrumbs, egg, and seasonings.',
-      'Stuff the heads with the mixture.',
-      'Make a dark roux with flour and oil.',
-      'Add holy trinity and cook until softened.',
-      'Add stock and seasonings, simmer 1 hour.',
-      'Add stuffed heads and cook 30 minutes more.',
-      'Serve in bowls over rice.'
-    ]
-  },
   
   // SOUTHERN CLASSICS
-  {
-    id: 10,
-    title: 'Oysters Rockefeller',
-    subtitle: "Antoine's 1889 Masterpiece",
-    description: 'Briny oysters topped with herbed spinach butter and broiled to bubbly perfection.',
-    category: 'Southern Classics',
-    categorySlug: 'classics',
-    time: '45 min',
-    servings: 6,
-    image: null,
-    featured: false,
-    ingredients: [
-      '24 fresh oysters on the half shell',
-      '1 lb fresh spinach, chopped',
-      '1 stick butter',
-      '1/2 cup breadcrumbs',
-      '1/4 cup Pernod or anise liqueur',
-      '4 cloves garlic, minced',
-      '1/4 cup parsley, chopped',
-      '1/4 cup green onions, chopped',
-      'Hot sauce, Worcestershire sauce',
-      'Rock salt for baking'
-    ],
-    instructions: [
-      'Preheat broiler.',
-      'Sauté spinach in butter until wilted.',
-      'Add garlic, parsley, green onions, and cook 2 minutes.',
-      'Add Pernod, hot sauce, and Worcestershire. Cook 1 minute.',
-      'Stir in breadcrumbs.',
-      'Arrange oysters on rock salt in baking pans.',
-      'Top each oyster with spinach mixture.',
-      'Broil 5-7 minutes until bubbly and golden.'
-    ]
-  },
   {
     id: 11,
     title: 'Shrimp Remoulade',
@@ -597,71 +495,6 @@ export const recipes: Recipe[] = [
       'Layer meats and cheeses on bottom half.',
       'Top with more olive salad and the bread top.',
       'Press and let sit 30 minutes. Slice into wedges.'
-    ]
-  },
-  {
-    id: 17,
-    title: 'Creole Stuffed Bell Peppers',
-    subtitle: 'Baked Until Tender',
-    description: 'Colorful bell peppers filled with seasoned ground beef, rice, and Creole spices—baked in a rich tomato sauce.',
-    category: 'Comfort Food',
-    categorySlug: 'comfort',
-    time: '1.5 hours',
-    servings: 6,
-    image: null,
-    featured: false,
-    ingredients: [
-      '6 bell peppers (mixed colors)',
-      '1 lb ground beef',
-      '1 cup cooked rice',
-      '1 small onion, diced',
-      '2 cloves garlic, minced',
-      '1 can diced tomatoes',
-      '1 cup tomato sauce',
-      '2 tsp Creole seasoning',
-      '1/2 cup cheddar cheese, shredded'
-    ],
-    instructions: [
-      'Cut tops off peppers and remove seeds.',
-      'Blanch peppers in boiling water 3 minutes. Set aside.',
-      'Brown beef with onion and garlic.',
-      'Add rice, half the diced tomatoes, and seasoning.',
-      'Stuff peppers with mixture and place in baking dish.',
-      'Pour remaining tomatoes and tomato sauce around peppers.',
-      'Cover and bake at 350°F for 45 minutes.',
-      'Uncover, top with cheese, and bake 10 minutes more.'
-    ]
-  },
-  {
-    id: 18,
-    title: 'Yakamein (Old Sober)',
-    subtitle: "NOLA's Hangover Cure",
-    description: "New Orleans' legendary hangover cure—beefy noodle soup with hard-boiled eggs and Cajun spice.",
-    category: 'Comfort Food',
-    categorySlug: 'comfort',
-    time: '2.5 hours',
-    servings: 6,
-    image: null,
-    featured: false,
-    ingredients: [
-      '2 lbs beef brisket or stew meat',
-      '8 cups beef broth',
-      '3 tbsp soy sauce',
-      '1 tbsp Worcestershire sauce',
-      '1 tsp Cajun seasoning',
-      '1 lb spaghetti noodles',
-      '6 hard-boiled eggs',
-      'Green onions for garnish',
-      'Hot sauce to taste'
-    ],
-    instructions: [
-      'Simmer beef in broth for 2 hours until tender.',
-      'Remove beef and shred. Return to broth.',
-      'Add soy sauce, Worcestershire, and Cajun seasoning.',
-      'Cook noodles separately and divide among bowls.',
-      'Ladle broth and beef over noodles.',
-      'Top each bowl with a halved hard-boiled egg.',
-      'Garnish with green onions and hot sauce.'
     ]
   },
   {
@@ -1008,39 +841,6 @@ export const recipes: Recipe[] = [
   },
   
   // BBQ & SMOKEHOUSE
-  {
-    id: 22,
-    title: 'Natchitoches Meat Pies',
-    subtitle: "Louisiana's Official Meat Pie",
-    description: "Crispy half-moon pastries filled with seasoned beef and pork. A beloved Natchitoches tradition since the 1700s.",
-    category: 'BBQ & Smokehouse',
-    categorySlug: 'bbq',
-    time: '1 hour',
-    servings: 24,
-    image: null,
-    featured: false,
-    ingredients: [
-      '1 lb ground beef',
-      '1/2 lb ground pork',
-      '1 onion, finely diced',
-      '1 green bell pepper, finely diced',
-      '4 cloves garlic, minced',
-      '2 tsp Cajun seasoning',
-      '2 cups flour',
-      '1/2 cup shortening',
-      '1 egg',
-      '1/2 cup milk'
-    ],
-    instructions: [
-      'Brown beef and pork with onion, bell pepper, and garlic.',
-      'Season with Cajun seasoning. Cool completely.',
-      'Make dough by cutting shortening into flour, adding egg and milk.',
-      'Roll dough and cut into circles.',
-      'Fill each circle with meat mixture.',
-      'Fold and crimp edges with a fork.',
-      'Fry at 350°F until golden brown.'
-    ]
-  },
   {
     id: 23,
     title: 'Boudin Balls',
@@ -1797,36 +1597,6 @@ export const recipes: Recipe[] = [
     ]
   },
   {
-    id: 34,
-    title: 'Louisiana Pecan Pie',
-    subtitle: 'Deep South Classic',
-    description: 'Rich, gooey filling packed with toasted pecans in a buttery, flaky crust.',
-    category: 'Desserts',
-    categorySlug: 'desserts',
-    time: '1.5 hours',
-    servings: 8,
-    image: null,
-    featured: false,
-    ingredients: [
-      '1 unbaked 9-inch pie crust',
-      '1 cup corn syrup',
-      '1 cup sugar',
-      '3 eggs, beaten',
-      '2 tbsp butter, melted',
-      '1 tsp vanilla extract',
-      '1/4 tsp salt',
-      '1.5 cups pecan halves'
-    ],
-    instructions: [
-      'Preheat oven to 350°F.',
-      'Whisk together corn syrup, sugar, eggs, butter, vanilla, and salt.',
-      'Arrange pecans in pie crust.',
-      'Pour filling over pecans.',
-      'Bake 50-55 minutes until set.',
-      'Cool completely before slicing.'
-    ]
-  },
-  {
     id: 35,
     title: 'King Cake',
     subtitle: 'Mardi Gras Tradition',
@@ -1977,33 +1747,6 @@ export const recipes: Recipe[] = [
       'Strain and divide among ramekins.',
       'Bake in water bath at 325°F for 40-45 minutes.',
       'Chill at least 3 hours. Serve with whipped cream.'
-    ]
-  },
-  {
-    id: 65,
-    title: 'Bourbon Banana Pudding Cups',
-    subtitle: 'Grown-Up Nostalgia',
-    description: 'Layers of creamy nostalgia with a grown-up twist of bourbon. Vanilla wafers, bananas, and silky pudding.',
-    category: 'Desserts',
-    categorySlug: 'desserts',
-    time: '1.5 hours',
-    servings: 6,
-    image: null,
-    featured: false,
-    ingredients: [
-      '1 box instant vanilla pudding',
-      '1 tub whipped topping',
-      '2 cups cold milk',
-      '4 bananas, sliced',
-      '2 tbsp bourbon',
-      '1 box vanilla wafers'
-    ],
-    instructions: [
-      'Mix pudding, milk, and bourbon. Chill 5 minutes.',
-      'Layer pudding, banana slices, and wafers in cups.',
-      'Toast wafers a few minutes for extra crunch.',
-      'Top with whipped topping.',
-      'Chill 1 hour before serving.'
     ]
   },
   {
