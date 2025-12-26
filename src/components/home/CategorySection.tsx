@@ -1,51 +1,51 @@
 import { Link } from 'react-router-dom';
-import { Flame, Home, Beef, Soup, Church, Wheat, Cake } from 'lucide-react';
+import { Flame, Home, Beef, Soup, Wheat, Cake, Utensils } from 'lucide-react';
 
 const categories = [
   {
-    name: 'Elevated Southern Classics',
+    name: 'Southern Classics',
     description: 'Refined versions of timeless Southern dishes — familiar, comforting, and deeply flavorful.',
     icon: Home,
     slug: 'classics',
     color: 'from-honey to-honey-light',
   },
   {
-    name: 'Comfort Food & Family Favorites',
+    name: 'Comfort Food',
     description: 'Recipes made to feed people, not impress trends.',
     icon: Soup,
     slug: 'comfort',
     color: 'from-burgundy to-accent',
   },
   {
-    name: 'Backyard BBQ & Smokehouse',
+    name: 'BBQ & Smokehouse',
     description: 'Where fire, smoke, and seasoning meet tradition.',
     icon: Flame,
     slug: 'bbq',
     color: 'from-secondary to-charcoal',
   },
   {
-    name: 'Cajun & Creole Roots',
+    name: 'Cajun & Creole',
     description: 'Bold Louisiana flavor with deep respect for technique.',
     icon: Beef,
     slug: 'cajun',
     color: 'from-accent to-burgundy',
   },
   {
-    name: 'Sunday Suppers',
-    description: 'Slow meals meant to bring people together.',
-    icon: Church,
-    slug: 'sunday',
-    color: 'from-honey to-primary',
-  },
-  {
-    name: 'Southern Sides & Breads',
+    name: 'Southern Sides',
     description: 'The dishes that complete the plate.',
     icon: Wheat,
     slug: 'sides',
     color: 'from-charcoal to-secondary',
   },
   {
-    name: 'Desserts with Soul',
+    name: 'Rubs & Marinades',
+    description: 'Signature seasonings and sauces for bold flavor.',
+    icon: Utensils,
+    slug: 'rubs',
+    color: 'from-honey to-primary',
+  },
+  {
+    name: 'Desserts',
     description: 'Sweet endings done the Southern way.',
     icon: Cake,
     slug: 'desserts',

@@ -14,16 +14,15 @@ import pecanPie from '@/assets/recipe-pecan-pie.jpg';
 const placeholderImages = [friedChicken, bbqRibs, shrimpGrits, pecanPie];
 const getPlaceholderImage = (index: number) => placeholderImages[index % placeholderImages.length];
 
-// Define category order for carousel
+// Define category order for carousel (updated - no Sunday Suppers)
 const categoryOrder = [
-  'cajun',      // Cajun & Creole Roots
-  'classics',   // Elevated Southern Classics
-  'comfort',    // Comfort Food & Family Favorites
-  'sides',      // Southern Sides & Breads
+  'cajun',      // Cajun & Creole
+  'classics',   // Southern Classics
+  'comfort',    // Comfort Food
+  'sides',      // Southern Sides
   'bbq',        // BBQ & Smokehouse
   'rubs',       // Rubs & Marinades
-  'sunday',     // Sunday Suppers
-  'sweets',     // Sweets & Desserts
+  'desserts',   // Desserts
 ];
 
 // Get one recipe per category in order
@@ -55,7 +54,7 @@ export function FeaturedRecipes() {
             Featured Recipes
           </h2>
           <p className="font-body text-muted-foreground max-w-2xl mx-auto">
-            From Cajun & Creole classics to smoky BBQ, comforting Sunday suppers to sweet Southern desserts — explore recipes from all our cookbooks, tried, tested, and ready for your kitchen.
+            From Cajun & Creole classics to smoky BBQ, comforting family favorites to sweet Southern desserts — explore recipes from all our cookbooks, tried, tested, and ready for your kitchen.
           </p>
         </div>
 
