@@ -5,15 +5,7 @@ import { getRecipeById, getRecipesByCategory } from '@/data/recipes';
 import { Clock, Users, ChefHat, ArrowLeft, Printer, Share2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
-
-// Placeholder images until real images are generated
-import friedChicken from '@/assets/recipe-fried-chicken.jpg';
-import bbqRibs from '@/assets/recipe-bbq-ribs.jpg';
-import shrimpGrits from '@/assets/recipe-shrimp-grits.jpg';
-import pecanPie from '@/assets/recipe-pecan-pie.jpg';
-
-const placeholderImages = [friedChicken, bbqRibs, shrimpGrits, pecanPie];
-const getPlaceholderImage = (id: number) => placeholderImages[id % placeholderImages.length];
+import { getRecipeImage } from '@/data/recipeImages';
 
 const RecipePage = () => {
   const { id } = useParams();
@@ -198,18 +190,6 @@ const RecipePage = () => {
               </section>
             )}
 
-            {/* From the Kitchen Note */}
-            <section className="bg-muted rounded-lg p-6 mt-10">
-              <h3 className="font-display text-xl font-semibold text-foreground mb-3">
-                From the Kitchen
-              </h3>
-              <p className="font-body text-muted-foreground">
-                This recipe comes from my collection of Southern favorites, tested and perfected over years of cooking for family and friends. Take your time with each step, taste as you go, and don't be afraid to make it your own. That's what Southern cooking is all about.
-              </p>
-              <p className="font-body text-muted-foreground mt-3">
-                — <span className="text-primary font-medium">Dexter M. Boyd</span>
-              </p>
-            </section>
           </div>
 
           {/* Related Recipes */}
