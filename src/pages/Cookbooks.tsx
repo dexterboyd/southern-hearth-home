@@ -604,7 +604,7 @@ const Cookbooks = () => {
         </section>
 
         {/* Newsletter Section */}
-        <section className="section-padding bg-secondary">
+        <section id="newsletter" className="section-padding bg-secondary">
           <div className="container-blog">
             <div className="max-w-4xl mx-auto text-center">
               <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-primary/20 flex items-center justify-center">
