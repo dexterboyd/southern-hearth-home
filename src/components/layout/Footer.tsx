@@ -29,12 +29,7 @@ export function Footer() {
   const handleResourceClick = (href: string, e: React.MouseEvent) => {
     if (href === 'newsletter') {
       e.preventDefault();
-      if (location.pathname === '/') {
-        const element = document.getElementById('newsletter');
-        element?.scrollIntoView({ behavior: 'smooth' });
-      } else {
-        navigate('/', { state: { scrollTo: 'newsletter' } });
-      }
+      navigate('/cookbooks', { state: { scrollTo: 'newsletter' } });
     }
   };
 
