@@ -1,28 +1,7 @@
 import { Link } from 'react-router-dom';
-import { Flame, Home, Beef, Soup, Wheat, Cake, Utensils } from 'lucide-react';
+import { Flame, Beef, Utensils, Cake, Heart } from 'lucide-react';
 
 const categories = [
-  {
-    name: 'Southern Classics',
-    description: 'Refined versions of timeless Southern dishes — familiar, comforting, and deeply flavorful.',
-    icon: Home,
-    slug: 'classics',
-    color: 'from-honey to-honey-light',
-  },
-  {
-    name: 'Comfort Food',
-    description: 'Recipes made to feed people, not impress trends.',
-    icon: Soup,
-    slug: 'comfort',
-    color: 'from-burgundy to-accent',
-  },
-  {
-    name: 'BBQ & Smokehouse',
-    description: 'Where fire, smoke, and seasoning meet tradition.',
-    icon: Flame,
-    slug: 'bbq',
-    color: 'from-secondary to-charcoal',
-  },
   {
     name: 'Cajun & Creole',
     description: 'Bold Louisiana flavor with deep respect for technique.',
@@ -31,11 +10,18 @@ const categories = [
     color: 'from-accent to-burgundy',
   },
   {
-    name: 'Southern Sides',
-    description: 'The dishes that complete the plate.',
-    icon: Wheat,
-    slug: 'sides',
-    color: 'from-charcoal to-secondary',
+    name: 'Southern Soul Food',
+    description: 'Comfort classics and soulful sides that complete every plate.',
+    icon: Heart,
+    slug: 'soulfood',
+    color: 'from-burgundy to-accent',
+  },
+  {
+    name: 'BBQ & Smokehouse',
+    description: 'Where fire, smoke, and seasoning meet tradition.',
+    icon: Flame,
+    slug: 'bbq',
+    color: 'from-secondary to-charcoal',
   },
   {
     name: 'Rubs & Marinades',
