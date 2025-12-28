@@ -1301,6 +1301,32 @@ export const recipes: Recipe[] = [
     ]
   },
   {
+    id: 61,
+    title: 'Bourbon Banana Pudding Cups',
+    subtitle: 'Southern Soul with a Twist',
+    description: 'Layers of creamy nostalgia with a grown-up twist of smoky bourbon. Stacked with vanilla wafers, ripe bananas, and silky pudding, finished with bourbon-kissed whipped topping.',
+    category: 'Desserts',
+    categorySlug: 'desserts',
+    time: '1.5 hours',
+    servings: 6,
+    image: null,
+    featured: false,
+    ingredients: [
+      '1 box instant vanilla pudding',
+      '1 tub whipped topping',
+      '2 cups cold milk',
+      '4 bananas, sliced',
+      '2 tbsp bourbon',
+      '1 box vanilla wafers'
+    ],
+    instructions: [
+      'Mix pudding, milk, and bourbon. Chill for 5 minutes.',
+      'Layer pudding, banana slices, and wafers in cups or jars.',
+      'Toast the wafers a few minutes for extra crunch.',
+      'Top with whipped topping and chill 1 hour before serving.'
+    ]
+  },
+  {
     id: 67,
     title: 'Easy Crab Dip',
     subtitle: 'Crowd-Pleasing Appetizer',
