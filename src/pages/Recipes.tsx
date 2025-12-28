@@ -83,14 +83,14 @@ const Recipes = () => {
         {/* Categories */}
         <section className="py-3 border-b border-border bg-background sticky top-16 md:top-20 z-40">
           <div className="container-blog">
-            <div className="flex gap-2 overflow-x-auto pb-2">
+            <div className="flex justify-between gap-2 overflow-x-auto pb-2">
               {categories.map((category) => (
                 <Button
                   key={category.slug}
                   variant={activeCategory === category.slug ? 'default' : 'ghost'}
                   size="sm"
                   onClick={() => handleCategoryChange(category.slug)}
-                  className="whitespace-nowrap"
+                  className="whitespace-nowrap flex-1 min-w-0"
                 >
                   {category.name}
                 </Button>
