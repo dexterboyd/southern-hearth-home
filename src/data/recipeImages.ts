@@ -57,6 +57,7 @@ import chickenDust from '@/assets/recipes/chicken-dust.jpg';
 import steakBlend from '@/assets/recipes/steak-blend.jpg';
 import memphisRub from '@/assets/recipes/memphis-rub.jpg';
 import bourbonBananaPudding from '@/assets/recipes/bourbon-banana-pudding.jpg';
+import crabDip from '@/assets/recipes/crab-dip.jpg';
 
 // Map recipe IDs to their images
 export const recipeImages: Record<number, string> = {
@@ -118,6 +119,7 @@ export const recipeImages: Record<number, string> = {
   59: steakBlend,
   60: memphisRub,
   61: bourbonBananaPudding,
+  67: crabDip,
   // Remaining recipes use category-based fallbacks
 };
 
