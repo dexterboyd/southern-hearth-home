@@ -177,6 +177,16 @@ const RecipePage = () => {
                     </li>
                   ))}
                 </ol>
+
+                {/* Back to Recipes Button */}
+                <div className="flex justify-end mt-8">
+                  <Link to={`/recipes?category=${recipe.categorySlug}`}>
+                    <Button variant="outline" className="gap-2">
+                      Back to Recipes
+                      <ArrowLeft className="w-4 h-4 rotate-180" />
+                    </Button>
+                  </Link>
+                </div>
               </section>
             )}
 
