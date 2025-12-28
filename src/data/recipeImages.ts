@@ -9,9 +9,6 @@ import blackenedRedfish from '@/assets/recipes/blackened-redfish.jpg';
 import dirtyRice from '@/assets/recipes/dirty-rice.jpg';
 import shrimpCreole from '@/assets/recipes/shrimp-creole.jpg';
 import oystersRockefeller from '@/assets/recipes/oysters-rockefeller.jpg';
-import shrimpRemoulade from '@/assets/recipes/shrimp-remoulade.jpg';
-import grilladesGrits from '@/assets/recipes/grillades-grits.jpg';
-import stuffedCrabs from '@/assets/recipes/stuffed-crabs.jpg';
 import roastBeefPoboy from '@/assets/recipes/roast-beef-poboy.jpg';
 import shrimpOysterPoboy from '@/assets/recipes/shrimp-oyster-poboy.jpg';
 import muffuletta from '@/assets/recipes/muffuletta.jpg';
@@ -72,9 +69,6 @@ export const recipeImages: Record<number, string> = {
   8: dirtyRice,
   9: shrimpCreole,
   10: oystersRockefeller,
-  11: shrimpRemoulade,
-  12: grilladesGrits,
-  13: stuffedCrabs,
   14: roastBeefPoboy,
   15: shrimpOysterPoboy,
   16: muffuletta,
@@ -132,7 +126,6 @@ export const getRecipeImage = (id: number, categorySlug: string): string => {
   // Fallback based on category
   const categoryFallbacks: Record<string, string> = {
     cajun: gumbo,
-    classics: oystersRockefeller,
     comfort: roastBeefPoboy,
     sides: macAndCheese,
     bbq: brisket,
