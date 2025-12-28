@@ -14,8 +14,7 @@ import { getRecipeImage } from '@/data/recipeImages';
 const categories = [
   { name: 'All Recipes', slug: 'all' },
   { name: 'Cajun & Creole', slug: 'cajun' },
-  { name: 'Comfort Food', slug: 'comfort' },
-  { name: 'Southern Sides', slug: 'sides' },
+  { name: 'Southern Soul Food', slug: 'soulfood' },
   { name: 'BBQ & Smokehouse', slug: 'bbq' },
   { name: 'Rubs & Marinades', slug: 'rubs' },
   { name: 'Desserts', slug: 'desserts' },
