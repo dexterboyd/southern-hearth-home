@@ -1,12 +1,13 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 import heroImage from '@/assets/hero-southern-feast.jpg';
 
 export function HeroSection() {
-  const scrollToNewsletter = () => {
-    const element = document.getElementById('newsletter');
-    element?.scrollIntoView({ behavior: 'smooth' });
+  const navigate = useNavigate();
+
+  const goToFreeRecipes = () => {
+    navigate('/cookbooks', { state: { scrollTo: 'newsletter' } });
   };
 
   return (
@@ -38,7 +39,7 @@ export function HeroSection() {
                 <ArrowRight className="w-5 h-5" />
               </Button>
             </Link>
-            <Button variant="hero-outline" size="xl" onClick={scrollToNewsletter}>
+            <Button variant="hero-outline" size="xl" onClick={goToFreeRecipes}>
               Download Free Recipes
             </Button>
           </div>

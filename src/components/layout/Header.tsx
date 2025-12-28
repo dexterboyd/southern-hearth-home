@@ -16,13 +16,8 @@ export function Header() {
   const location = useLocation();
   const navigate = useNavigate();
 
-  const scrollToNewsletter = () => {
-    if (location.pathname === '/') {
-      const element = document.getElementById('newsletter');
-      element?.scrollIntoView({ behavior: 'smooth' });
-    } else {
-      navigate('/', { state: { scrollTo: 'newsletter' } });
-    }
+  const goToFreeRecipes = () => {
+    navigate('/cookbooks', { state: { scrollTo: 'newsletter' } });
   };
 
   const scrollToTop = () => {
@@ -78,7 +73,7 @@ export function Header() {
                 {link.name}
               </Link>
             ))}
-            <Button variant="default" size="sm" onClick={scrollToNewsletter}>
+            <Button variant="default" size="sm" onClick={goToFreeRecipes}>
               Free Recipes
             </Button>
           </nav>
@@ -117,7 +112,7 @@ export function Header() {
                 className="mt-2" 
                 onClick={() => {
                   setIsOpen(false);
-                  scrollToNewsletter();
+                  goToFreeRecipes();
                 }}
               >
                 Free Recipes
