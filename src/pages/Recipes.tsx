@@ -39,6 +39,11 @@ const Recipes = () => {
     } else {
       setSearchParams({ category: slug });
     }
+    // Scroll to top of recipe collection
+    const recipeSection = document.getElementById('recipe-collection');
+    if (recipeSection) {
+      recipeSection.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   const filteredRecipes = recipes.filter((recipe) => {
