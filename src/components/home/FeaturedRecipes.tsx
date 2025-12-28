@@ -12,6 +12,7 @@ const categoryOrder = [
   'cajun',      // Cajun & Creole
   'classics',   // Southern Classics
   'comfort',    // Comfort Food
+  'soulfood',   // Southern Soul Food
   'sides',      // Southern Sides
   'bbq',        // BBQ & Smokehouse
   'rubs',       // Rubs & Marinades
