@@ -13,20 +13,6 @@ export function CookbookCTA() {
 
       <div className="container-blog relative">
         <div className="max-w-4xl mx-auto text-center">
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/20 text-primary mb-6">
-            <Star className="w-4 h-4 fill-current" />
-            <span className="font-body text-sm font-medium">5.0 Rating on Amazon</span>
-          </div>
-
-          {/* Heading */}
-          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-semibold mb-6 leading-tight">
-            Flavor First: Homemade Rubs, Marinades & BBQ Sauces
-          </h2>
-          <p className="font-body text-xl text-cream/80 mb-8 max-w-2xl mx-auto leading-relaxed">
-            Your complete guide to flavor-forward backyard cooking. 41+ battle-tested recipes including signature dry rubs, marinades, regional BBQ sauces, and full meat recipes.
-          </p>
-
           {/* Features */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10 max-w-3xl mx-auto">
             <div className="text-center">
