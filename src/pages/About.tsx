@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { Button } from '@/components/ui/button';
-import { BookOpen, Instagram, Mail } from 'lucide-react';
+import { BookOpen, Instagram, Facebook } from 'lucide-react';
 
 const About = () => {
   return (
@@ -123,12 +123,12 @@ const About = () => {
                   Get 10 complimentary cookbook-quality recipes plus early access to new releases.
                 </p>
                 <div className="flex flex-wrap justify-center gap-4">
-                  <Link to="/#newsletter">
+                  <a href="https://www.facebook.com/FlavorFirst" target="_blank" rel="noopener noreferrer">
                     <Button variant="hero">
-                      <Mail className="w-4 h-4" />
-                      Get Free Recipes
+                      <Facebook className="w-4 h-4" />
+                      Follow on Facebook
                     </Button>
-                  </Link>
+                  </a>
                   <Button variant="outline">
                     <Instagram className="w-4 h-4" />
                     Follow on Instagram
