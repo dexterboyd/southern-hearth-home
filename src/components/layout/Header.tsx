@@ -17,7 +17,11 @@ export function Header() {
   const navigate = useNavigate();
 
   const goToFreeRecipes = () => {
-    navigate('/cookbooks', { state: { scrollTo: 'newsletter' } });
+    navigate('/cookbooks');
+    setTimeout(() => {
+      const element = document.getElementById('newsletter');
+      element?.scrollIntoView({ behavior: 'smooth' });
+    }, 100);
   };
 
   const scrollToTop = () => {
