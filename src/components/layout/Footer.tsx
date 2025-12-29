@@ -1,4 +1,4 @@
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { Mail, Instagram, Facebook, Youtube } from 'lucide-react';
 
 const footerLinks = {
@@ -9,7 +9,7 @@ const footerLinks = {
     { name: 'Desserts', href: '/recipes?category=desserts' },
   ],
   resources: [
-    { name: 'Free Recipes', href: 'newsletter' },
+    { name: 'Free Recipes', href: '/cookbooks#newsletter' },
     { name: 'Cookbooks', href: '/cookbooks' },
     { name: 'About Me', href: '/about' },
   ],
@@ -23,16 +23,6 @@ const socialLinks = [
 ];
 
 export function Footer() {
-  const location = useLocation();
-  const navigate = useNavigate();
-
-  const handleResourceClick = (href: string, e: React.MouseEvent) => {
-    if (href === 'newsletter') {
-      e.preventDefault();
-      navigate('/cookbooks', { state: { scrollTo: 'newsletter' } });
-    }
-  };
-
   return (
     <footer className="bg-secondary text-secondary-foreground">
       <div className="container-blog section-padding">
@@ -85,22 +75,12 @@ export function Footer() {
             <ul className="space-y-3">
               {footerLinks.resources.map((link) => (
                 <li key={link.name}>
-                  {link.href === 'newsletter' ? (
-                    <a
-                      href="#newsletter"
-                      onClick={(e) => handleResourceClick(link.href, e)}
-                      className="font-body text-secondary-foreground/70 hover:text-primary transition-colors cursor-pointer"
-                    >
-                      {link.name}
-                    </a>
-                  ) : (
-                    <Link
-                      to={link.href}
-                      className="font-body text-secondary-foreground/70 hover:text-primary transition-colors"
-                    >
-                      {link.name}
-                    </Link>
-                  )}
+                  <Link
+                    to={link.href}
+                    className="font-body text-secondary-foreground/70 hover:text-primary transition-colors"
+                  >
+                    {link.name}
+                  </Link>
                 </li>
               ))}
             </ul>

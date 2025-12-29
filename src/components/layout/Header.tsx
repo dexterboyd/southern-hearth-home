@@ -1,4 +1,4 @@
-import { useState, useEffect, type MouseEvent } from 'react';
+import { useState, type MouseEvent } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -17,6 +17,13 @@ export function Header() {
   const navigate = useNavigate();
 
   const goToFreeRecipes = () => {
+    if (location.pathname === '/cookbooks') {
+      document
+        .getElementById('newsletter')
+        ?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      return;
+    }
+
     navigate('/cookbooks#newsletter');
   };
 
@@ -35,15 +42,6 @@ export function Header() {
 
       setIsOpen(false);
     };
-  useEffect(() => {
-    if (location.state?.scrollTo === 'newsletter') {
-      setTimeout(() => {
-        const element = document.getElementById('newsletter');
-        element?.scrollIntoView({ behavior: 'smooth' });
-      }, 100);
-      window.history.replaceState({}, document.title);
-    }
-  }, [location]);
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
