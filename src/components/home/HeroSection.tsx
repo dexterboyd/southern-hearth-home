@@ -26,7 +26,7 @@ export function HeroSection() {
       <div className="relative z-10 container-blog px-4 py-20 text-center">
         <div className="max-w-2xl mx-auto">
           <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-semibold text-cream leading-tight mb-6 animate-fade-up opacity-0 stagger-2">
-            Southern Soul Food Starts with{' '}
+            Soul Food Starts with{' '}
             <span className="text-primary italic">Flavor.</span>
           </h1>
           <p className="font-body text-lg md:text-xl text-cream/80 mb-8 leading-relaxed animate-fade-up opacity-0 stagger-3">
