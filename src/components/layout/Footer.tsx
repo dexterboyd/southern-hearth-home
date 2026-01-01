@@ -9,7 +9,6 @@ const footerLinks = {
     { name: 'Desserts', href: '/recipes?category=desserts' },
   ],
   resources: [
-    { name: 'Free Recipes', href: '/cookbooks#newsletter' },
     { name: 'Cookbooks', href: '/cookbooks' },
     { name: 'About Me', href: '/about' },
   ],
