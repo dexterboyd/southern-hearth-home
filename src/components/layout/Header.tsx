@@ -1,7 +1,6 @@
 import { useState, type MouseEvent } from 'react';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
-import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 
 const navLinks = [
@@ -14,18 +13,6 @@ const navLinks = [
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
-  const navigate = useNavigate();
-
-  const goToFreeRecipes = () => {
-    if (location.pathname === '/cookbooks') {
-      document
-        .getElementById('newsletter')
-        ?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      return;
-    }
-
-    navigate('/cookbooks#newsletter');
-  };
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
@@ -71,9 +58,6 @@ export function Header() {
                 {link.name}
               </Link>
             ))}
-            <Button variant="default" size="sm" onClick={goToFreeRecipes}>
-              Free Recipes
-            </Button>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -105,16 +89,6 @@ export function Header() {
                   {link.name}
                 </Link>
               ))}
-              <Button 
-                variant="default" 
-                className="mt-2" 
-                onClick={() => {
-                  setIsOpen(false);
-                  goToFreeRecipes();
-                }}
-              >
-                Free Recipes
-              </Button>
             </div>
           </nav>
         )}
