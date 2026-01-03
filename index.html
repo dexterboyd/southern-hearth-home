@@ -8,18 +8,39 @@
     <meta name="keywords" content="Southern recipes, BBQ recipes, comfort food, Southern cooking, homestyle recipes, Cajun, Creole, Sunday suppers, Southern classics" />
     <meta name="author" content="Flavor First" />
     <link rel="canonical" href="https://flavorfirst.com" />
-    
+
+    <!-- GitHub Pages SPA deep-link fix (supports /recipes, /recipe/:id on refresh) -->
+    <script type="text/javascript">
+      (function (l) {
+        if (l.search && l.search[1] === "/") {
+          var decoded =
+            l.search
+              .slice(1)
+              .split("&")
+              .map(function (s) {
+                return s.replace(/~and~/g, "&");
+              })
+              .join("?");
+          window.history.replaceState(
+            null,
+            null,
+            l.pathname.slice(0, -1) + decoded + l.hash
+          );
+        }
+      })(window.location);
+    </script>
+
     <!-- Open Graph -->
     <meta property="og:title" content="Flavor First | Premium Southern Recipes" />
     <meta property="og:description" content="Luxury-inspired, homestyle Southern recipes with a bold BBQ edge — written like a cookbook, cooked like home." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://flavorfirst.com" />
-    
+
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Flavor First" />
     <meta name="twitter:description" content="Southern Comfort Starts with Flavor. Always." />
-    
+
     <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
   </head>
   <body>
