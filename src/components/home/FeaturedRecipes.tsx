@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { Clock, Users, ArrowRight } from 'lucide-react';
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from '@/components/ui/carousel';
 import Autoplay from 'embla-carousel-autoplay';
-import { recipes, Recipe } from '@/data/recipes';
+import { recipes, Recipe, getRecipeSlug } from '@/data/recipes';
 
 import { getRecipeImage } from '@/data/recipeImages';
 
@@ -71,7 +71,7 @@ export function FeaturedRecipes() {
             {carouselRecipes.map((recipe, index) => (
               <CarouselItem key={recipe.id} className="pl-4 md:basis-1/2 lg:basis-1/3">
                 <Link
-                  to={`/recipe/${recipe.id}`}
+                  to={`/recipe/${getRecipeSlug(recipe)}`}
                   className="group block relative aspect-[3/4] rounded-xl overflow-hidden card-elevated"
                 >
                   <img
