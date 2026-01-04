@@ -86,15 +86,15 @@ const Recipes = () => {
 
         {/* Categories */}
         <section className="py-3 border-b border-border bg-background sticky top-16 md:top-20 z-40">
-          <div className="container-blog">
-            <div className="flex justify-center gap-3 overflow-x-auto pb-2">
+          <div className="container-blog px-4">
+            <div className="flex md:justify-center gap-3 overflow-x-auto pb-2 scrollbar-hide">
               {categories.map((category) => (
                 <Button
                   key={category.slug}
                   variant={activeCategory === category.slug ? 'default' : 'ghost'}
                   size="sm"
                   onClick={() => handleCategoryChange(category.slug)}
-                  className="whitespace-nowrap px-4"
+                  className="whitespace-nowrap px-4 flex-shrink-0"
                 >
                   {category.name}
                 </Button>
