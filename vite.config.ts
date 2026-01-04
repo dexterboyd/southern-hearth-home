@@ -5,7 +5,8 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: mode === "production" ? "./" : "/",
+  // Use absolute base in production so deep-linked routes like /recipe/... can load /assets correctly.
+  base: mode === "production" ? "/" : "/",
   server: {
     host: "::",
     port: 8080,
