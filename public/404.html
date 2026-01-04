@@ -8,9 +8,9 @@
       // SPA routing fix for GitHub Pages (serves index.html on refresh / deep links)
       // Based on: https://github.com/rafgraph/spa-github-pages
       (function () {
-        var segmentCount = 1; // repo pages: /<repo-name>/...
+        var repoName = "southern-hearth-home";
+        var segmentCount = window.location.pathname.split("/")[1] === repoName ? 1 : 0;
         var l = window.location;
-        l.replace(
           l.protocol +
             "//" +
             l.hostname +
