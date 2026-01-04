@@ -113,7 +113,7 @@ const Recipes = () => {
                   to={`/recipe/${recipe.id}`}
                   className="group bg-card rounded-xl overflow-hidden card-elevated"
                 >
-                  <div className="aspect-[4/3] overflow-hidden">
+                  <div className="aspect-[3/2] overflow-hidden">
                     <img
                       src={getRecipeImage(recipe.id, recipe.categorySlug)}
                       alt={recipe.title}
