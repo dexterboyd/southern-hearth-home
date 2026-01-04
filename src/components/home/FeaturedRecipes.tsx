@@ -103,8 +103,8 @@ export function FeaturedRecipes() {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="hidden md:flex -left-4 bg-background border-border" />
-          <CarouselNext className="hidden md:flex -right-4 bg-background border-border" />
+          <CarouselPrevious className="-left-2 md:-left-4 bg-background border-border" />
+          <CarouselNext className="-right-2 md:-right-4 bg-background border-border" />
         </Carousel>
 
         {/* View All Link */}
