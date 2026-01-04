@@ -1358,6 +1358,26 @@ export const recipes: Recipe[] = [
 ];
 
 // Helper functions
+
+// Generate URL-friendly slug from recipe title
+export const generateSlug = (title: string): string => {
+  return title
+    .toLowerCase()
+    .replace(/[éè]/g, 'e')
+    .replace(/[àâ]/g, 'a')
+    .replace(/[ùû]/g, 'u')
+    .replace(/[ôö]/g, 'o')
+    .replace(/[îï]/g, 'i')
+    .replace(/[ç]/g, 'c')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+};
+
+// Get slug for a recipe
+export const getRecipeSlug = (recipe: Recipe): string => {
+  return generateSlug(recipe.title);
+};
+
 export const featuredRecipes = recipes.filter(recipe => recipe.featured);
 
 export const getRecipesByCategory = (categorySlug: string) => {
@@ -1367,4 +1387,8 @@ export const getRecipesByCategory = (categorySlug: string) => {
 
 export const getRecipeById = (id: number) => {
   return recipes.find(recipe => recipe.id === id);
+};
+
+export const getRecipeBySlug = (slug: string) => {
+  return recipes.find(recipe => generateSlug(recipe.title) === slug);
 };

@@ -1,15 +1,15 @@
 import { useParams, Link } from 'react-router-dom';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
-import { getRecipeById, getRecipesByCategory } from '@/data/recipes';
+import { getRecipeBySlug, getRecipesByCategory, getRecipeSlug } from '@/data/recipes';
 import { Clock, Users, ChefHat, ArrowLeft, Printer, Share2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
 import { getRecipeImage } from '@/data/recipeImages';
 
 const RecipePage = () => {
-  const { id } = useParams();
-  const recipe = getRecipeById(Number(id));
+  const { slug } = useParams();
+  const recipe = getRecipeBySlug(slug || '');
 
   if (!recipe) {
     return (
@@ -212,7 +212,7 @@ const RecipePage = () => {
                 {relatedRecipes.map((related) => (
                   <Link
                     key={related.id}
-                    to={`/recipe/${related.id}`}
+                    to={`/recipe/${getRecipeSlug(related)}`}
                     className="group bg-card rounded-xl overflow-hidden card-elevated"
                   >
                     <div className="aspect-[4/3] overflow-hidden">

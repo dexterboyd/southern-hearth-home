@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import { Clock, Users, Search } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
-import { recipes } from '@/data/recipes';
+import { recipes, getRecipeSlug } from '@/data/recipes';
 
 import { getRecipeImage } from '@/data/recipeImages';
 
@@ -107,10 +107,10 @@ const Recipes = () => {
         <section className="py-6 md:py-8 bg-background">
           <div className="container-blog">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {filteredRecipes.map((recipe, index) => (
+              {filteredRecipes.map((recipe) => (
                 <Link
                   key={recipe.id}
-                  to={`/recipe/${recipe.id}`}
+                  to={`/recipe/${getRecipeSlug(recipe)}`}
                   className="group bg-card rounded-xl overflow-hidden card-elevated"
                 >
                   <div className="aspect-[3/2] overflow-hidden">
