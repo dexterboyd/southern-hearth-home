@@ -66,7 +66,7 @@ const RecipePage = () => {
       <Header />
       <main className="pt-20">
         {/* Hero Image */}
-        <div className="relative h-[75vh] md:h-[90vh] overflow-hidden">
+        <div className="relative h-[40vh] md:h-[50vh] overflow-hidden">
           <img
             src={getRecipeImage(recipe.id, recipe.categorySlug)}
             alt={recipe.title}
