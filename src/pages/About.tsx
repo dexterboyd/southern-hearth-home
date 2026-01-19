@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
-import { Button } from '@/components/ui/button';
 import { BookOpen, Instagram, Facebook } from 'lucide-react';
 
 const About = () => {
@@ -123,24 +122,31 @@ const About = () => {
                   Get 10 complimentary cookbook-quality recipes plus early access to new releases.
                 </p>
                 <div className="flex flex-wrap justify-center gap-4">
-                  <Button variant="hero" asChild>
-                    <a href="https://www.facebook.com/profile.php?id=61556349519083" target="_blank" rel="noopener noreferrer">
-                      <Facebook className="w-4 h-4" />
-                      Follow on Facebook
-                    </a>
-                  </Button>
-                  <Button variant="outline" asChild>
-                    <a href="https://www.instagram.com/soulfulflavorskitchen/" target="_blank" rel="noopener noreferrer">
-                      <Instagram className="w-4 h-4" />
-                      Follow on Instagram
-                    </a>
-                  </Button>
-                  <Button variant="outline" asChild>
-                    <Link to="/cookbooks">
-                      <BookOpen className="w-4 h-4" />
-                      Shop Cookbooks
-                    </Link>
-                  </Button>
+                  <a 
+                    href="https://www.facebook.com/profile.php?id=61556349519083" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-xl text-sm font-semibold ring-offset-background transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg hover:shadow-xl h-11 px-6"
+                  >
+                    <Facebook className="w-4 h-4" />
+                    Follow on Facebook
+                  </a>
+                  <a 
+                    href="https://www.instagram.com/soulfulflavorskitchen/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-xl text-sm font-semibold ring-offset-background transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-11 px-6"
+                  >
+                    <Instagram className="w-4 h-4" />
+                    Follow on Instagram
+                  </a>
+                  <Link 
+                    to="/cookbooks"
+                    className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-xl text-sm font-semibold ring-offset-background transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-11 px-6"
+                  >
+                    <BookOpen className="w-4 h-4" />
+                    Shop Cookbooks
+                  </Link>
                 </div>
               </div>
             </div>

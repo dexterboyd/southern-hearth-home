@@ -46,15 +46,43 @@ const Recipes = () => {
     }
   };
 
-  const filteredRecipes = recipes.filter((recipe) => {
-    const matchesCategory =
-      activeCategory === 'all' ||
-      recipe.categorySlug === activeCategory;
-    const matchesSearch = recipe.title
-      .toLowerCase()
-      .includes(searchQuery.toLowerCase());
-    return matchesCategory && matchesSearch;
-  });
+  // Define custom sort orders for specific recipes to appear first
+  const cajunPriorityIds = [5, 1]; // Backyard Crawfish Boil, then New Orleans Red Beans & Rice
+  const dessertsPriorityIds = [35, 32, 61]; // King Cake, Bananas Foster, Bourbon Banana Pudding Cups
+  const allPriorityIds = [2, 40]; // Traditional New Orleans Gumbo, Southern Baked Mac & Cheese
+
+  const getSortedRecipes = (recipeList: typeof recipes) => {
+    let priorityIds: number[] = [];
+    
+    if (activeCategory === 'cajun') {
+      priorityIds = cajunPriorityIds;
+    } else if (activeCategory === 'desserts') {
+      priorityIds = dessertsPriorityIds;
+    } else if (activeCategory === 'all') {
+      priorityIds = allPriorityIds;
+    }
+
+    if (priorityIds.length === 0) return recipeList;
+
+    const priorityRecipes = priorityIds
+      .map(id => recipeList.find(r => r.id === id))
+      .filter(Boolean);
+    const remainingRecipes = recipeList.filter(r => !priorityIds.includes(r.id));
+    
+    return [...priorityRecipes, ...remainingRecipes] as typeof recipes;
+  };
+
+  const filteredRecipes = getSortedRecipes(
+    recipes.filter((recipe) => {
+      const matchesCategory =
+        activeCategory === 'all' ||
+        recipe.categorySlug === activeCategory;
+      const matchesSearch = recipe.title
+        .toLowerCase()
+        .includes(searchQuery.toLowerCase());
+      return matchesCategory && matchesSearch;
+    })
+  );
 
   return (
     <div className="min-h-screen bg-background">

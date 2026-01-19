@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { Mail, Instagram, Facebook } from 'lucide-react';
 
 const footerLinks = {
@@ -9,7 +9,7 @@ const footerLinks = {
     { name: 'Desserts', href: '/recipes?category=desserts' },
   ],
   resources: [
-    { name: 'Cookbooks', href: '/cookbooks' },
+    { name: 'Cookbooks', href: '/cookbooks', scrollToTop: true },
     { name: 'About Me', href: '/about' },
   ],
 };
@@ -21,6 +21,15 @@ const socialLinks = [
 ];
 
 export function Footer() {
+  const location = useLocation();
+
+  const handleResourceClick = (link: { name: string; href: string; scrollToTop?: boolean }, e: React.MouseEvent) => {
+    if (link.scrollToTop && location.pathname === link.href) {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
+
   return (
     <footer className="bg-secondary text-secondary-foreground">
       <div className="container-blog section-padding">
@@ -77,6 +86,7 @@ export function Footer() {
                 <li key={link.name}>
                   <Link
                     to={link.href}
+                    onClick={(e) => handleResourceClick(link, e)}
                     className="font-body text-secondary-foreground/70 hover:text-primary transition-colors"
                   >
                     {link.name}
