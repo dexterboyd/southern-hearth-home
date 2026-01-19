@@ -123,16 +123,18 @@ const About = () => {
                   Get 10 complimentary cookbook-quality recipes plus early access to new releases.
                 </p>
                 <div className="flex flex-wrap justify-center gap-4">
-                  <a href="https://www.facebook.com/FlavorFirst" target="_blank" rel="noopener noreferrer">
+                  <a href="https://www.facebook.com/profile.php?id=61556349519083" target="_blank" rel="noopener noreferrer">
                     <Button variant="hero">
                       <Facebook className="w-4 h-4" />
                       Follow on Facebook
                     </Button>
                   </a>
-                  <Button variant="outline">
-                    <Instagram className="w-4 h-4" />
-                    Follow on Instagram
-                  </Button>
+                  <a href="https://www.instagram.com/soulfulflavorskitchen/" target="_blank" rel="noopener noreferrer">
+                    <Button variant="outline">
+                      <Instagram className="w-4 h-4" />
+                      Follow on Instagram
+                    </Button>
+                  </a>
                   <Link to="/cookbooks">
                     <Button variant="outline">
                       <BookOpen className="w-4 h-4" />
