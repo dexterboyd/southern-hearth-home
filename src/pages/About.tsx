@@ -123,24 +123,24 @@ const About = () => {
                   Get 10 complimentary cookbook-quality recipes plus early access to new releases.
                 </p>
                 <div className="flex flex-wrap justify-center gap-4">
-                  <a href="https://www.facebook.com/profile.php?id=61556349519083" target="_blank" rel="noopener noreferrer">
-                    <Button variant="hero">
+                  <Button variant="hero" asChild>
+                    <a href="https://www.facebook.com/profile.php?id=61556349519083" target="_blank" rel="noopener noreferrer">
                       <Facebook className="w-4 h-4" />
                       Follow on Facebook
-                    </Button>
-                  </a>
-                  <a href="https://www.instagram.com/soulfulflavorskitchen/" target="_blank" rel="noopener noreferrer">
-                    <Button variant="outline">
+                    </a>
+                  </Button>
+                  <Button variant="outline" asChild>
+                    <a href="https://www.instagram.com/soulfulflavorskitchen/" target="_blank" rel="noopener noreferrer">
                       <Instagram className="w-4 h-4" />
                       Follow on Instagram
-                    </Button>
-                  </a>
-                  <Link to="/cookbooks">
-                    <Button variant="outline">
+                    </a>
+                  </Button>
+                  <Button variant="outline" asChild>
+                    <Link to="/cookbooks">
                       <BookOpen className="w-4 h-4" />
                       Shop Cookbooks
-                    </Button>
-                  </Link>
+                    </Link>
+                  </Button>
                 </div>
               </div>
             </div>
