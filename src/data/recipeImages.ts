@@ -58,6 +58,13 @@ import steakBlend from '@/assets/recipes/steak-blend.jpg';
 import memphisRub from '@/assets/recipes/memphis-rub.jpg';
 import bourbonBananaPudding from '@/assets/recipes/bourbon-banana-pudding.jpg';
 import crabDip from '@/assets/recipes/crab-dip.jpg';
+import popeyesSandwichAsset from '@/assets/recipes/copycat-popeyes-chicken-sandwich.jpg.asset.json';
+import filetOFishAsset from '@/assets/recipes/copycat-filet-o-fish.jpg.asset.json';
+import cheesecakeFactoryAsset from '@/assets/recipes/copycat-cheesecake-factory.jpg.asset.json';
+
+const popeyesSandwich = popeyesSandwichAsset.url;
+const filetOFish = filetOFishAsset.url;
+const cheesecakeFactory = cheesecakeFactoryAsset.url;
 
 // Map recipe IDs to their images
 export const recipeImages: Record<number, string> = {
@@ -120,6 +127,9 @@ export const recipeImages: Record<number, string> = {
   60: memphisRub,
   61: bourbonBananaPudding,
   67: crabDip,
+  68: popeyesSandwich,
+  69: filetOFish,
+  70: cheesecakeFactory,
   // Remaining recipes use category-based fallbacks
 };
 
