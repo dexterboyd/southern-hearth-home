@@ -94,9 +94,6 @@ const Recipes = () => {
             <h1 className="font-display text-2xl md:text-3xl font-semibold text-foreground mb-2">
               Recipe Collection
             </h1>
-            <p className="font-body text-sm text-muted-foreground max-w-2xl mx-auto mb-4">
-              Bold Southern flavors, homestyle Cajun & Creole recipes, and BBQ classics — ready for your kitchen.
-            </p>
 
             {/* Search */}
             <div className="max-w-sm mx-auto relative">

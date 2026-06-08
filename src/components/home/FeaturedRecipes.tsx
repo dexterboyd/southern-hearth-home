@@ -41,15 +41,9 @@ export function FeaturedRecipes() {
       <div className="container-blog">
         {/* Section Header */}
         <div className="text-center mb-12">
-          <p className="font-body text-primary uppercase tracking-widest text-sm mb-3">
-            From My Kitchen to Yours
-          </p>
           <h2 className="font-display text-3xl md:text-4xl font-semibold text-foreground mb-4">
             Featured Recipes
           </h2>
-          <p className="font-body text-muted-foreground max-w-2xl mx-auto">
-            From Cajun & Creole classics to smoky BBQ, comforting family favorites to sweet Southern desserts — explore recipes from all our cookbooks, tried, tested, and ready for your kitchen.
-          </p>
         </div>
 
         {/* Recipe Carousel */}
