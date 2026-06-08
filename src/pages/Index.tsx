@@ -2,7 +2,6 @@ import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { HeroSection } from '@/components/home/HeroSection';
 import { FeaturedRecipes } from '@/components/home/FeaturedRecipes';
-import { CategorySection } from '@/components/home/CategorySection';
 import { AboutPreview } from '@/components/home/AboutPreview';
 
 const Index = () => {
