@@ -11,7 +11,6 @@ const Index = () => {
       <main>
         <HeroSection />
         <FeaturedRecipes />
-        <CategorySection />
         <AboutPreview />
       </main>
       <Footer />
