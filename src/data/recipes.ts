@@ -1489,6 +1489,80 @@ export const recipes: Recipe[] = [
       'Glazed strawberries: Whisk cornstarch and cold water in a small bowl until smooth. In a medium saucepan, combine strawberries, sugar, lemon juice, and the cornstarch slurry. Bring to a simmer over medium heat and cook until the liquid thickens to a syrupy texture that coats the strawberries. Transfer to a bowl, cover with plastic wrap, and chill until ready to serve.',
       'To serve, top each slice with a few glazed strawberries and a swirl of whipped cream.'
     ]
+  },
+  {
+    id: 71,
+    title: 'Dookie Chase Style Fried Chicken',
+    subtitle: 'Crispy, Bold, Leah Chase-Inspired',
+    description: 'Inspired by legendary New Orleans chef Leah Chase, this crispy fried chicken is packed with bold Southern flavor and a crunchy golden crust.',
+    category: 'Southern Soul Food',
+    categorySlug: 'soulfood',
+    time: '45 min (plus overnight marinate)',
+    servings: 4,
+    image: null,
+    featured: false,
+    ingredients: [
+      '1 whole chicken, cut into 8 pieces',
+      '3 large eggs',
+      '1/4 cup water',
+      '2 cups all-purpose flour',
+      '3 Tbsp salt, divided',
+      '1 Tbsp black pepper',
+      '1 Tbsp garlic powder',
+      '1 Tbsp cayenne pepper',
+      'Vegetable oil, for frying'
+    ],
+    instructions: [
+      'In a small bowl, mix 2 Tbsp of the salt, black pepper, garlic powder, and cayenne.',
+      'In a large bowl, whisk the eggs, water, and seasoning blend together until well combined.',
+      'Add the chicken to the egg mixture, turning to coat. Cover and refrigerate overnight to marinate.',
+      'In a shallow dish, mix the flour with the remaining 1 Tbsp salt.',
+      'Heat about 2 inches of vegetable oil in a heavy skillet or Dutch oven to 350°F.',
+      'Dredge each piece of marinated chicken in the seasoned flour, pressing to coat well.',
+      'Carefully fry the chicken 15–16 minutes, turning occasionally, until golden brown and the internal temperature reaches 165°F.',
+      'Transfer to a wire rack and rest 5 minutes before serving.'
+    ]
+  },
+  {
+    id: 72,
+    title: "Copycat Raising Cane's Fried Chicken",
+    subtitle: 'Crispy Tenders with Signature Crunch',
+    description: "Craving that crispy Raising Cane's-style chicken at home? This copycat recipe brings you tender fried chicken strips with bold seasoning and a crunchy coating—perfect for dipping and sharing.",
+    category: 'Copycat Classics',
+    categorySlug: 'copycat',
+    time: '40 min (plus marinate)',
+    servings: 4,
+    image: null,
+    featured: false,
+    ingredients: [
+      'MARINADE:',
+      '1 1/2 lbs chicken tenders or boneless chicken breast strips',
+      '2 cups buttermilk',
+      '1 tsp salt',
+      '1/2 tsp black pepper',
+      '1/2 tsp garlic powder',
+      'DRY BREADING:',
+      '2 cups all-purpose flour',
+      '1/2 cup cornstarch',
+      '1 1/2 tsp salt',
+      '1 tsp black pepper',
+      '1 tsp garlic powder',
+      '1/2 tsp paprika',
+      'WET DREDGE:',
+      '1 cup buttermilk',
+      '1 large egg',
+      '1 Tbsp hot sauce (optional, very mild)',
+      'Vegetable oil, for frying'
+    ],
+    instructions: [
+      'Marinate: In a large bowl or zip-top bag, whisk the buttermilk, salt, pepper, and garlic powder. Add chicken, cover, and refrigerate 4–24 hours.',
+      'Make the dry breading: In a shallow dish, whisk together the flour, cornstarch, salt, pepper, garlic powder, and paprika.',
+      'Make the wet dredge: In a separate shallow bowl, whisk the buttermilk, egg, and hot sauce (if using).',
+      'Heat 2 inches of vegetable oil in a heavy pot or Dutch oven to 350°F.',
+      'Remove chicken from the marinade, letting excess drip off. Dip each piece into the wet dredge, then into the dry breading, pressing firmly to coat.',
+      'Working in batches, fry the tenders 4–6 minutes, turning once, until deep golden brown and the internal temperature reaches 165°F.',
+      'Transfer to a wire rack and rest 2–3 minutes. Serve hot with your favorite dipping sauce.'
+    ]
   }
 ];
 
