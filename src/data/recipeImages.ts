@@ -61,6 +61,8 @@ import crabDip from '@/assets/recipes/crab-dip.jpg';
 import popeyesSandwich from '@/assets/recipes/copycat-popeyes-chicken-sandwich.jpg';
 import filetOFish from '@/assets/recipes/copycat-filet-o-fish.jpg';
 import cheesecakeFactory from '@/assets/recipes/copycat-cheesecake-factory.jpg';
+import dookieChaseFriedChicken from '@/assets/recipes/dookie-chase-fried-chicken.jpg';
+import copycatRaisingCanes from '@/assets/recipes/copycat-raising-canes.png';
 
 // Map recipe IDs to their images
 export const recipeImages: Record<number, string> = {
@@ -126,6 +128,8 @@ export const recipeImages: Record<number, string> = {
   68: popeyesSandwich,
   69: filetOFish,
   70: cheesecakeFactory,
+  71: dookieChaseFriedChicken,
+  72: copycatRaisingCanes,
   // Remaining recipes use category-based fallbacks
 };
 
