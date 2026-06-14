@@ -1563,6 +1563,72 @@ export const recipes: Recipe[] = [
       'Working in batches, fry the tenders 4–6 minutes, turning once, until deep golden brown and the internal temperature reaches 165°F.',
       'Transfer to a wire rack and rest 2–3 minutes. Serve hot with your favorite dipping sauce.'
     ]
+  },
+  {
+    id: 73,
+    title: "Copycat McDonald's Hotcakes",
+    subtitle: 'Fluffy Golden Pancakes, Just Like the Drive-Thru',
+    description: "Soft, fluffy, and slightly sweet—these copycat McDonald's hotcakes are the perfect homemade breakfast stack. Serve with a square pat of butter and a generous pour of warm maple syrup.",
+    category: 'Copycat Classics',
+    categorySlug: 'copycat',
+    time: '20 min',
+    servings: 4,
+    image: null,
+    featured: false,
+    ingredients: [
+      '2 eggs',
+      '2 cups milk',
+      '2 Tbsp maple syrup, plus more for serving',
+      '1/4 cup vegetable oil, plus more for cooking',
+      '1 Tbsp baking powder',
+      '2 cups all-purpose flour',
+      '1/4 tsp kosher salt',
+      'Butter, for serving'
+    ],
+    instructions: [
+      'In a large bowl, whisk the eggs, milk, oil, and syrup until combined. Add baking powder, flour, and salt. Whisk together until just combined, and not smooth. The lumpier, the better!',
+      'Heat a large nonstick skillet or griddle over medium heat. (If desired, add a little oil or butter here.) Using a 1/4 cup measuring cup, scoop batter onto the skillet/griddle. Cook until bubbles appear on the surface, about 2–3 minutes. Flip gently so as to not deflate the rise, and cook for another 2 minutes, or until the hotcakes are cooked through. Repeat with the remaining batter.',
+      'Serve with maple syrup and a perfectly square pat of butter.'
+    ]
+  },
+  {
+    id: 74,
+    title: "Copycat McDonald's McGriddle",
+    subtitle: 'Sweet Maple Pancakes, Egg, Bacon & Cheese',
+    description: "The iconic sweet-and-savory breakfast sandwich made from scratch—maple-kissed pancake buns layered with fluffy egg, melty American cheese, and crispy bacon.",
+    category: 'Copycat Classics',
+    categorySlug: 'copycat',
+    time: '45 min',
+    servings: 4,
+    image: null,
+    featured: false,
+    ingredients: [
+      'PANCAKES:',
+      '2 cups store-bought pancake mix',
+      '1/2 tsp maple extract',
+      '1 1/2 cups water',
+      '1/4 cup packed light brown sugar',
+      '2 Tbsp pure maple syrup',
+      'Cooking spray',
+      '2 Tbsp plus 2 tsp unsalted butter',
+      'EGGS:',
+      '4 large eggs',
+      '2 Tbsp whole milk',
+      '1/2 tsp kosher salt',
+      'ASSEMBLY:',
+      '4 slices bacon',
+      '4 slices American cheese',
+      'Equipment: 3 3/4" round cutter'
+    ],
+    instructions: [
+      'Preheat oven to 350°F. In a large bowl, stir pancake mix, maple extract, and 1 1/2 cups water until combined. In a small bowl, mix brown sugar and maple syrup until combined.',
+      'Preheat a large nonstick skillet over medium heat. Spray a 3 3/4" round cutter with cooking spray and place in pan with about 1 teaspoon butter. Using a 1/4-cup measuring cup, pour in 1/8 cup pancake mixture. Dot with 4 to 5 (1/4-teaspoon) rounds of brown sugar mixture. Spoon 1/8 cup pancake mixture on top. Cook, turning halfway through, until golden brown, 4 to 5 minutes on each side. Transfer to a baking sheet and keep warm. Repeat with remaining pancake mixture and brown sugar mixture.',
+      'Grease a 12" x 8 1/2" baking pan with cooking spray, then line with parchment, making sure parchment is arranged high enough to avoid egg spilling underneath. Spray parchment with cooking spray.',
+      'In a medium bowl, whisk eggs, milk, and salt until cohesive and pale yellow. Pour mixture into prepared pan. Bake egg mixture until set, 6 to 8 minutes. Let cool slightly.',
+      'Cut eggs into 4 (12" x 2") strips. Roll strips into bundles.',
+      'Meanwhile, on a small foil-lined baking sheet, arrange bacon in a single layer. Bake until shrunk and turns lightly crispy, 10 to 12 minutes.',
+      'Place a slice of cheese on bottom half of pancake. Top with eggs and bacon. Close with another pancake.'
+    ]
   }
 ];
 
