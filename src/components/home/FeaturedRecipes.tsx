@@ -7,33 +7,14 @@ import { recipes, Recipe, getRecipeSlug } from '@/data/recipes';
 import { getRecipeImage } from '@/data/recipeImages';
 
 
-// Define category order for carousel (updated - no Sunday Suppers)
-const categoryOrder = [
-  'cajun',      // Cajun & Creole
-  'classics',   // Southern Classics
-  'comfort',    // Comfort Food
-  'soulfood',   // Southern Soul Food
-  'sides',      // Southern Sides
-  'bbq',        // BBQ & Smokehouse
-  'rubs',       // Rubs & Marinades
-  'desserts',   // Desserts
-];
-
-// Get one recipe per category in order
-const getCarouselRecipes = (): Recipe[] => {
-  const carouselRecipes: Recipe[] = [];
-  
-  categoryOrder.forEach(categorySlug => {
-    const categoryRecipe = recipes.find(r => r.categorySlug === categorySlug);
-    if (categoryRecipe) {
-      carouselRecipes.push(categoryRecipe);
-    }
-  });
-  
-  return carouselRecipes;
+// Get the 10 latest recipes by ID
+const getLatestRecipes = (): Recipe[] => {
+  // Sort recipes by ID descending and take the first 10
+  const sortedRecipes = [...recipes].sort((a, b) => b.id - a.id);
+  return sortedRecipes.slice(0, 10);
 };
 
-const carouselRecipes = getCarouselRecipes();
+const carouselRecipes = getLatestRecipes();
 
 export function FeaturedRecipes() {
   return (
