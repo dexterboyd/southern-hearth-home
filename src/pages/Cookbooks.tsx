@@ -8,14 +8,6 @@ import bigEasyCover from '@/assets/big-easy-ebook-cover.png';
 import comfortFoodCover from '@/assets/southern-comfort-food-cover.png';
 import culinaryChroniclesCover from '@/assets/culinary-chronicles-cover.png';
 
-const cookbookFeatures = [
-  'Over 50 homemade rubs, marinades & BBQ sauces',
-  'Step-by-step instructions for every recipe',
-  'Pro tips for building bold, layered flavor',
-  'Perfect for grilling, smoking, and everyday cooking',
-  'Designed for home cooks and pitmasters alike',
-  'Recipes that elevate any cut of meat',
-];
 
 const testimonials = [
   {
@@ -41,9 +33,9 @@ const Cookbooks = () => {
       <Header />
       <main className="pt-20">
         {/* Hero Section - Flavor First */}
-        <section className="section-padding bg-gradient-to-br from-charcoal via-secondary to-charcoal text-cream">
+        <section className="pt-8 md:pt-12 pb-16 md:pb-24 px-4 md:px-8 bg-gradient-to-br from-charcoal via-secondary to-charcoal text-cream">
           <div className="container-blog">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
               {/* Content */}
               <div>
                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/20 text-primary mb-6">
@@ -150,28 +142,6 @@ const Cookbooks = () => {
           </div>
         </section>
 
-        {/* Features Section */}
-        <section className="section-padding bg-background">
-          <div className="container-blog">
-            <div className="text-center mb-12">
-              <h2 className="font-display text-3xl md:text-4xl font-semibold text-foreground mb-4">
-                What's Inside
-              </h2>
-              <p className="font-body text-muted-foreground max-w-2xl mx-auto">
-                More than just recipes — a complete guide to mastering bold, homemade flavor.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-3xl mx-auto">
-              {cookbookFeatures.map((feature, index) => (
-                <div key={index} className="flex items-start gap-3 p-4 bg-muted rounded-lg">
-                  <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span className="font-body text-foreground">{feature}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
 
         {/* Testimonials */}
         <section className="section-padding bg-muted">
