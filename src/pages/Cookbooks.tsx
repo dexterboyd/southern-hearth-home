@@ -142,28 +142,6 @@ const Cookbooks = () => {
           </div>
         </section>
 
-        {/* Features Section */}
-        <section className="section-padding bg-background">
-          <div className="container-blog">
-            <div className="text-center mb-12">
-              <h2 className="font-display text-3xl md:text-4xl font-semibold text-foreground mb-4">
-                What's Inside
-              </h2>
-              <p className="font-body text-muted-foreground max-w-2xl mx-auto">
-                More than just recipes — a complete guide to mastering bold, homemade flavor.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-3xl mx-auto">
-              {cookbookFeatures.map((feature, index) => (
-                <div key={index} className="flex items-start gap-3 p-4 bg-muted rounded-lg">
-                  <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span className="font-body text-foreground">{feature}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
 
         {/* Testimonials */}
         <section className="section-padding bg-muted">
