@@ -41,9 +41,9 @@ const Cookbooks = () => {
       <Header />
       <main className="pt-20">
         {/* Hero Section - Flavor First */}
-        <section className="section-padding bg-gradient-to-br from-charcoal via-secondary to-charcoal text-cream">
+        <section className="pt-8 md:pt-12 pb-16 md:pb-24 px-4 md:px-8 bg-gradient-to-br from-charcoal via-secondary to-charcoal text-cream">
           <div className="container-blog">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
               {/* Content */}
               <div>
                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/20 text-primary mb-6">
