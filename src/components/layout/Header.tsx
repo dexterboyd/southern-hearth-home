@@ -37,7 +37,7 @@ export function Header() {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2">
             <span className="font-display text-2xl md:text-3xl font-semibold text-foreground">
-              Flavor <span className="text-primary">First</span>
+              Flavor First <span className="text-primary">Recipes</span>
             </span>
           </Link>
 
