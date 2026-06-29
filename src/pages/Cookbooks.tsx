@@ -253,25 +253,6 @@ const Cookbooks = () => {
                   church-supper classics, and crave-worthy dishes made simple for everyday cooks.
                 </p>
 
-                {/* Features */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
-                  <div className="flex items-start gap-2">
-                    <Check className="w-5 h-5 text-stone-600 flex-shrink-0 mt-0.5" />
-                    <span className="font-body text-foreground text-sm">Homestyle Southern classics</span>
-                  </div>
-                  <div className="flex items-start gap-2">
-                    <Check className="w-5 h-5 text-stone-600 flex-shrink-0 mt-0.5" />
-                    <span className="font-body text-foreground text-sm">Soulful sides & crowd favorites</span>
-                  </div>
-                  <div className="flex items-start gap-2">
-                    <Check className="w-5 h-5 text-stone-600 flex-shrink-0 mt-0.5" />
-                    <span className="font-body text-foreground text-sm">Appetizers & small bites</span>
-                  </div>
-                  <div className="flex items-start gap-2">
-                    <Check className="w-5 h-5 text-stone-600 flex-shrink-0 mt-0.5" />
-                    <span className="font-body text-foreground text-sm">Beginner-friendly instructions</span>
-                  </div>
-                </div>
 
                 {/* Pricing */}
                 <a 
