@@ -8,14 +8,6 @@ import bigEasyCover from '@/assets/big-easy-ebook-cover.png';
 import comfortFoodCover from '@/assets/southern-comfort-food-cover.png';
 import culinaryChroniclesCover from '@/assets/culinary-chronicles-cover.png';
 
-const cookbookFeatures = [
-  'Over 50 homemade rubs, marinades & BBQ sauces',
-  'Step-by-step instructions for every recipe',
-  'Pro tips for building bold, layered flavor',
-  'Perfect for grilling, smoking, and everyday cooking',
-  'Designed for home cooks and pitmasters alike',
-  'Recipes that elevate any cut of meat',
-];
 
 const testimonials = [
   {
