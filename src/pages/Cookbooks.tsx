@@ -64,22 +64,22 @@ const Cookbooks = () => {
               </div>
 
               {/* Book Cover with Recipe Cards */}
-              <div className="relative flex flex-col items-center gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
                 {/* Ebook Cover */}
-                <div className="relative">
+                <div className="relative flex justify-center">
                   <div className="bg-gradient-to-br from-primary/30 to-burgundy/30 p-4 rounded-2xl">
                     <img 
                       src={flavorFirstCover} 
                       alt="Flavor First: Homemade Rubs, Marinades & BBQ Sauces Cookbook Cover" 
-                      className="rounded-xl shadow-2xl max-w-xs md:max-w-sm"
+                      className="rounded-xl shadow-2xl max-w-xs md:max-w-full"
                     />
                   </div>
                   <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-primary/20 rounded-2xl -z-10" />
                 </div>
 
                 {/* Featured Recipes Description */}
-                <div className="w-full max-w-md mt-4">
-                  <p className="font-display text-base text-cream/80 mb-3 text-center uppercase tracking-wider">
+                <div>
+                  <p className="font-display text-base text-cream/80 mb-3 uppercase tracking-wider">
                     Featured Recipes Inside:
                   </p>
                   <div className="bg-charcoal/60 border border-primary/20 rounded-xl p-5 text-left">
