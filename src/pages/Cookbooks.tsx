@@ -1,7 +1,7 @@
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { Button } from '@/components/ui/button';
-import { BookOpen, ShoppingBag, Star, Check, Flame } from 'lucide-react';
+import { BookOpen, ShoppingBag, Check, Flame } from 'lucide-react';
 import { toast } from 'sonner';
 import flavorFirstCover from '@/assets/flavor-first-ebook-cover.jpg';
 import bigEasyCover from '@/assets/big-easy-ebook-cover.png';
@@ -9,23 +9,6 @@ import comfortFoodCover from '@/assets/southern-comfort-food-cover.png';
 import culinaryChroniclesCover from '@/assets/culinary-chronicles-cover.png';
 
 
-const testimonials = [
-  {
-    quote: "One of the best cooking guides I've bought in a long time. The recipes are straightforward, the flavors are big. 100% worth it.",
-    author: "Dave",
-    location: "Verified Purchase",
-  },
-  {
-    quote: "Hands down one of the best BBQ guides I've ever picked up. The recipes, rubs, and sauces are bursting with bold flavor and easy enough for anyone to master.",
-    author: "LStalli1",
-    location: "Verified Purchase",
-  },
-  {
-    quote: "Boyd does a great job breaking it down into simple steps and fun. I'm inspired.",
-    author: "Tee",
-    location: "Verified Purchase",
-  },
-];
 
 const Cookbooks = () => {
   return (
@@ -143,35 +126,6 @@ const Cookbooks = () => {
         </section>
 
 
-        {/* Testimonials */}
-        <section className="section-padding bg-muted">
-          <div className="container-blog">
-            <div className="text-center mb-12">
-              <h2 className="font-display text-3xl md:text-4xl font-semibold text-foreground mb-4">
-                What Readers Are Saying
-              </h2>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {testimonials.map((testimonial, index) => (
-                <div key={index} className="bg-card p-6 rounded-xl card-elevated">
-                  <div className="flex gap-1 mb-4">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 text-primary fill-current" />
-                    ))}
-                  </div>
-                  <p className="font-body text-foreground/80 mb-4 italic">
-                    "{testimonial.quote}"
-                  </p>
-                  <div className="font-body text-sm">
-                    <span className="text-foreground font-medium">{testimonial.author}</span>
-                    <span className="text-muted-foreground"> • {testimonial.location}</span>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
 
         {/* Second Cookbook - Flavors of the Big Easy */}
         <section className="section-padding bg-background">
@@ -204,25 +158,6 @@ const Cookbooks = () => {
                   authentic Southern dishes at home.
                 </p>
 
-                {/* Features */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
-                  <div className="flex items-start gap-2">
-                    <Check className="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" />
-                    <span className="font-body text-foreground text-sm">Cajun & Creole classics</span>
-                  </div>
-                  <div className="flex items-start gap-2">
-                    <Check className="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" />
-                    <span className="font-body text-foreground text-sm">Elevated Southern favorites</span>
-                  </div>
-                  <div className="flex items-start gap-2">
-                    <Check className="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" />
-                    <span className="font-body text-foreground text-sm">Comfort food & family recipes</span>
-                  </div>
-                  <div className="flex items-start gap-2">
-                    <Check className="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" />
-                    <span className="font-body text-foreground text-sm">Backyard BBQ & smokehouse</span>
-                  </div>
-                </div>
 
                 {/* Pricing */}
                 <a 
@@ -259,25 +194,6 @@ const Cookbooks = () => {
                   patience, and served with love.
                 </p>
 
-                {/* Features */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
-                  <div className="flex items-start gap-2">
-                    <Check className="w-5 h-5 text-orange-600 flex-shrink-0 mt-0.5" />
-                    <span className="font-body text-foreground text-sm">40+ time-tested Southern recipes</span>
-                  </div>
-                  <div className="flex items-start gap-2">
-                    <Check className="w-5 h-5 text-orange-600 flex-shrink-0 mt-0.5" />
-                    <span className="font-body text-foreground text-sm">Comfort food staples & sides</span>
-                  </div>
-                  <div className="flex items-start gap-2">
-                    <Check className="w-5 h-5 text-orange-600 flex-shrink-0 mt-0.5" />
-                    <span className="font-body text-foreground text-sm">Iconic Southern desserts</span>
-                  </div>
-                  <div className="flex items-start gap-2">
-                    <Check className="w-5 h-5 text-orange-600 flex-shrink-0 mt-0.5" />
-                    <span className="font-body text-foreground text-sm">Home-cook friendly instructions</span>
-                  </div>
-                </div>
 
                 {/* Pricing */}
                 <a 
@@ -337,25 +253,6 @@ const Cookbooks = () => {
                   church-supper classics, and crave-worthy dishes made simple for everyday cooks.
                 </p>
 
-                {/* Features */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
-                  <div className="flex items-start gap-2">
-                    <Check className="w-5 h-5 text-stone-600 flex-shrink-0 mt-0.5" />
-                    <span className="font-body text-foreground text-sm">Homestyle Southern classics</span>
-                  </div>
-                  <div className="flex items-start gap-2">
-                    <Check className="w-5 h-5 text-stone-600 flex-shrink-0 mt-0.5" />
-                    <span className="font-body text-foreground text-sm">Soulful sides & crowd favorites</span>
-                  </div>
-                  <div className="flex items-start gap-2">
-                    <Check className="w-5 h-5 text-stone-600 flex-shrink-0 mt-0.5" />
-                    <span className="font-body text-foreground text-sm">Appetizers & small bites</span>
-                  </div>
-                  <div className="flex items-start gap-2">
-                    <Check className="w-5 h-5 text-stone-600 flex-shrink-0 mt-0.5" />
-                    <span className="font-body text-foreground text-sm">Beginner-friendly instructions</span>
-                  </div>
-                </div>
 
                 {/* Pricing */}
                 <a 
