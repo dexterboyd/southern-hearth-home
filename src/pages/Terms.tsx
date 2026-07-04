@@ -71,7 +71,7 @@ export default function Terms() {
                   Contact
                 </h2>
                 <p>
-                  If you have any questions about these Terms of Use, please contact us at hello@flavorfirst.com.
+                  If you have any questions about these Terms of Use, please contact us at hello@flavorfirstrecipes.com.
                 </p>
               </div>
             </div>
