@@ -50,7 +50,7 @@ export default function Privacy() {
                   Your Rights
                 </h2>
                 <p>
-                  You have the right to access, correct, or delete your personal information. To exercise these rights or if you have any questions about this privacy policy, please contact us at hello@flavorfirst.com.
+                  You have the right to access, correct, or delete your personal information. To exercise these rights or if you have any questions about this privacy policy, please contact us at hello@flavorfirstrecipes.com.
                 </p>
 
                 <h2 className="font-display text-xl font-semibold text-foreground mt-8 mb-4">

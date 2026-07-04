@@ -17,7 +17,7 @@ const footerLinks = {
 const socialLinks = [
   { name: 'Instagram', icon: Instagram, href: 'https://www.instagram.com/soulfulflavorskitchen/' },
   { name: 'Facebook', icon: Facebook, href: 'https://www.facebook.com/profile.php?id=61556349519083' },
-  { name: 'Email', icon: Mail, href: 'mailto:hello@flavorfirst.com' },
+  { name: 'Email', icon: Mail, href: 'mailto:hello@flavorfirstrecipes.com' },
 ];
 
 export function Footer() {
