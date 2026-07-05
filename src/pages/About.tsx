@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
-import { BookOpen, Instagram, Facebook } from 'lucide-react';
+import { BookOpen, Instagram, Facebook, Gift } from 'lucide-react';
 
 const About = () => {
   return (
@@ -122,6 +122,13 @@ const About = () => {
                   Get 10 complimentary cookbook-quality recipes plus early access to new releases.
                 </p>
                 <div className="flex flex-wrap justify-center gap-4">
+                  <Link
+                    to="/#newsletter"
+                    className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-xl text-sm font-semibold ring-offset-background transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg hover:shadow-xl h-11 px-6"
+                  >
+                    <Gift className="w-4 h-4" />
+                    Get 10 Free Recipes
+                  </Link>
                   <a 
                     href="https://www.facebook.com/profile.php?id=61556349519083" 
                     target="_blank" 
