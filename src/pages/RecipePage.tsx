@@ -6,6 +6,7 @@ import { Clock, Users, ChefHat, ArrowLeft, Printer, Share2 } from 'lucide-react'
 import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
 import { getRecipeImage } from '@/data/recipeImages';
+import { Seo, SITE_URL } from '@/components/Seo';
 
 const RecipePage = () => {
   const { slug } = useParams();
@@ -14,6 +15,11 @@ const RecipePage = () => {
   if (!recipe) {
     return (
       <div className="min-h-screen bg-background">
+        <Seo
+          title="Recipe Not Found | Flavor First"
+          description="The recipe you're looking for doesn't exist or has been moved. Browse our full library of Southern recipes."
+          canonicalPath="/recipes"
+        />
         <Header />
         <main className="pt-20 pb-16">
           <div className="container-blog text-center py-20">
@@ -41,6 +47,61 @@ const RecipePage = () => {
     .filter(r => r.id !== recipe.id)
     .slice(0, 3);
 
+  const recipeImageUrl = (() => {
+    const img = getRecipeImage(recipe.id, recipe.categorySlug);
+    if (!img) return `${SITE_URL}/og-image.jpg`;
+    return img.startsWith('http') ? img : `${SITE_URL}${img.startsWith('/') ? img : `/${img}`}`;
+  })();
+
+  const seoTitle = `${recipe.title} | Flavor First`;
+  const seoDescription = recipe.description.length > 155
+    ? `${recipe.description.slice(0, 152)}...`
+    : recipe.description;
+
+  // Parse "2.5 hours" or "45 minutes" into ISO 8601 duration for schema.org
+  const toIsoDuration = (time: string): string | undefined => {
+    if (!time) return undefined;
+    const t = time.toLowerCase();
+    const num = parseFloat(t);
+    if (Number.isNaN(num)) return undefined;
+    if (t.includes('hour') || t.includes('hr')) {
+      const h = Math.floor(num);
+      const m = Math.round((num - h) * 60);
+      return `PT${h}H${m ? `${m}M` : ''}`;
+    }
+    if (t.includes('min')) return `PT${Math.round(num)}M`;
+    return undefined;
+  };
+
+  const recipeJsonLd: Record<string, unknown> = {
+    '@context': 'https://schema.org',
+    '@type': 'Recipe',
+    name: recipe.title,
+    description: recipe.description,
+    image: [recipeImageUrl],
+    author: { '@type': 'Person', name: 'Dexter M. Boyd' },
+    publisher: {
+      '@type': 'Organization',
+      name: 'Flavor First',
+      url: SITE_URL,
+    },
+    recipeCategory: recipe.category,
+    recipeCuisine: 'Southern',
+    recipeYield: recipe.yield || `${recipe.servings} servings`,
+    url: `${SITE_URL}/recipe/${getRecipeSlug(recipe)}`,
+    ...(toIsoDuration(recipe.time) ? { totalTime: toIsoDuration(recipe.time) } : {}),
+    ...(recipe.ingredients?.length ? { recipeIngredient: recipe.ingredients } : {}),
+    ...(recipe.instructions?.length
+      ? {
+          recipeInstructions: recipe.instructions.map((text, i) => ({
+            '@type': 'HowToStep',
+            position: i + 1,
+            text,
+          })),
+        }
+      : {}),
+  };
+
   const handlePrint = () => {
     window.print();
   };
@@ -63,6 +124,14 @@ const RecipePage = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Seo
+        title={seoTitle}
+        description={seoDescription}
+        canonicalPath={`/recipe/${getRecipeSlug(recipe)}`}
+        image={recipeImageUrl}
+        type="article"
+        jsonLd={recipeJsonLd}
+      />
       <Header />
       <main className="pt-20">
         {/* Hero Image */}
