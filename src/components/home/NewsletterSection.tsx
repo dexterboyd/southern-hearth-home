@@ -8,16 +8,43 @@ export function NewsletterSection() {
   const [email, setEmail] = useState('');
   const [isLoading, setIsLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    const formId = import.meta.env.VITE_KIT_FORM_ID;
+    const apiKey = import.meta.env.VITE_KIT_API_KEY;
+
+    if (!formId || !apiKey) {
+      toast.error("Newsletter isn't configured yet. Please try again later.");
+      console.error("Missing VITE_KIT_FORM_ID or VITE_KIT_API_KEY env variables.");
+      return;
+    }
+
     setIsLoading(true);
-    
-    // Simulate subscription
-    setTimeout(() => {
-      toast.success("Welcome to Flavor First! Check your inbox for your 10 free recipes.");
+
+    try {
+      const res = await fetch(
+        `https://api.convertkit.com/v3/forms/${formId}/subscribe`,
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ api_key: apiKey, email }),
+        }
+      );
+
+      if (!res.ok) {
+        const data = await res.json().catch(() => null);
+        throw new Error(data?.message || `Request failed (${res.status})`);
+      }
+
+      toast.success("Welcome to Flavor First! Check your inbox to confirm and get your 10 free recipes.");
       setEmail('');
+    } catch (err) {
+      console.error("Newsletter signup failed:", err);
+      toast.error("Something went wrong. Please try again in a moment.");
+    } finally {
       setIsLoading(false);
-    }, 1000);
+    }
   };
 
   return (
