@@ -33,6 +33,9 @@ jobs:
         run: npm ci
       - name: Build
         run: npm run build
+        env:
+          VITE_KIT_FORM_ID: ${{ vars.VITE_KIT_FORM_ID }}
+          VITE_KIT_API_KEY: ${{ vars.VITE_KIT_API_KEY }}
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
