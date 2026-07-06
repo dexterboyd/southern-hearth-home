@@ -1,16 +1,19 @@
 import { useParams, Link } from 'react-router-dom';
+import { useState } from 'react';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { getRecipeBySlug, getRecipesByCategory, getRecipeSlug } from '@/data/recipes';
-import { Clock, Users, ChefHat, ArrowLeft, Printer, Share2 } from 'lucide-react';
+import { Clock, Users, ChefHat, ArrowLeft, Printer, Share2, Minus, Plus } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
 import { getRecipeImage } from '@/data/recipeImages';
 import { Seo, SITE_URL } from '@/components/Seo';
+import { scaleIngredient } from '@/lib/scaleIngredient';
 
 const RecipePage = () => {
   const { slug } = useParams();
   const recipe = getRecipeBySlug(slug || '');
+  const [servings, setServings] = useState<number>(recipe?.servings ?? 1);
 
   if (!recipe) {
     return (
@@ -46,6 +49,11 @@ const RecipePage = () => {
   const relatedRecipes = getRecipesByCategory(recipe.categorySlug)
     .filter(r => r.id !== recipe.id)
     .slice(0, 3);
+
+  const scaleFactor = servings / recipe.servings;
+  const decreaseServings = () => setServings((s) => Math.max(1, s - 1));
+  const increaseServings = () => setServings((s) => Math.min(99, s + 1));
+  const resetServings = () => setServings(recipe.servings);
 
   const recipeImageUrl = (() => {
     const img = getRecipeImage(recipe.id, recipe.categorySlug);
@@ -210,12 +218,54 @@ const RecipePage = () => {
             {/* Ingredients */}
             {recipe.ingredients && recipe.ingredients.length > 0 && (
               <section className="mb-10">
-                <h2 className="font-display text-2xl font-semibold text-foreground mb-6 flex items-center gap-3">
-                  <span className="w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-sm">
-                    1
-                  </span>
-                  Ingredients
-                </h2>
+                <div className="flex flex-wrap items-center justify-between gap-4 mb-6">
+                  <h2 className="font-display text-2xl font-semibold text-foreground flex items-center gap-3">
+                    <span className="w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-sm">
+                      1
+                    </span>
+                    Ingredients
+                  </h2>
+                  <div className="flex items-center gap-3">
+                    <span className="font-body text-sm text-muted-foreground">Servings</span>
+                    <div className="flex items-center gap-1 rounded-full border border-border bg-background p-1">
+                      <Button
+                        variant="ghost"
+                        size="icon"
+                        className="h-8 w-8 rounded-full"
+                        onClick={decreaseServings}
+                        aria-label="Decrease servings"
+                        disabled={servings <= 1}
+                      >
+                        <Minus className="h-4 w-4" />
+                      </Button>
+                      <span
+                        className="min-w-[2.5rem] text-center font-display text-lg font-semibold text-foreground"
+                        aria-live="polite"
+                      >
+                        {servings}
+                      </span>
+                      <Button
+                        variant="ghost"
+                        size="icon"
+                        className="h-8 w-8 rounded-full"
+                        onClick={increaseServings}
+                        aria-label="Increase servings"
+                        disabled={servings >= 99}
+                      >
+                        <Plus className="h-4 w-4" />
+                      </Button>
+                    </div>
+                    {servings !== recipe.servings && (
+                      <button
+                        type="button"
+                        onClick={resetServings}
+                        className="font-body text-xs text-primary hover:underline"
+                      >
+                        Reset
+                      </button>
+                    )}
+                  </div>
+                </div>
                 <ul className="grid md:grid-cols-2 gap-3">
                   {recipe.ingredients.map((ingredient, index) => (
                     <li
@@ -223,7 +273,7 @@ const RecipePage = () => {
                       className="flex items-start gap-3 font-body text-foreground"
                     >
                       <span className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
-                      {ingredient}
+                      {scaleIngredient(ingredient, scaleFactor)}
                     </li>
                   ))}
                 </ul>
