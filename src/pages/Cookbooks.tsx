@@ -7,12 +7,18 @@ import flavorFirstCover from '@/assets/flavor-first-ebook-cover.jpg';
 import bigEasyCover from '@/assets/big-easy-ebook-cover.png';
 import comfortFoodCover from '@/assets/southern-comfort-food-cover.png';
 import culinaryChroniclesCover from '@/assets/culinary-chronicles-cover.png';
+import { Seo } from '@/components/Seo';
 
 
 
 const Cookbooks = () => {
   return (
     <div className="min-h-screen bg-background">
+      <Seo
+        title="Southern Cookbooks by Flavor First | Rubs, BBQ & Comfort Food"
+        description="Shop Flavor First cookbooks — homemade rubs and BBQ sauces, Big Easy Cajun & Creole classics, Southern comfort food, and culinary chronicles."
+        canonicalPath="/cookbooks"
+      />
       <Header />
       <main className="pt-20">
         {/* Hero Section - Flavor First */}

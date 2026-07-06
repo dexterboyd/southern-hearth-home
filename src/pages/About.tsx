@@ -2,10 +2,16 @@ import { Link } from 'react-router-dom';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { BookOpen, Instagram, Facebook, Gift } from 'lucide-react';
+import { Seo } from '@/components/Seo';
 
 const About = () => {
   return (
     <div className="min-h-screen bg-background">
+      <Seo
+        title="About Flavor First | Southern Cooking with Dexter M. Boyd"
+        description="Meet the cook behind Flavor First — a Southern kitchen built on patience, bold seasoning, and recipes rooted in tradition."
+        canonicalPath="/about"
+      />
       <Header />
       <main id="top" className="pt-20">
         {/* Hero Section */}
