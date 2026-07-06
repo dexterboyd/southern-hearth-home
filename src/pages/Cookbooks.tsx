@@ -7,12 +7,18 @@ import flavorFirstCover from '@/assets/flavor-first-ebook-cover.jpg';
 import bigEasyCover from '@/assets/big-easy-ebook-cover.png';
 import comfortFoodCover from '@/assets/southern-comfort-food-cover.png';
 import culinaryChroniclesCover from '@/assets/culinary-chronicles-cover.png';
+import { Seo } from '@/components/Seo';
 
 
 
 const Cookbooks = () => {
   return (
     <div className="min-h-screen bg-background">
+      <Seo
+        title="Southern Cookbooks by Flavor First | Rubs, BBQ & Comfort Food"
+        description="Shop Flavor First cookbooks — homemade rubs and BBQ sauces, Big Easy Cajun & Creole classics, Southern comfort food, and culinary chronicles."
+        canonicalPath="/cookbooks"
+      />
       <Header />
       <main className="pt-20">
         {/* Hero Section - Flavor First */}
@@ -72,6 +78,9 @@ const Cookbooks = () => {
                       src={flavorFirstCover} 
                       alt="Flavor First: Homemade Rubs, Marinades & BBQ Sauces Cookbook Cover" 
                       className="rounded-xl shadow-2xl max-w-xs md:max-w-full"
+                      loading="eager"
+                      fetchPriority="high"
+                      decoding="async"
                     />
                   </div>
                   <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-primary/20 rounded-2xl -z-10" />
@@ -138,6 +147,8 @@ const Cookbooks = () => {
                     src={bigEasyCover} 
                     alt="Flavors of the Big Easy Cookbook Cover" 
                     className="rounded-xl shadow-2xl max-w-xs md:max-w-sm"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
                 <div className="absolute -bottom-6 -left-6 w-40 h-40 bg-amber-500/20 rounded-2xl -z-10" />
@@ -215,6 +226,8 @@ const Cookbooks = () => {
                     src={comfortFoodCover} 
                     alt="Flavor First: Southern Comfort Food Recipes Cookbook Cover" 
                     className="rounded-xl shadow-2xl max-w-xs md:max-w-sm"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
                 <div className="absolute -bottom-6 -right-6 w-40 h-40 bg-orange-700/20 rounded-2xl -z-10" />
@@ -234,6 +247,8 @@ const Cookbooks = () => {
                     src={culinaryChroniclesCover} 
                     alt="Culinary Chronicles: Easy Southern American Comfort Food Cookbook Cover" 
                     className="rounded-xl shadow-2xl max-w-xs md:max-w-sm"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
                 <div className="absolute -bottom-6 -left-6 w-40 h-40 bg-stone-500/20 rounded-2xl -z-10" />

@@ -142,6 +142,9 @@ const RecipePage = () => {
             className={`w-full h-full object-cover ${
               recipe.id === 9 ? 'object-bottom' : 'object-center'
             }`}
+            loading="eager"
+            fetchPriority="high"
+            decoding="async"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent" />
         </div>
@@ -291,6 +294,8 @@ const RecipePage = () => {
                         src={getRecipeImage(related.id, related.categorySlug)}
                         alt={related.title}
                         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        loading="lazy"
+                        decoding="async"
                       />
                     </div>
                     <div className="p-4">

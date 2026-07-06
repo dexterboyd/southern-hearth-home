@@ -9,6 +9,7 @@ import { Button } from '@/components/ui/button';
 import { recipes, getRecipeSlug } from '@/data/recipes';
 
 import { getRecipeImage } from '@/data/recipeImages';
+import { Seo } from '@/components/Seo';
 
 
 const categories = [
@@ -86,6 +87,11 @@ const Recipes = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Seo
+        title="Southern Recipe Collection | Cajun, BBQ, Soul Food & Desserts"
+        description="Browse the Flavor First recipe library — authentic Cajun and Creole, Southern soul food, BBQ and smokehouse favorites, and classic Southern desserts."
+        canonicalPath="/recipes"
+      />
       <Header />
       <main className="pt-20">
         {/* Hero Section */}
@@ -143,6 +149,8 @@ const Recipes = () => {
                       src={getRecipeImage(recipe.id, recipe.categorySlug)}
                       alt={recipe.title}
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      loading="lazy"
+                      decoding="async"
                     />
                   </div>
                   <div className="p-5">
