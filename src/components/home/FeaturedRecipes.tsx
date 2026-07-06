@@ -53,6 +53,8 @@ export function FeaturedRecipes() {
                     src={getRecipeImage(recipe.id, recipe.categorySlug)}
                     alt={recipe.title}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    loading="lazy"
+                    decoding="async"
                   />
                   <div className="absolute inset-0 recipe-card-overlay" />
                   <div className="absolute bottom-0 left-0 right-0 p-6">

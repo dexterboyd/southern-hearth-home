@@ -149,6 +149,8 @@ const Recipes = () => {
                       src={getRecipeImage(recipe.id, recipe.categorySlug)}
                       alt={recipe.title}
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      loading="lazy"
+                      decoding="async"
                     />
                   </div>
                   <div className="p-5">
