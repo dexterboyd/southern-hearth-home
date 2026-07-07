@@ -9,6 +9,8 @@ import About from "./pages/About";
 import Recipes from "./pages/Recipes";
 import RecipePage from "./pages/RecipePage";
 import Cookbooks from "./pages/Cookbooks";
+import Collections from "./pages/Collections";
+import CollectionPage from "./pages/CollectionPage";
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
 import NotFound from "./pages/NotFound";
@@ -41,6 +43,8 @@ const App = () => {
             <Route path="/recipes" element={<Recipes />} />
             <Route path="/recipe/:slug" element={<RecipePage />} />
             <Route path="/cookbooks" element={<Cookbooks />} />
+            <Route path="/collections" element={<Collections />} />
+            <Route path="/collections/:slug" element={<CollectionPage />} />
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/terms" element={<Terms />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
