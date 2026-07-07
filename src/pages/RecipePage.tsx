@@ -10,6 +10,7 @@ import { getRecipeImage } from '@/data/recipeImages';
 import { Seo, SITE_URL } from '@/components/Seo';
 import { scaleIngredient } from '@/lib/scaleIngredient';
 import { CookingMode } from '@/components/CookingMode';
+import { Breadcrumbs, breadcrumbJsonLd } from '@/components/Breadcrumbs';
 
 const RecipePage = () => {
   const { slug } = useParams();
@@ -112,6 +113,14 @@ const RecipePage = () => {
       : {}),
   };
 
+  const crumbs = [
+    { label: 'Recipes', to: '/recipes' },
+    { label: recipe.category, to: `/recipes?category=${recipe.categorySlug}` },
+    { label: recipe.title },
+  ];
+  const breadcrumbLd = breadcrumbJsonLd(crumbs, SITE_URL);
+  const combinedJsonLd = [recipeJsonLd, breadcrumbLd];
+
   const handlePrint = () => {
     window.print();
   };
@@ -140,7 +149,7 @@ const RecipePage = () => {
         canonicalPath={`/recipe/${getRecipeSlug(recipe)}`}
         image={recipeImageUrl}
         type="article"
-        jsonLd={recipeJsonLd}
+        jsonLd={combinedJsonLd}
       />
       <Header />
       <main className="pt-20">
@@ -163,13 +172,7 @@ const RecipePage = () => {
         <article className="container-blog -mt-32 relative z-10 pb-16">
           <div className="bg-card rounded-xl p-6 md:p-10 card-elevated">
             {/* Breadcrumb */}
-            <Link
-              to="/recipes"
-              className="inline-flex items-center gap-2 text-primary font-body text-sm mb-6 hover:underline"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              Back to Recipes
-            </Link>
+            <Breadcrumbs items={crumbs} className="mb-6" />
 
             {/* Header */}
             <header className="mb-8">
