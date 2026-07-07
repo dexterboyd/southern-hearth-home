@@ -40,7 +40,7 @@ export const collections: Collection[] = [
     tagline: 'Big flavor, small window',
     description:
       'One-pan, one-pot, and under-an-hour Southern classics for the nights you want something soulful without babysitting a stove all evening.',
-    recipeIds: [6, 7, 3, 51, 44, 62],
+    recipeIds: [6, 7, 3, 51, 44, 26],
   },
   {
     slug: 'holiday-dessert-table',
