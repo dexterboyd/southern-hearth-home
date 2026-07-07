@@ -10,6 +10,7 @@ import { recipes, getRecipeSlug } from '@/data/recipes';
 
 import { getRecipeImage } from '@/data/recipeImages';
 import { Seo } from '@/components/Seo';
+import { Breadcrumbs } from '@/components/Breadcrumbs';
 
 
 const categories = [
@@ -94,6 +95,23 @@ const Recipes = () => {
       />
       <Header />
       <main className="pt-20">
+        {/* Breadcrumbs */}
+        <div className="container-blog px-4 pt-4">
+          <Breadcrumbs
+            items={
+              activeCategory === 'all'
+                ? [{ label: 'Recipes' }]
+                : [
+                    { label: 'Recipes', to: '/recipes' },
+                    {
+                      label:
+                        categories.find((c) => c.slug === activeCategory)?.name ||
+                        'Category',
+                    },
+                  ]
+            }
+          />
+        </div>
         {/* Hero Section */}
         <section id="recipe-collection" className="py-5 md:py-8 bg-muted scroll-mt-20">
           <div className="container-blog text-center">
