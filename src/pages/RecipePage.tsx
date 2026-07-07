@@ -3,17 +3,19 @@ import { useState } from 'react';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { getRecipeBySlug, getRecipesByCategory, getRecipeSlug } from '@/data/recipes';
-import { Clock, Users, ChefHat, ArrowLeft, Printer, Share2, Minus, Plus } from 'lucide-react';
+import { Clock, Users, ChefHat, ArrowLeft, Printer, Share2, Minus, Plus, Play } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
 import { getRecipeImage } from '@/data/recipeImages';
 import { Seo, SITE_URL } from '@/components/Seo';
 import { scaleIngredient } from '@/lib/scaleIngredient';
+import { CookingMode } from '@/components/CookingMode';
 
 const RecipePage = () => {
   const { slug } = useParams();
   const recipe = getRecipeBySlug(slug || '');
   const [servings, setServings] = useState<number>(recipe?.servings ?? 1);
+  const [cookingOpen, setCookingOpen] = useState(false);
 
   if (!recipe) {
     return (
@@ -201,6 +203,12 @@ const RecipePage = () => {
                   </div>
                 )}
                 <div className="flex gap-2 ml-auto">
+                  {recipe.instructions && recipe.instructions.length > 0 && (
+                    <Button size="sm" onClick={() => setCookingOpen(true)}>
+                      <Play className="w-4 h-4 mr-2" />
+                      Cooking Mode
+                    </Button>
+                  )}
                   <Button variant="outline" size="sm" onClick={handlePrint}>
                     <Printer className="w-4 h-4 mr-2" />
                     Print
@@ -382,6 +390,13 @@ const RecipePage = () => {
         </article>
       </main>
       <Footer />
+      {cookingOpen && recipe.instructions && (
+        <CookingMode
+          title={recipe.title}
+          steps={recipe.instructions}
+          onClose={() => setCookingOpen(false)}
+        />
+      )}
     </div>
   );
 };
