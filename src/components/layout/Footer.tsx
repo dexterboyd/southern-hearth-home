@@ -3,10 +3,10 @@ import { Mail, Instagram, Facebook } from 'lucide-react';
 
 const footerLinks = {
   recipes: [
-    { name: 'Southern Classics', href: '/recipes?category=classics' },
-    { name: 'BBQ & Smokehouse', href: '/recipes?category=bbq' },
-    { name: 'Comfort Food', href: '/recipes?category=comfort' },
-    { name: 'Desserts', href: '/recipes?category=desserts' },
+    { name: 'Cajun & Creole', href: '/category/cajun' },
+    { name: 'Southern Soul Food', href: '/category/soulfood' },
+    { name: 'BBQ & Smokehouse', href: '/category/bbq' },
+    { name: 'Southern Desserts', href: '/category/desserts' },
   ],
   resources: [
     { name: 'Cookbooks', href: '/cookbooks', scrollToTop: true },
