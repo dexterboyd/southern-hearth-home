@@ -8,6 +8,7 @@ import Index from "./pages/Index";
 import About from "./pages/About";
 import Recipes from "./pages/Recipes";
 import RecipePage from "./pages/RecipePage";
+import CategoryPage from "./pages/CategoryPage";
 import Cookbooks from "./pages/Cookbooks";
 import Collections from "./pages/Collections";
 import CollectionPage from "./pages/CollectionPage";
@@ -42,6 +43,7 @@ const App = () => {
             <Route path="/about" element={<About />} />
             <Route path="/recipes" element={<Recipes />} />
             <Route path="/recipe/:slug" element={<RecipePage />} />
+            <Route path="/category/:slug" element={<CategoryPage />} />
             <Route path="/cookbooks" element={<Cookbooks />} />
             <Route path="/collections" element={<Collections />} />
             <Route path="/collections/:slug" element={<CollectionPage />} />
