@@ -225,3 +225,79 @@
     display: none;
   }
 }
+
+/* ==========================================================================
+   Print styles — clean ingredient/instructions-only printout
+   ========================================================================== */
+@media print {
+  @page {
+    margin: 0.5in;
+  }
+
+  html,
+  body {
+    background: #fff !important;
+    color: #000 !important;
+  }
+
+  /* Hide anything explicitly marked, plus site chrome */
+  .no-print,
+  .no-print * {
+    display: none !important;
+  }
+
+  main {
+    padding-top: 0 !important;
+  }
+
+  /* The card that wraps the printable recipe content */
+  #print-area {
+    position: static !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #fff !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    max-width: 100% !important;
+  }
+
+  #print-area h1,
+  #print-area h2,
+  #print-area h3,
+  #print-area p,
+  #print-area li,
+  #print-area span {
+    color: #000 !important;
+  }
+
+  #print-area h1,
+  #print-area h2,
+  #print-area h3 {
+    page-break-after: avoid;
+  }
+
+  #print-area ul,
+  #print-area ol {
+    page-break-inside: auto;
+  }
+
+  #print-area li {
+    page-break-inside: avoid;
+  }
+
+  #print-area a {
+    color: inherit !important;
+    text-decoration: none !important;
+  }
+
+  /* Force the ingredient two-column grid to stack for a cleaner printout */
+  #print-area ul.grid {
+    display: block !important;
+  }
+
+  #print-area ul.grid > li {
+    margin-bottom: 0.35rem;
+  }
+}
