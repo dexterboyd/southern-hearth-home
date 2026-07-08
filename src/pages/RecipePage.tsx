@@ -151,10 +151,12 @@ const RecipePage = () => {
         type="article"
         jsonLd={combinedJsonLd}
       />
-      <Header />
+      <div className="no-print">
+        <Header />
+      </div>
       <main className="pt-20">
         {/* Hero Image */}
-        <div className="relative h-[70vh] md:h-[80vh] overflow-hidden">
+        <div className="relative h-[70vh] md:h-[80vh] overflow-hidden no-print">
           <img
             src={getRecipeImage(recipe.id, recipe.categorySlug)}
             alt={recipe.title}
@@ -170,9 +172,11 @@ const RecipePage = () => {
 
         {/* Recipe Content */}
         <article className="container-blog -mt-32 relative z-10 pb-16">
-          <div className="bg-card rounded-xl p-6 md:p-10 card-elevated">
+          <div id="print-area" className="bg-card rounded-xl p-6 md:p-10 card-elevated">
             {/* Breadcrumb */}
-            <Breadcrumbs items={crumbs} className="mb-6" />
+            <div className="no-print">
+              <Breadcrumbs items={crumbs} className="mb-6" />
+            </div>
 
             {/* Header */}
             <header className="mb-8">
@@ -205,7 +209,7 @@ const RecipePage = () => {
                     <span className="font-body">{recipe.yield}</span>
                   </div>
                 )}
-                <div className="flex gap-2 ml-auto">
+                <div className="flex gap-2 ml-auto no-print">
                   {recipe.instructions && recipe.instructions.length > 0 && (
                     <Button size="sm" onClick={() => setCookingOpen(true)}>
                       <Play className="w-4 h-4 mr-2" />
@@ -226,9 +230,45 @@ const RecipePage = () => {
 
             <Separator className="my-8" />
 
+            {/* Sticky Table of Contents */}
+            <nav
+              aria-label="On this page"
+              className="no-print sticky top-16 md:top-20 z-30 -mx-6 md:-mx-10 mb-8 border-y border-border bg-card/95 backdrop-blur-sm"
+            >
+              <div className="px-6 md:px-10 py-3 flex items-center gap-2 overflow-x-auto scrollbar-hide">
+                <span className="font-body text-xs uppercase tracking-wider text-muted-foreground mr-2 flex-shrink-0">
+                  On this page
+                </span>
+                {recipe.ingredients && recipe.ingredients.length > 0 && (
+                  <a
+                    href="#ingredients"
+                    className="font-body text-sm px-3 py-1 rounded-full text-foreground hover:bg-primary hover:text-primary-foreground transition-colors whitespace-nowrap"
+                  >
+                    Ingredients
+                  </a>
+                )}
+                {recipe.instructions && recipe.instructions.length > 0 && (
+                  <a
+                    href="#instructions"
+                    className="font-body text-sm px-3 py-1 rounded-full text-foreground hover:bg-primary hover:text-primary-foreground transition-colors whitespace-nowrap"
+                  >
+                    Instructions
+                  </a>
+                )}
+                {recipe.proTip && (
+                  <a
+                    href="#pro-tips"
+                    className="font-body text-sm px-3 py-1 rounded-full text-foreground hover:bg-primary hover:text-primary-foreground transition-colors whitespace-nowrap"
+                  >
+                    Pro Tips
+                  </a>
+                )}
+              </div>
+            </nav>
+
             {/* Ingredients */}
             {recipe.ingredients && recipe.ingredients.length > 0 && (
-              <section className="mb-10">
+              <section id="ingredients" className="mb-10 scroll-mt-32">
                 <div className="flex flex-wrap items-center justify-between gap-4 mb-6">
                   <h2 className="font-display text-2xl font-semibold text-foreground flex items-center gap-3">
                     <span className="w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-sm">
@@ -236,7 +276,7 @@ const RecipePage = () => {
                     </span>
                     Ingredients
                   </h2>
-                  <div className="flex items-center gap-3">
+                  <div className="flex items-center gap-3 no-print">
                     <span className="font-body text-sm text-muted-foreground">Servings</span>
                     <div className="flex items-center gap-1 rounded-full border border-border bg-background p-1">
                       <Button
@@ -295,7 +335,7 @@ const RecipePage = () => {
 
             {/* Instructions */}
             {recipe.instructions && recipe.instructions.length > 0 && (
-              <section className="mb-10">
+              <section id="instructions" className="mb-10 scroll-mt-32">
                 <h2 className="font-display text-2xl font-semibold text-foreground mb-6 flex items-center gap-3">
                   <span className="w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-sm">
                     2
@@ -314,7 +354,7 @@ const RecipePage = () => {
                 </ol>
 
                 {/* Back to Recipes Button */}
-                <div className="flex justify-end mt-8">
+                <div className="flex justify-end mt-8 no-print">
                   <Link to={`/recipes?category=${recipe.categorySlug}`}>
                     <Button variant="outline" className="gap-2">
                       Back to Recipes
@@ -327,7 +367,7 @@ const RecipePage = () => {
 
             {/* Pro Tip */}
             {recipe.proTip && (
-              <section className="mb-10 bg-primary/5 border border-primary/20 rounded-lg p-6">
+              <section id="pro-tips" className="mb-10 bg-primary/5 border border-primary/20 rounded-lg p-6 scroll-mt-32">
                 <h3 className="font-display text-lg font-semibold text-primary mb-2">
                   Pro Tip from the Kitchen
                 </h3>
@@ -339,7 +379,7 @@ const RecipePage = () => {
 
           {/* Related Recipes */}
           {relatedRecipes.length > 0 && (
-            <section className="mt-16">
+            <section className="mt-16 no-print">
               <h2 className="font-display text-2xl font-semibold text-foreground mb-8 text-center">
                 More {recipe.category} Recipes
               </h2>
@@ -377,7 +417,7 @@ const RecipePage = () => {
           )}
 
           {/* CTA */}
-          <section className="mt-16 text-center bg-muted rounded-xl p-8">
+          <section className="mt-16 text-center bg-muted rounded-xl p-8 no-print">
             <h2 className="font-display text-2xl font-semibold text-foreground mb-3">
               Love This Recipe?
             </h2>
@@ -392,7 +432,9 @@ const RecipePage = () => {
           </section>
         </article>
       </main>
-      <Footer />
+      <div className="no-print">
+        <Footer />
+      </div>
       {cookingOpen && recipe.instructions && (
         <CookingMode
           title={recipe.title}
