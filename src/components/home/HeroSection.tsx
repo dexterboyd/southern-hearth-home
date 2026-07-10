@@ -5,7 +5,7 @@ import heroImage from '@/assets/hero-southern-feast.jpg';
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden pt-20">
+    <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden pt-20">
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
@@ -20,7 +20,7 @@ export function HeroSection() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container-blog px-4 py-20 text-center">
+      <div className="relative z-10 container-blog px-4 py-12 text-center">
         <div className="max-w-2xl mx-auto">
           <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-semibold text-cream leading-tight mb-6 animate-fade-up opacity-0 stagger-2">
             Soul Food Starts with{' '}
